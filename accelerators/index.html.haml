@@ -1,0 +1,372 @@
+!!!
+%html{:lang => "en"}
+  %head
+    / Basic
+    %meta{:charset => "utf-8"}/
+    %title OpenShift Accelerators - Resources for Community Organizers, Evangelists, and Innovators
+    %meta{:content => "The next generation open source app hosting platform by Red Hat", :name => "description"}/
+    / Mobile Metas
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    / Google Webmaster Tools
+    %meta{:content => "9jyGvNki3NSELTYJ7t_XbF-YQZ8jjfm7LqQQGNq4SSg", :name => "google-site-verification"}/
+    
+    / Skins Theme
+    %link.skin_color{:href => "#", :media => "screen", :rel => "stylesheet"}/
+
+    / Theme CSS
+    %link{:href => "/css/style.css", :media => "screen", :rel => "stylesheet"}/
+
+    / Responsive CSS
+    %link{:href => "/css/theme-responsive.css", :media => "screen", :rel => "stylesheet"}/
+   
+    %link{:href => "/stylesheets/styles.css", :media => "screen", :rel => "stylesheet"}/
+
+    %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700", :rel => "stylesheet", :type => "text/css"}/
+
+    / Favicons
+    %link{:href => "/img/icons/favicon.png", :rel => "shortcut icon"}/
+    %link{:href => "/img/icons/apple-touch-icon.png", :rel => "apple-touch-icon"}/
+    /[if IE]
+      <link rel="stylesheet" href="css/ie/ie.css">
+    /[if lte IE 8]
+      <script src="/js/responsive/html5shiv.js"></script>
+      <script src="/js/responsive/respond.js"></script>
+
+    / Google Analytics
+    %script{:src => "//www.google-analytics.com/analytics.js", :type => "text/javascript", :async => true}
+    :javascript
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-40375612-1', 'openshift.org');
+      ga('set', 'forceSSL', true);
+      ga('send', 'pageview');
+  %body
+    #layout.layout-wide
+      / Header Section
+      %header.index_static
+        .nav_logo.animated.fadeIn
+          .container
+            .row
+              %nav.col-md-12
+                %ul#menu.sf-menu
+                  %li 
+                    %a{:href => "#about"} ABOUT
+                  %li
+                    %a{:href => "#resources"} RESOURCES
+                  %li 
+                    %a{:href => "#apply"} SIGN UP
+        %section.content_info
+          / Parallax Background
+          .bg_parallax.image_03_parallax
+          / Parallax Background
+          / Content Parallax
+          %section.opacy_bg_02.paddings
+            / Info Head Static
+            .row.container.info_title
+              .container
+                %h1.animated.fadeInDown.delay
+                  OpenShift Accelerators
+                %p.animated.fadeInUp.delay Resources for open source innovators, evangelists, and community organizers
+
+      %section.container#about
+        .info_title.info_vertical
+          .row.wow.animated.fadeInUp
+            %img{:alt => "OpenShift Accelerators Logo", :src => "/img/accelerators_logo_road.png"}/
+          .row.wow.animated.fadeInDown
+            %h1 
+              Accelerate Your Community
+        .row.wow.info_vertical.animated.fadeInDown
+          .col-md-6.text-left
+            %p The Accelerators program is designed to enable, regcognise, and reward successful users and promotors of the OpenShift platform.
+            %br/
+            %p Group members get:
+            %ul
+              %li Early access to upcoming projects and initiatives
+              %li Online access to our monthly Accelerators meetings
+              %li Support and advice from other Accelerators and open source evangelists through our meetings and our mailing list
+              %li Inclusion in the OpenShift Accelerators team on GitHub
+            
+          .col-md-6.text-left
+            %p Accelerate the adoption of open source platforms in your community by becoming an active member in ours:
+            %ul
+              %li Share your slides, events, and CFPs with our mailing list and social media channels
+              %li Get increased exposure for your blog posts, videos, and screencasts
+              %li Find opportunites to lead a talk or workshop, or to help organize local events
+              %li Help us write, review, and translate OpenShift documentation
+              %li Help adapt popular projects to run on an open cloud platform
+              %li Share your applications, demos, and service integrations
+
+      %section.opacy_bg_01.paddings.container.info_title#resources
+        .info_vertical
+          %i.fa.fa-bullhorn.right
+          .row.wow.text-center.fadeInUp
+            %h1
+              Accelerator Resources
+          .row.wow.info_title.animated.fadeInUp.info_vertical
+            .col-md-4.col-lg-4.text-left
+              %h2.text-center
+                Docs &amp; Examples 
+              %h4
+                %i.fa.fa-book
+                Documentation
+              %ul.list-group
+                %li.list-group-item
+                  %a{:href=>"https://github.com/openshift/devcenter/",:title=>"OpenShift Developer Center"}
+                    %i.fa.fa-book
+                    OpenShift Developer Center
+                %li.list-group-item
+                  %a{:href=>"https://github.com/openshift/openshift-docs",:title=>"OpenShift PlatformV3 Documentation"}
+                    %i.fa.fa-book
+                    OpenShiftV3 Docs
+              %h4 
+                %i.fa.fa-code
+                Applications
+              %ul.list-group
+                %li.list-group-item
+                  %a{ :href=>"https://hub.openshift.com",:title=>"The OpenShift Hub"} 
+                    %i.fa.fa-star
+                    OpenShift Application Hub
+                %li.list-group-item
+                  %a{ :href=>"http://origin.ly", :title=>"The Origin.ly Project Index"}
+                    %i.fa.fa-rocket
+                    Orign.ly Project Index
+                %li.list-group-item
+                  %a{ :href=>"https://launch-shifter.rhcloud.com/",:title=>"Launch-Service embeddable application launchers"} 
+                    %i.fa.fa-external-link-square
+                    Launch-Service
+                %li.list-group-item
+                  %a{ :href=>"https://github.com/openshift/origin/releases",:title=>"OpenShift PlatformV3 Beta releases on GitHub"} 
+                    %i.fa.fa-cloud-download
+                    OSV3 Beta Releases
+                %li.list-group-item
+                  %a{ :href=>"https://github.com/openshift/origin/tree/master/examples#openshift-examples",:title=>"OpenShiftV3 example projects, templates"} 
+                    %i.fa.fa-gift
+                    OSV3 Template Examples
+              %h4 
+                %i.fa.fa-newspaper-o
+                Blogs
+              %ul.list-group
+                %li.list-group-item
+                  %a{ :href=>"https://blog.openshift.com/",:title=>"OpenShift Online Blog"} 
+                    %i.fa.fa-bookmark
+                    OpenShift Online Blog
+            
+  
+            .col-md-4.col-lg-4.text-left
+              %h2.text-center Training Materials
+              %h4
+                %i.fa.fa-film
+                Presentations
+              %ul.list-group
+                %li.list-group-item
+                  %a{:href=>"https://www.youtube.com/results?search_query=openshift",:title=>"OpenShift on Youtube"}
+                    %i.fa.fa-youtube-play
+                    OpenShift on YouTube
+                %li.list-group-item
+                  %a{:href=>"https://www.youtube.com/playlist?list=PLWTAQQMxSZN3vnlB3pmoFX3EvEDVZudeR",:title=>"OpenShift Origin Community Hangouts on YouTube"}
+                    %i.fa.fa-youtube-play
+                    OpenShift Origin Community Hangouts
+                %li.list-group-item
+                  %a{:href=>"https://www.youtube.com/playlist?list=PLmmKflyBbs63J9rFncEoJ_CXnfvdIb366",:title=>"OpenShift Commons Briefings"}
+                    %i.fa.fa-youtube-play
+                    OpenShift Commons Briefings
+              
+              %h4 
+                %i.fa.fa-desktop
+                Slides
+              %ul.list-group
+                %li.list-group-item
+                  %a{:href => "https://github.com/openshift-evangelists/accelerators",:title=>"Slides from the OpenShift Accelerators team on GitHub" }
+                    %i.fa.fa-github-square
+                    Accelerator Team Slides
+                %li.list-group-item
+                  %a{:href=>"http://slideshare.net/openshift",:title=>"OpenShift slides on SlideShare"}
+                    %i.fa.fa-slideshare
+                    OpenShift on SlideShare
+              %h4
+                %i.fa.fa-mortar-board
+                Certification Exams 
+              %ul.list-group
+                %li.list-group-item
+                  %a{:href=>"http://ca.redhat.com/training/courses/cl280r/",:title=>"Red Hat Certification Program for OpenShift Administrators"}
+                    %i.fa.fa-trophy
+                    Red Hat Certification Program for OpenShift Admins
+                %li.list-group-item
+                  %a{ :href=>"http://ca.redhat.com/training/courses/ex280/",:title=>"Red Hat Certificate of Expertise in Platform-as-a-Service"}
+                    %i.fa.fa-trophy
+                    Red Hat Certificate of Expertise in PaaS
+  
+  
+  
+            .col-md-4.col-lg-4.text-left
+              %h2.text-center
+                Community
+              %h4
+                %i.fa.fa-globe
+                Events &amp; Conferences
+              %ul.list-group
+                %li.list-group-item
+                  %a{:href => "https://blog.openshift.com/category/events/",:title=>"OpenShift Online Events Listing" }
+                    %i.fa.fa-calendar
+                    OpenShift Calendar
+                %li.list-group-item
+                  %a{:href => "http://openshift.meetup.com/",:title=>"Find an OpenShift-related Meetup group near you" }
+                    %i.fa.fa-calendar-o
+                    OpenShift Meetups
+  
+              %h4
+                %i.fa.fa-users
+                Opportunities to Share
+              %ul.list-group
+                %li.list-group-item
+                  %a{:title=>"Access to the Accelerators mailing list" }
+                    %i.fa.fa-envelope
+                    Accelerators Mailing List
+                %li.list-group-item
+                  %a{:title=>"Get notified about opportunities to speak, or to volunteer at conferences or events" }
+                    %i.fa.fa-comments-o
+                    Upcoming CFPs
+                %li.list-group-item
+                  %a{:href => "http://openshift.meetup.com/",:title=>"Pitch an OpenShift talk to your local Meetup" }
+                    %i.fa.fa-comments-o
+                    OpenShift Meetups
+                %li.list-group-item
+                  %a{:href => "https://blog.openshift.com/",:title=>"Write a guest post for the OpenShift blog" }
+                    %i.fa.fa-pencil-square-o
+                    OpenShift Online Blog
+                %li.list-group-item
+                  %a{:href => "http://stackoverflow.com/questions/tagged/openshift",:title=>"OpenShift Questions on StackOverflow" }
+                    %i.fa.fa-stack-overflow
+                    Questions on StackOverflow
+                %li.list-group-item
+                  %a{:href => "https://plus.google.com/communities/114361859072744017486",:title=>"Join the Origin community on G+" }
+                    %i.fa.fa-google-plus-square
+                    OpenShift Origin on G+
+                %li.list-group-item
+                  %a{:href => "https://twitter.com/openshift",:title=>"Tweet to @OpenShift" }
+                    %i.fa.fa-twitter-square
+                    Tell us what you're up to
+
+      %section.container.info_title#apply
+        .vertical_line
+          .circle_bottom
+        %i.fa.fa-check-circle-o.right
+        .row.wow.info_vertical.animated.fadeInUp
+          %h1 Apply to Join!
+        .row.wow.info_vertical.animated.fadeInUp.padding_bottom
+          .col-xs-12.col-sm-6.col-md-6.col-lg-6.text-left
+            %h3 Application Process
+            %p 
+              Complete each of the onboading tasks to gain access to our private mailing list, monthly meetings, and our
+              %a{:href=>"https://github.com/orgs/openshift-evangelists/teams/accelerators", :title=>"OpenShift Accelerators Team on GitHub"}
+              OpenShift Accelerators Team on GitHub.
+            %br/
+            %p 
+              Active team members may be eligible for material support (event sponsorship, training promotions, free stickers, etc)
+          .col-xs-12.col-sm-6.col-md-6.col-lg-6.text-left
+            %h3
+              How to get started
+            %ol
+              %li
+                Watch the 
+                %a{:href=>"https://github.com/openshift/origin-server", :title=>"OpenShift project on GitHub"} OpenShift project on GitHub
+              %li
+                Join the 
+                %a{ :href=>"https://plus.google.com/u/0/communities/114361859072744017486", :title=>"OpenShift G+ community as a member"} OpenShift Community on G+
+              %li
+                Take some time and explore 
+                %a{ :href=>"https://www.openshift.com/walkthrough/how-it-works", :title=>"OpenShift"} OpenShift
+            %p 
+              Then, apply to become a member of the OpenShift Accelerators program:
+            %br/
+            %p.text-center
+              %a{:href=>"https://docs.google.com/forms/d/1q4IBEXvg8ZharjovlsY7jjjhSjDkq6UzorYV23_vpSg/viewform", :title=>"Join the OpenShift Accelerators"}
+                %button.btn.btn-lg.btn-primary
+                  Join the Accelerators
+
+      /footer              
+      %footer
+        .container
+          .row
+            / Social Section
+            .col-md-6.col-sm-12
+              %a{:href => "https://www.redhat.com/"}
+                %img{:alt => "Red Hat", :src => "https://assets.openshift.net/app/assets/redhat.svg"}/
+            .col-md-6.col-sm-12
+              %ul.social
+                %li.twitter
+                  %a{:href => "https://twitter.com/openshift"}
+                    %span
+                      %i.fa.fa-twitter-square
+                %li.github
+                  %a{:href => "https://github.com/openshift/origin-server"}
+                    %span
+                      %i.fa.fa-github
+                %li.google
+                  %a{:href => "https://plus.google.com/communities/114361859072744017486"} 
+                    %span
+                      %i.fa.fa-google-plus-square
+                %li.facebook
+                  %a{:href => "https://www.facebook.com/openshift"}
+                    %span
+                      %i.fa.fa-facebook-square
+      / End footer
+      / footer
+    / End layout
+
+    / Google Remarekting
+    :plain
+      <script type="text/javascript">
+      /* <![CDATA[ */
+      var google_conversion_id = 1007064360;
+      var google_custom_params = window.google_tag_params;
+      var google_remarketing_only = true;
+      /* ]]> */
+      </script>
+      <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+      </script>
+      <noscript>
+      <div style="display:inline;">
+      <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1007064360/?value=0&amp;guid=ON&amp;script=0"/>
+      </div>
+      </noscript>
+
+    / ======================= JQuery libs ===========================
+    / jQuery local
+    %script{:src => "/js/jquery.js", :type => "text/javascript"}
+    / Nav
+    %script{:src => "/js/nav/tinynav.js", :type => "text/javascript"}
+    %script{:src => "/js/nav/superfish.js", :type => "text/javascript"}
+    %script{:src => "/js/nav/hoverIntent.js", :type => "text/javascript"}
+    / %script{:src => "/js/nav/jquery.sticky.js", :type => "text/javascript"}
+    / Totop
+    %script{:src => "/js/totop/jquery.ui.totop.js", :type => "text/javascript"}
+    / Slide
+    %script{:src => "/js/rs-plugin/js/jquery.themepunch.tools.min.js", :type => "text/javascript"}
+    %script{:src => "/js/rs-plugin/js/jquery.themepunch.revolution.min.js", :type => "text/javascript"}
+    / owl-carousel
+    %script{:src => "/js/carousel/owl.carousel.js", :type => "text/javascript"}
+    / Ligbox
+    %script{:src => "/js/fancybox/jquery.fancybox.pack.js", :type => "text/javascript"}
+    / Gallery Grid
+    %script{:src => "/js/gallery/modernizr.custom.26633.js", :type => "text/javascript"}
+    %script{:src => "/js/gallery/jquery.gridrotator.js", :type => "text/javascript"}
+    / Minislider Team
+    %script{:src => "/js/team/modernizr.custom.63321.js", :type => "text/javascript"}
+    %script{:src => "/js/team/jquery.catslider.js", :type => "text/javascript"}
+    / Filters
+    %script{:src => "/js/filters/jquery.isotope.js", :type => "text/javascript"}
+    / Theme Options
+    %script{:src => "/js/theme-options/theme-options.js", :type => "text/javascript"}
+    %script{:src => "/js/theme-options/jquery.cookies.js", :type => "text/javascript"}
+    / Twitter Feed
+    %script{:src => "/js/twitter/jquery.tweet.js", :type => "text/javascript"}
+    / WOW-master
+    %script{:src => "/js/animations/wow.min.js", :type => "text/javascript"}
+    / Parallax
+    %script{:src => "/js/parallax/jquery.inview.js", :type => "text/javascript"}
+    %script{:src => "/js/parallax/nbw-parallax.js", :type => "text/javascript"}
+    / Bootstrap./js
+    %script{:src => "/js/bootstrap/bootstrap.js", :type => "text/javascript"}
+    / fUNCTIONS
+    %script{:src => "/js/main.js", :type => "text/javascript"}
+    / ======================= End JQuery libs ===========================
