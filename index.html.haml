@@ -383,15 +383,36 @@
                     %a{:href => "http://lists.openshift.redhat.com/openshiftmm/listinfo"} Join the public user or development mailing lists.
                   %li
                     %a{:href => "http://webchat.freenode.net/?randomnick=1&channels=openshift-dev&uio=d4"} Join the #openshift-dev channel on Freenode
+      
+      / Google Remarekting
+      :plain
+        <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 1007064360;
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+        /* ]]> */
+        </script>
+        <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+        </script>
+        <noscript>
+        <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1007064360/?value=0&amp;guid=ON&amp;script=0"/>
+        </div>
+        </noscript>
+
       /footer              
       %footer
         .container
           .row
             / Social Section
-            .col-md-6.col-sm-12
+            .col-md-4.col-sm-12
               %a{:href => "https://www.redhat.com/"}
                 %img{:alt => "Red Hat", :src => "https://assets.openshift.net/app/assets/redhat.svg"}/
-            .col-md-6.col-sm-12
+            .col-md-4.col-sm-12.text-center
+              %a{"href"=>"https://hub.openshift.com/quickstarts/92-do-it-yourself-0-1", "title"=>"Powered by OpenShift Online with the DIY Cartridge"}
+                %img{"src"=>"https://www.openshift.com/sites/default/files/images/powered-transparent-white.png", "alt"=>"Powered by OpenShift Online"}/
+            .col-md-4.col-sm-12
               %ul.social
                 %li.twitter
                   %a{:href => "https://twitter.com/openshift"}
@@ -412,23 +433,6 @@
       / End footer
       / footer
     / End layout
-
-    / Google Remarekting
-    :plain
-      <script type="text/javascript">
-      /* <![CDATA[ */
-      var google_conversion_id = 1007064360;
-      var google_custom_params = window.google_tag_params;
-      var google_remarketing_only = true;
-      /* ]]> */
-      </script>
-      <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-      </script>
-      <noscript>
-      <div style="display:inline;">
-      <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1007064360/?value=0&amp;guid=ON&amp;script=0"/>
-      </div>
-      </noscript>
 
     / ======================= JQuery libs ===========================
     / jQuery local
