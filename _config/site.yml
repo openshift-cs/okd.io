@@ -10,5 +10,5 @@ profiles:
   production:
     base_url: http://www.openshift.org/
     deploy:
-      host: www-originsites.rhcloud.com
-      path: /var/lib/openshift/547c99faecb8d478010001ab/app-root/data/html
+      host: ww2-originsites.rhcloud.com
+      path: /var/lib/openshift/5515bf4b4382ec090d00007c/app-root/runtime/repo/php
