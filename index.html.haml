@@ -7,6 +7,8 @@
     %meta{:content => "The next generation open source app hosting platform by Red Hat", :name => "description"}/
     / Mobile Metas
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    / Google Webmaster Tools
+    %meta{:content => "9jyGvNki3NSELTYJ7t_XbF-YQZ8jjfm7LqQQGNq4SSg", :name => "google-site-verification"}/
     
     / Skins Theme
     %link.skin_color{:href => "#", :media => "screen", :rel => "stylesheet"}/
@@ -29,6 +31,14 @@
     /[if lte IE 8]
       <script src="js/responsive/html5shiv.js"></script>
       <script src="js/responsive/respond.js"></script>
+
+    / Google Analytics
+    %script{:src => "//www.google-analytics.com/analytics.js", :type => "text/javascript", :async => true}
+    :javascript
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-40375612-1', 'openshift.org');
+      ga('set', 'forceSSL', true);
+      ga('send', 'pageview');
   %body
     #layout.layout-wide
       / Header Section
@@ -45,7 +55,7 @@
                   %li 
                     %a{:href => "#contribute"} CONTRIBUTE
                   %li
-                    %a{:href => "http://openshift.github.io/documentation/"} DOCUMENTATION
+                    %a{:href => "http://docs.openshift.org/"} DOCUMENTATION
         %section.content_info
           / Parallax Background
           .bg_parallax.image_03_parallax
@@ -131,12 +141,12 @@
                     %a{:href => "http://www.vmware.com/"} VMWare
                   You can read more about the Origin VM in the
                   = succeed "." do
-                    %a{:href => "http://openshift.github.io/documentation/oo_deployment_guide_vm.html"} VM Deployment Guide
+                    %a{:href => "http://docs.openshift.org/origin-m4/oo_deployment_guide_vm.html"} VM Deployment Guide
                 %p
-                  %a{:href => "http://openshift.github.io/documentation/oo_deployment_guide_puppet.html"} You can also build your own machine using Puppet
+                  %a{:href => "http://docs.openshift.org/origin-m4/oo_deployment_guide_puppet.html"} You can also build your own machine using Puppet
                   or
                   follow the
-                  %a{:href => "http://openshift.github.io/documentation/oo_deployment_guide_comprehensive.html"} comprehensive guide
+                  %a{:href => "http://docs.openshift.org/origin-m4/oo_deployment_guide_comprehensive.html"} comprehensive guide
                   and deploy OpenShift Origin manually
               .col-xs-12.col-sm-4.col-md-4.col-lg-4
                 %h2 Online
@@ -373,15 +383,36 @@
                     %a{:href => "http://lists.openshift.redhat.com/openshiftmm/listinfo"} Join the public user or development mailing lists.
                   %li
                     %a{:href => "http://webchat.freenode.net/?randomnick=1&channels=openshift-dev&uio=d4"} Join the #openshift-dev channel on Freenode
+      
+      / Google Remarekting
+      :plain
+        <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 1007064360;
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+        /* ]]> */
+        </script>
+        <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+        </script>
+        <noscript>
+        <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1007064360/?value=0&amp;guid=ON&amp;script=0"/>
+        </div>
+        </noscript>
+
       /footer              
       %footer
         .container
           .row
             / Social Section
-            .col-md-6.col-sm-12
+            .col-md-4.col-sm-12
               %a{:href => "https://www.redhat.com/"}
                 %img{:alt => "Red Hat", :src => "https://assets.openshift.net/app/assets/redhat.svg"}/
-            .col-md-6.col-sm-12
+            .col-md-4.col-sm-12.text-center
+              %a{"href"=>"https://hub.openshift.com/quickstarts/92-do-it-yourself-0-1", "title"=>"Powered by OpenShift Online with the DIY Cartridge"}
+                %img{"src"=>"https://www.openshift.com/sites/default/files/images/powered-transparent-white.png", "alt"=>"Powered by OpenShift Online"}/
+            .col-md-4.col-sm-12
               %ul.social
                 %li.twitter
                   %a{:href => "https://twitter.com/openshift"}
@@ -402,6 +433,7 @@
       / End footer
       / footer
     / End layout
+
     / ======================= JQuery libs ===========================
     / jQuery local
     %script{:src => "js/jquery.js", :type => "text/javascript"}
