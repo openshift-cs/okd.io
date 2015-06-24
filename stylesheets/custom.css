@@ -117,7 +117,7 @@ footer {
 		width: 70%;
 	}
 	.service-process:before {
-		background-image: url('../img/dev-process.svg');
+		background-image: url('../img/img-theme/service-bg.png');
 		background-position: inherit;
 		background-repeat: no-repeat;
 		background-size: contain;
