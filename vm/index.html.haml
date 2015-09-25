@@ -1,0 +1,238 @@
+!!!
+%html{:lang => "en"}
+  %head
+    / Basic
+    %meta{:charset => "utf-8"}/
+    %title All-In-One Virtual Machine for OpenShift Origin
+    %meta{:content => "The next generation open source app hosting platform by Red Hat", :name => "description"}/
+    / Mobile Metas
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    / Google Webmaster Tools
+    %meta{:content => "9jyGvNki3NSELTYJ7t_XbF-YQZ8jjfm7LqQQGNq4SSg", :name => "google-site-verification"}/
+    
+    / Skins Theme
+    %link.skin_color{:href => "#", :media => "screen", :rel => "stylesheet"}/
+
+    / Theme CSS
+    %link{:href => "/css/style.css", :media => "screen", :rel => "stylesheet"}/
+
+    / Responsive CSS
+    %link{:href => "/css/theme-responsive.css", :media => "screen", :rel => "stylesheet"}/
+   
+    %link{:href => "/stylesheets/styles.css", :media => "screen", :rel => "stylesheet"}/
+
+    %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700", :rel => "stylesheet", :type => "text/css"}/
+
+    / Favicons
+    %link{:href => "/img/icons/favicon.png", :rel => "shortcut icon"}/
+    %link{:href => "/img/icons/apple-touch-icon.png", :rel => "apple-touch-icon"}/
+    /[if IE]
+      <link rel="stylesheet" href="css/ie/ie.css">
+    /[if lte IE 8]
+      <script src="/js/responsive/html5shiv.js"></script>
+      <script src="/js/responsive/respond.js"></script>
+
+    / Google Analytics
+    %script{:src => "//www.google-analytics.com/analytics.js", :type => "text/javascript", :async => true}
+    :javascript
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-40375612-1', 'openshift.org');
+      ga('set', 'forceSSL', true);
+      ga('send', 'pageview');
+  %body
+    #layout.layout-wide
+      / Header Section
+      %header.index_static
+        .nav_logo.animated.fadeIn
+          .container
+            .row
+              %nav.col-md-12
+                %ul#menu.sf-menu
+                  %li 
+                    %a{:href => "#about"} ABOUT
+                  %li
+                    %a{:href => "#resources"} RESOURCES
+                  %li 
+                    %a{:href => "#apply"} SIGN UP
+        %section.content_info
+          / Parallax Background
+          .bg_parallax.image_03_parallax
+          / Parallax Background
+          / Content Parallax
+          %section.opacy_bg_02.paddings
+            / Info Head Static
+            .row.container.info_title
+              .container
+                %h1.animated.fadeInDown.delay
+                  All-In-One Virtual Machine
+                %p.animated.fadeInUp.delay Get Origin Up and Running From the Comfort of Your Own Laptop
+
+      %section.container#about
+        .info_title.info_vertical
+          .row.wow.info_vertical.animated.fadeInDown
+            .col-md-12.text-left
+              %p
+                Welcome to the all in one VM for
+                <a href="https://github.com/openshift/origin">OpenShift Origin</a>
+                , the FOSS PaaS from Red Hat. On this page you will find links to download:
+              %p &nbsp;
+              %ul
+                %li A Vagrant VirtualBox VM
+                %li OpenShift client tools (oc) that match the release
+                %li A document to help you run through some of the basic steps to exercise this image 
+              %p &nbsp;
+              %p
+                This image is based off of OpenShift Origin and is a fully functioning OpenShift
+                instance with an integrated Docker registry. The intent of this project is to allow
+                Web developers and other interested parties to run OpenShift V3 on their own computer.
+                Given the way it is configured, the VM will appear to your local machine as if it was
+                running somewhere off the machine.
+              %p &nbsp;
+              %p
+                The intent of this image is to give application developers and sysadmins a quick way
+                to get started with OpenShift Origin. The OpenShift Master, Node, Docker Registry, and
+                other pieces are running in one VM. Given it's focus on application developers, it
+                should NOT be used in production. While the Vagrantfile only specifies 2 gigs of RAM,
+                you can increase this if you want to run more containers concurrently in your instance.
+              %p &nbsp;
+              %p
+                The reason our Vagrant box is so large is because we have pre-cached several Docker
+                images on the VM. You should be able to deploy those pre-cached images (such as
+                fedora/apache) without an internet connection.
+              %p &nbsp;
+              %p
+                <strong>WARNING:</strong> We wanted to allow developers to use any Docker image they
+                want, which required us turning off some security in OpenShift. By default, OpenShift
+                will not allow a container to run as root or even a non-random platform assigned userid.
+                Most Docker images in the Dockerhub do not follow this best practice and instead run
+                as root. As a double negative, a large majority of Dockerhub images are not patched
+                for well known vulnerabilities. Therefore, please use images from Dockerhub with
+                caution. We think some of the risk is mitigated because you are running OpenShift in
+                a VM, but still - be careful which Docker images you run.
+              %p &nbsp;
+              %p
+                <strong>NOTE:</strong> As this is based off the Origin project and not the commercial
+                OpenShift Enterprise product, support is limited to community effort.
+
+      %section.opacy_bg_01.paddings.container.info_title#downloads
+        .info_vertical
+          %i.fa.fa-bullhorn.right
+          .row.wow.text-center.fadeInUp
+            %h1
+              Downloads
+        .row.wow.info_vertical.animated.fadeInDown
+          .col-md-12.text-left
+            %p Origin files:
+            %ul
+              %li <a href="https://www.vagrantup.com/downloads.html">Vagrant</a> (may also be offered in your distro) - We have tested with 1.7.2
+              %li <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> (again, may be offered in your distro) - We have tested with 4.3.30. We would love to get feedback on newer versions.
+              %li <a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxNzlQQUNMTm1VajQ">Vagrant Box File 1.0.6</a>, about 6.5GB
+              %li <a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxLUJQLUJmYllFRFk">Vagrantfile</a> - You will do 'vagrant up' in the same directory as this file
+            %p Client tools:
+            %ul
+              %li <a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxSzZVd2hiWGt4NFk">Windows 64-bit OpenShift Client tools</a>
+              %li <a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxdEdZZ0E1VDZXbWM">Mac 64-bit OpenShift Client tools</a>
+              %li <a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxT05wM09GNWY2clU">Linux 64-bit OpenShift Client tools</a>
+            %p Docs:
+            %ul
+              %li <a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxNFZkQ3VLaW9kams">Intro. documentation</a>
+
+      %section.container.info_title#feedback
+        .vertical_line
+          .circle_bottom
+        %i.fa.fa-check-circle-o.right
+        .row.wow.info_vertical.animated.fadeInUp
+          %h1 Feedback
+        .row.wow.info_vertical.animated.fadeInDown
+          .col-md-12.text-left
+            %p Please send any and all feedback to <a href="mailto:thesteve0@redhat.com">TheSteve0</a>, but please note this is not an "officially supported" product.
+            %p &nbsp;
+            %p You can also come chat about it in <a href="irc://irc.freenode.org/#openshift">IRC at FreeNode, #openshift channel</a> with thesteve0
+
+      /footer              
+      %footer
+        .container
+          .row
+            / Social Section
+            .col-md-6.col-sm-12
+              %a{:href => "https://www.redhat.com/"}
+                %img{:alt => "Red Hat", :src => "https://assets.openshift.net/app/assets/redhat.svg"}/
+            .col-md-6.col-sm-12
+              %ul.social
+                %li.twitter
+                  %a{:href => "https://twitter.com/openshift"}
+                    %span
+                      %i.fa.fa-twitter-square
+                %li.github
+                  %a{:href => "https://github.com/openshift/origin-server"}
+                    %span
+                      %i.fa.fa-github
+                %li.google
+                  %a{:href => "https://plus.google.com/communities/114361859072744017486"} 
+                    %span
+                      %i.fa.fa-google-plus-square
+                %li.facebook
+                  %a{:href => "https://www.facebook.com/openshift"}
+                    %span
+                      %i.fa.fa-facebook-square
+      / End footer
+      / footer
+    / End layout
+
+    / Google Remarekting
+    :plain
+      <script type="text/javascript">
+      /* <![CDATA[ */
+      var google_conversion_id = 1007064360;
+      var google_custom_params = window.google_tag_params;
+      var google_remarketing_only = true;
+      /* ]]> */
+      </script>
+      <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+      </script>
+      <noscript>
+      <div style="display:inline;">
+      <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1007064360/?value=0&amp;guid=ON&amp;script=0"/>
+      </div>
+      </noscript>
+
+    / ======================= JQuery libs ===========================
+    / jQuery local
+    %script{:src => "/js/jquery.js", :type => "text/javascript"}
+    / Nav
+    %script{:src => "/js/nav/tinynav.js", :type => "text/javascript"}
+    %script{:src => "/js/nav/superfish.js", :type => "text/javascript"}
+    %script{:src => "/js/nav/hoverIntent.js", :type => "text/javascript"}
+    / %script{:src => "/js/nav/jquery.sticky.js", :type => "text/javascript"}
+    / Totop
+    %script{:src => "/js/totop/jquery.ui.totop.js", :type => "text/javascript"}
+    / Slide
+    %script{:src => "/js/rs-plugin/js/jquery.themepunch.tools.min.js", :type => "text/javascript"}
+    %script{:src => "/js/rs-plugin/js/jquery.themepunch.revolution.min.js", :type => "text/javascript"}
+    / owl-carousel
+    %script{:src => "/js/carousel/owl.carousel.js", :type => "text/javascript"}
+    / Ligbox
+    %script{:src => "/js/fancybox/jquery.fancybox.pack.js", :type => "text/javascript"}
+    / Gallery Grid
+    %script{:src => "/js/gallery/modernizr.custom.26633.js", :type => "text/javascript"}
+    %script{:src => "/js/gallery/jquery.gridrotator.js", :type => "text/javascript"}
+    / Minislider Team
+    %script{:src => "/js/team/modernizr.custom.63321.js", :type => "text/javascript"}
+    %script{:src => "/js/team/jquery.catslider.js", :type => "text/javascript"}
+    / Filters
+    %script{:src => "/js/filters/jquery.isotope.js", :type => "text/javascript"}
+    / Theme Options
+    %script{:src => "/js/theme-options/theme-options.js", :type => "text/javascript"}
+    %script{:src => "/js/theme-options/jquery.cookies.js", :type => "text/javascript"}
+    / Twitter Feed
+    %script{:src => "/js/twitter/jquery.tweet.js", :type => "text/javascript"}
+    / WOW-master
+    %script{:src => "/js/animations/wow.min.js", :type => "text/javascript"}
+    / Parallax
+    %script{:src => "/js/parallax/jquery.inview.js", :type => "text/javascript"}
+    %script{:src => "/js/parallax/nbw-parallax.js", :type => "text/javascript"}
+    / Bootstrap./js
+    %script{:src => "/js/bootstrap/bootstrap.js", :type => "text/javascript"}
+    / fUNCTIONS
+    %script{:src => "/js/main.js", :type => "text/javascript"}
+    / ======================= End JQuery libs ===========================
