@@ -95,11 +95,6 @@
                 more containers concurrently in your instance.
               %p &nbsp;
               %p
-                The reason our Vagrant box is so large is because we have pre-cached several Docker
-                images on the VM. You should be able to deploy those pre-cached images (such as
-                fedora/apache) without an internet connection.
-              %p &nbsp;
-              %p
                 <strong>WARNING:</strong> We wanted to allow developers to use any Docker image they
                 want, which required us turning off some security in OpenShift. By default, OpenShift
                 will not allow a container to run as root or even a non-random platform assigned userid.
@@ -125,7 +120,7 @@
             %ul
               %li <a href="https://www.vagrantup.com/downloads.html">Vagrant</a> (may also be offered in your distro) - We have tested with 1.7.2, 1.7.4
               %li <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> (again, may be offered in your distro) - We have tested with 4.3.30, 5.0.4. We would love to get feedback on newer versions.
-              %li <a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxNzlQQUNMTm1VajQ">Vagrant Box File 1.0.6</a>, about 6.5GB
+              %li <a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxNzlQQUNMTm1VajQ">Vagrant Box File 1.0.6</a>, about 2.1GB
               %li <a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxLUJQLUJmYllFRFk">Vagrantfile</a> - You will do 'vagrant up' in the same directory as this file
             %p Client tools:
             %ul
