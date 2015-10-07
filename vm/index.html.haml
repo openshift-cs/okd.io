@@ -72,7 +72,7 @@
           .row.wow.info_vertical.animated.fadeInDown
             .col-md-12.text-left
               %p
-                Welcome to the all in one VM for
+                Welcome to the all-in-one VM for
                 <a href="https://github.com/openshift/origin">OpenShift Origin</a>
                 , the FOSS PaaS from Red Hat. On this page you will find links to download:
               %p &nbsp;
@@ -89,11 +89,10 @@
                 running somewhere off the machine.
               %p &nbsp;
               %p
-                The intent of this image is to give application developers and sysadmins a quick way
-                to get started with OpenShift Origin. The OpenShift Master, Node, Docker Registry, and
-                other pieces are running in one VM. Given it's focus on application developers, it
-                should NOT be used in production. While the Vagrantfile only specifies 2 gigs of RAM,
-                you can increase this if you want to run more containers concurrently in your instance.
+                The OpenShift Master, Node, Docker Registry, and other pieces are running in one VM. Given 
+                it's focus on application developers, it should NOT be used in production. While the Vagrantfile 
+                only specifies 2 gigs of RAM, you can edit the file to increase this setting if you want to run 
+                more containers concurrently in your instance.
               %p &nbsp;
               %p
                 The reason our Vagrant box is so large is because we have pre-cached several Docker
@@ -124,8 +123,8 @@
           .col-md-12.text-left
             %p Origin files:
             %ul
-              %li <a href="https://www.vagrantup.com/downloads.html">Vagrant</a> (may also be offered in your distro) - We have tested with 1.7.2
-              %li <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> (again, may be offered in your distro) - We have tested with 4.3.30. We would love to get feedback on newer versions.
+              %li <a href="https://www.vagrantup.com/downloads.html">Vagrant</a> (may also be offered in your distro) - We have tested with 1.7.2, 1.7.4
+              %li <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> (again, may be offered in your distro) - We have tested with 4.3.30, 5.0.4. We would love to get feedback on newer versions.
               %li <a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxNzlQQUNMTm1VajQ">Vagrant Box File 1.0.6</a>, about 6.5GB
               %li <a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxLUJQLUJmYllFRFk">Vagrantfile</a> - You will do 'vagrant up' in the same directory as this file
             %p Client tools:
