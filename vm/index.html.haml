@@ -107,6 +107,15 @@
               %p
                 <strong>NOTE:</strong> As this is based off the Origin project and not the commercial
                 OpenShift Enterprise product, support is limited to community effort.
+              %p &nbsp;
+              %p
+                To remove a previous installation please do the following commands:
+                %ol
+                  %li Change to the directory with your Vagrantfile
+                  %li $ vagrant destroy
+                  %li $ vagrant box remove --force openshift3 {or openshift3-bootstrap}
+                  %li Fire up VirtualBox to make sure the VM is really deleted. If not then delete it and all the files
+                  %li Follow the normal installation instructions
 
       %section.opacy_bg_01.paddings.container.info_title#downloads
         .info_vertical
@@ -120,13 +129,13 @@
             %ul
               %li <a href="https://www.vagrantup.com/downloads.html">Vagrant</a> (may also be offered in your distro) - We have tested with 1.7.2, 1.7.4
               %li <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> (again, may be offered in your distro) - We have tested with 4.3.30, 5.0.4. We would love to get feedback on newer versions.
-              %li <a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxT2pzY2ZUZXFLN0U">Vagrant Box File 1.0.7</a>, about 2.2GB
+              %li <a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxQmNWQ3hKd3haTFE">Vagrant Box File 1.1.0</a>, about 2.8GB
               %li <a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxLUJQLUJmYllFRFk">Vagrantfile</a> - You will do 'vagrant up' in the same directory as this file
             %p Client tools:
             %ul
-              %li <a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxMXhhU2tKajczZWs">Windows 64-bit OpenShift Client tools</a>
-              %li <a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxYmRPLW43Q09lbnM">Mac 64-bit OpenShift Client tools</a>
-              %li <a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxSm82Q3pLeXJSNzQ">Linux 64-bit OpenShift Client tools</a>
+              %li <a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxcHo4c3VfZEhUWmM">Windows 64-bit OpenShift Client tools</a>
+              %li <a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxWkRwZzdScmJBVVE">Mac 64-bit OpenShift Client tools</a>
+              %li <a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxZ1gxZjF1WXFzQ1E">Linux 64-bit OpenShift Client tools</a>
             %p Docs:
             %ul
               %li <a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxNFZkQ3VLaW9kams">All-in-One VM setup notes</a>
