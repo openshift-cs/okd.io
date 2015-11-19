@@ -111,10 +111,10 @@
               %p
                 To remove a previous installation please do the following commands:
                 %ol
+                  %li Change to the directory with your Vagrantfile
+                  %li vagrant destroy
                   %li $ vagrant box remove --force openshift3 {or openshift3-bootstrap}
                   %li Fire up VirtualBox to make sure the VM is really deleted. If not then delete it and all the files
-                  %li Change to the directory with your Vagrantfile
-                  %li Delete the .vagrant directory in this directory
                   %li Follow the normal installation instructions
 
       %section.opacy_bg_01.paddings.container.info_title#downloads
