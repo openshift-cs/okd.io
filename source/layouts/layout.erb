@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title><%= current_page.data.title || "OpenShift Origin" %></title>
+  <title><%= current_page.data.title || settings.site_title %></title>
   <meta name="description" content="The next generation open source app hosting platform by Red Hat">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="9jyGvNki3NSELTYJ7t_XbF-YQZ8jjfm7LqQQGNq4SSg">
@@ -10,7 +10,7 @@
   <%= stylesheet_link_tag "style.css", :media => "screen, print" %>
   <%= stylesheet_link_tag "theme-responsive.css", :media => "screen" %>
   <%= stylesheet_link_tag "custom.css", :media => "screen" %>
-  <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700", :media => "screen" %>
+  <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700", :media => "screen" %>
   <%= favicon_tag "/img/icons/apple-touch-icon.png", :rel => "apple-touch-icon-precomposed" %>
   <%= favicon_tag "/img/icons/favicon.png" %>
   <!--[if IE]>
@@ -25,7 +25,7 @@
   <body>
     <div class="layout-wide" id="layout">
       <header class="index_static">
-        <%= partial "layouts/navbar" %>
+        <%= content_for?(:navbar) ? yield_content(:navbar) : (partial "layouts/navbar") %>
         <section class="content_info">
           <div class="bg_parallax image_03_parallax"></div>
           <section class="opacy_bg_02 paddings">
@@ -48,6 +48,8 @@
       <!-- main content -->
       <%= yield %>
       <!-- end main content -->
+      
+      <%= partial "layouts/footer" %>
     </div>
 
     <%= javascript_include_tag "jquery.js" %>
