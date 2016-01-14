@@ -90,5 +90,14 @@
     <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1007064360/?value=0&amp;guid=ON&amp;script=0"/>
     </div>
     </noscript>
+    <!-- Track tagged outbound Links -->
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('.analytics').click(function(e){
+        e.preventDefault();
+        trackOutboundLink($(this).attr('href'));
+      });
+    });
+    </script>
   </body>
 </html>

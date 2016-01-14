@@ -5,4 +5,11 @@
   ga('create', 'UA-40375612-1', 'openshift.org');
   ga('set', 'forceSSL', true);
   ga('send', 'pageview');
+  
+  var trackOutboundLink = function(url) {
+     ga('send', 'event', 'outbound', 'click', url, {
+       'transport': 'beacon',
+       'hitCallback': function(){document.location = url;}
+     });
+  }
 </script>
