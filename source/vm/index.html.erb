@@ -4,7 +4,7 @@ title: All-In-One Virtual Machine for OpenShift Origin
 
 <% content_for :header do %>
 <h1 class="animated fadeInDown delay">
-  All-In-One Virtual Machine
+  All-In-One Virtual Machine (Version 1.1.2)
 </h1>
 <p class="animated fadeInUp delay">Get Origin Up and Running From the Comfort of Your Own Laptop</p>
 <% end %>
@@ -65,7 +65,7 @@ title: All-In-One Virtual Machine for OpenShift Origin
         <p>
           <strong>WARNING:</strong> We wanted to allow developers to use any Docker image they
           want, which required us turning off some security in OpenShift. By default, OpenShift
-          will not allow a container to run as root or even a non-random platform assigned userid.
+          will not allow a container to run as root or even a non-random container assigned userid.
           Most Docker images in the Dockerhub do not follow this best practice and instead run
           as root. As a double negative, a large majority of Dockerhub images are not patched
           for well known vulnerabilities. Therefore, please use images from Dockerhub with
@@ -78,11 +78,39 @@ title: All-In-One Virtual Machine for OpenShift Origin
           OpenShift Enterprise product, support is limited to community effort.
         </p>
         <p>&nbsp;</p>
+        <p><strong>Install instructions</strong><br />
+          After you have installed Vagrant and VirtualBox, please: <br />
+          <strong>Easiest instructions</strong>
+          <ol>
+            <li>Go to an empty directory</li>
+            <li>In the directory, at the command line, run <pre>$ vagrant init thesteve0/openshift-origin</pre></li>
+            <li><em>Optional</em> You can edit the generated Vagrantfile to give your machine more resources</li>
+            <li>Then run <pre>$ vagrant up</pre></li>
+          </ol>
+          <strong>A bit more involved</strong>
+          <ol>
+            <li>Download the Vagrantfile linked below and place it where you want Vagrant to "run"</li>
+            <li>In the directory, at the command line, run <pre>$ vagrant up</pre></li>
+          </ol>
+          The Vagrantfile has the address in <a href="https://atlas.hashicorp.com/thesteve0/boxes/openshift-origin">Atlas 
+          for the Origin box</a> and will download the box for you. 
+
+        </p>
+        <p>&nbsp;</p>
         <p>
+          <strong> Updating previous versions</strong> <br />
+          <ol>
+            <li>Go to the directory where you previously ran <pre>$ vagrant up</pre></li>
+            <li>Run the following command <pre>$ vagrant box update --box thesteve0/openshift-origin</pre></li>
+          </ol>
+        <p>&nbsp;</p>
+        <p>
+          <strong> Uninstall</strong> <br />
           To remove a previous installation please do the following commands:
           <ol>
             <li>Change to the directory with your Vagrantfile</li>
-            <li>$ vagrant destroy</li>
+            <li>$ vagrant halt</li>
+            <li>$ vagrant destroy --force</li>
             <li>$ vagrant box remove --force openshift3 {or openshift3-bootstrap}</li>
             <li>Fire up VirtualBox to make sure the VM is really deleted. If not then delete it and all the files</li>
             <li>Follow the normal installation instructions</li>
@@ -94,31 +122,32 @@ title: All-In-One Virtual Machine for OpenShift Origin
 </section>
 <section class="opacy_bg_01 paddings container info_title" id="downloads">
   <div class="info_vertical">
-    <i class="fa fa-bullhorn right"></i>
     <div class="row wow text-center fadeInUp">
       <h1>
         Downloads
       </h1>
     </div>
   </div>
-  <div class="row wow info_vertical animated fadeInDown">
+  <div class="container info_title" id="downloads">
     <div class="col-md-12 text-left">
-      <p>Origin files:</p>
+      <p><strong>Required files:</strong></p>
       <ul>
         <li><a href="https://www.vagrantup.com/downloads.html">Vagrant</a> (may also be offered in your distro) - We have tested with 1.7.2, 1.7.4</li>
         <li><a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> (again, may be offered in your distro) - We have tested with 4.3.30, 5.0.4. We would love to get feedback on newer versions.</li>
-        <li><a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxQmNWQ3hKd3haTFE" class="analytics">Vagrant Box File 1.1.0</a>, about 2.8GB</li>
-        <li><a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxLUJQLUJmYllFRFk" class="analytics">Vagrantfile</a> - You will do 'vagrant up' in the same directory as this file</li>
       </ul>
-      <p>Client tools:</p>
-      <ul>
-        <li><a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxcHo4c3VfZEhUWmM" class="analytics">Windows 64-bit OpenShift Client tools</a></li>
-        <li><a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxWkRwZzdScmJBVVE" class="analytics">Mac 64-bit OpenShift Client tools</a></li>
-        <li><a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxZ1gxZjF1WXFzQ1E" class="analytics">Linux 64-bit OpenShift Client tools</a></li>
+      <p>If you want to download the Vagrantfile separately here is a link for it.</p>
+        <li><a href="./Vagrantfile" class="analytics">Vagrantfile</a> right click and save but be sure to remove the .txt ending. You will do 'vagrant up' in the same directory as this file</li>
       </ul>
-      <p>Docs:</p>
+      <p>&nbsp</p>
+      <p><strong>Client tools:</strong></p>
       <ul>
-        <li><a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxNFZkQ3VLaW9kams" class="analytics">All-in-One VM setup notes</a></li>
+        <li><a href="https://github.com/openshift/origin/releases/download/v1.1.2/openshift-origin-client-tools-v1.1.2-2711160-windows.zip" class="analytics">Windows 64-bit OpenShift Client tools</a></li>
+        <li><a href="https://github.com/openshift/origin/releases/download/v1.1.2/openshift-origin-client-tools-v1.1.2-2711160-mac.zip" class="analytics">Mac 64-bit OpenShift Client tools</a></li>
+        <li><a href="https://github.com/openshift/origin/releases/download/v1.1.2/openshift-origin-client-tools-v1.1.2-2711160-linux-64bit.tar.gz" class="analytics">Linux 64-bit OpenShift Client tools</a></li>
+      </ul>
+      <p><strong>Docs:</strong></p>
+      <ul>
+        <li><a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxNFZkQ3VLaW9kams" class="analytics">All-in-One VM setup notes - VERY out of date but somewhat applicable (no need for browser plugins></a></li>
       </ul>
     </div>
   </div>
