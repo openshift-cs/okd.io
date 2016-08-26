@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/openshift/openshift.org.svg?branch=master)](https://travis-ci.org/openshift/openshift.org)
 
-This repo contains the sources for the [OpenShift.org](https://openshift.org/).
+This repo contains the sources for the [OpenShift.org](https://www.openshift.org/).
 
 ## Development
 
