@@ -8,13 +8,34 @@ title: Setup instructions for All-In-One VM that matches Online
 </h1>
 <% end %>
 
+<% content_for :navbar do %>
+<div class="nav_logo animated fadeIn">
+  <div class="container">
+    <div class="row">
+      <nav class="col-md-12">
+        <ul class="sf-menu" id="menu">
+          <li>
+            <a href="#about">ABOUT</a>
+          </li>
+          <li>
+            <a href="#downloads">DOWNLOADS</a>
+          </li>
+          <li>
+            <a href="#feedback">FEEDBACK</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+<% end %>
 
 <section class="container" id="about">
   <div class="info_title info_vertical">
     <div class="row wow info_vertical animated fadeInDown">
       <div class="col-md-12 text-left">
         <p>
-          These notes assume you have read or understand the <a href="index.thml"> notes for the all-in-one VM. The only purpose of this page is to give setup instructions for origin 1.2 (which "matches" 3.2 running in OpenShift Online). Remember this is origin while Online is running OpenShift Container Platform so there might be differences.
+          These notes assume you have read or understand the <%= link_to "notes for the all-in-one VM", "/vm/index.html" %>. The only purpose of this page is to give setup instructions for origin 1.2 (which "matches" 3.2 running in OpenShift Online). Remember this is origin while Online is running OpenShift Container Platform so there might be differences.
         </p>
         <p>&nbsp;</p>
         <p><strong>Install instructions</strong><br />
@@ -43,9 +64,9 @@ title: Setup instructions for All-In-One VM that matches Online
           To remove a previous installation please do the following commands:
           <ol>
             <li>Change to the directory with your Vagrantfile</li>
-            <li>$ vagrant halt</li>
-            <li>$ vagrant destroy --force</li>
-            <li>$ vagrant box remove --force openshift3 {or openshift3-bootstrap}</li>
+            <li><pre>$ vagrant halt</pre></li>
+            <li><pre>$ vagrant destroy --force</pre></li>
+            <li><pre>$ vagrant box remove --force openshift3</pre> or <pre>$ vagrant box remove --force openshift3-bootstrap</pre></li>
             <li>Fire up VirtualBox to make sure the VM is really deleted. If not then delete it and all the files</li>
             <li>Follow the normal installation instructions</li>
           </ol>
