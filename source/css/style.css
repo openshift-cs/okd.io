@@ -1859,3 +1859,29 @@ aside .search .btn{
 	display: block;
 	font-size: 16px;
 }
+
+.code {
+    background: #122637;
+    color: #fff;
+    font-size: 20pt;
+}
+
+#get-started {
+    display: inline-block;
+    vertical-align: center;
+    background: #ee2d31;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    padding: 15px 19px;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+#get-started:hover {
+	opacity:0.8;
+}
