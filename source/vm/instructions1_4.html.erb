@@ -1,0 +1,188 @@
+---
+title: All-In-One Vagrant Virtual Machine for OpenShift Origin
+---
+
+<% content_for :header do %>
+<h1 class="animated fadeInDown delay">
+  All-In-One Virtual Machine
+</h1>
+<p class="animated fadeInUp delay">Get Origin Up and Running From the Comfort of Your Own Laptop</p>
+<% end %>
+
+<% content_for :navbar do %>
+<div class="nav_logo animated fadeIn">
+  <div class="container">
+    <div class="row">
+      <nav class="col-md-12">
+        <ul class="sf-menu" id="menu">
+          <li>
+            <a href="#about">ABOUT</a>
+          </li>
+          <li>
+            <a href="#downloads">DOWNLOADS</a>
+          </li>
+          <li>
+            <a href="#feedback">FEEDBACK</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+<% end %>
+
+<section class="container" id="about">
+  <div class="info_title info_vertical">
+    <div class="row wow info_vertical animated fadeInDown">
+      <div class="col-md-12 text-left">
+        <p>
+          Welcome to the all-in-one VM for
+          <a href="https://github.com/openshift/origin">OpenShift Origin</a>
+          , the FOSS PaaS from Red Hat. On this page you will find links to download:
+        </p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>A Vagrant VirtualBox VM</li>
+          <li>OpenShift client tools (oc) that match the release</li>
+          <li>A document to help you run through some of the basic steps to exercise this image</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>
+          This image is based off of OpenShift Origin and is a fully functioning OpenShift
+          instance with an integrated Docker registry. The intent of this project is to allow
+          Web developers and other interested parties to run OpenShift V3 on their own computer.
+          Given the way it is configured, the VM will appear to your local machine as if it was
+          running somewhere off the machine.
+        </p>
+
+        <p>
+          If you are looking for an image that matches the current version of OpenShift Online please go
+          to the <a href="instructions1_3.html">instructions</a> for the 1.3 origin image.
+        </p>
+        <p>  This VM is built using the tools and scripts found in this <a href="https://github.com/openshift-evangelists/vagrant-origin">Github repository</a>. This
+          VM is built by the OpenShift Evangelists so they can:
+          <ol>
+            <li>
+              Have a method to try out developer builds before they are released
+            </li>
+            <li>
+              Track the latest version of Origin
+            </li>
+            <li>
+              Provide a VM Evangelists or others can use for Workshop and demos, emphasizing ease of use for the user and the least dependencies
+            </li>
+            <li>
+              As a means to carry out local development for projects that will eventually be deployed to an OpenShift cluster
+            </li>
+          </ol>
+        </p>
+        <p>
+          There are other free means to get OpenShift installed on your development machine:
+          <ol>
+            <li>
+              If you want to get OpenShift Container Platform on RHEL - which means only released products rather than upstream software, you should use the <a href="http://developers.redhat.com/products/cdk/overview/">Red Hat Container Development Kit </a> (CDK). This is a maintained product with a large development team behind it.
+            </li>
+            <li>
+              If you don't installing OpenShift into your local Docker engine, we highly reccomend "oc cluster up". The basic idea is you download the client tools from down below and then execute the command "oc cluster up". The command then proceeds to download all the Container Images required to run OpenShift and sets them up on your local machine. For more information you can do "oc cluster up -h"
+        </p>
+        <p>&nbsp;</p>
+        <p>
+          The OpenShift Master, Node, Docker Registry, Metrics, Cockpit, and other pieces are running in one VM. Given it's focus on application developers, it should NOT be used in production. While the Vagrantfile
+          only specifies 4 gigs of RAM, you can edit the file to increase or decrease this setting depending on how many containers you want to run in your instance.
+        </p>
+        <p>&nbsp;</p>
+        <p>
+          <strong>WARNING:</strong> We wanted to allow developers to use any Docker image they
+          want, which required us turning off some security in OpenShift. By default, OpenShift
+          will not allow a container to run as root or even a non-random container assigned userid.
+          Most Docker images in the Dockerhub do not follow this best practice and instead run
+          as root. As a double negative, a large majority of Dockerhub images are not patched
+          for well known vulnerabilities. Therefore, please use images from Dockerhub with
+          caution. We think some of the risk is mitigated because you are running OpenShift in
+          a VM, but still - be careful which Docker images you run.
+        </p>
+        <p>&nbsp;</p>
+        <p>
+          <strong>NOTE:</strong> As this is based off the Origin project and not the commercial
+          OpenShift Enterprise product, support is limited to community effort.
+        </p>
+        <p>&nbsp;</p>
+        <p><strong>Install instructions</strong><br />
+          After you have installed Vagrant and VirtualBox, please: <br />
+          <strong>Easiest instructions</strong>
+          <ol>
+            <li>Go to an empty directory</li>
+            <li>In the directory, at the command line, run <pre>$ vagrant init openshift/origin-all-in-one</pre></li>
+            <li><em>Optional</em> You can edit the generated Vagrantfile to give your machine more resources</li>
+            <li>Then run <pre>$ vagrant up --provider=virtualbox</pre></li>
+          </ol>
+        <p>&nbsp;</p>
+        <p>
+          <strong> Updating previous versions</strong> <br />
+          <ol>
+            <li>Go to the directory where you previously ran <pre>$ vagrant up</pre></li>
+            <li>Run the following command <pre>$ vagrant box update --box openshift/origin-all-in-one</pre></li>
+            <li>You need to destroy and create the environment again</li>
+            <li><pre>$ vagrant destroy --force </pre></li>
+            <li><pre>$ vagrant up --provider=virtualbox </pre></li>
+          </ol>
+        <p>&nbsp;</p>
+        <p>
+          <strong> Uninstall</strong> <br />
+          To remove a previous installation please do the following commands:
+          <ol>
+            <li>Change to the directory with your Vagrantfile</li>
+            <li>$ vagrant halt</li>
+            <li>$ vagrant destroy --force</li>
+            <li>$ vagrant box remove --force openshift/origin-all-in-one</li>
+            <li>Follow the normal installation instructions if you want to re-install</li>
+          </ol>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="opacy_bg_01 paddings container info_title" id="downloads">
+  <div class="info_vertical">
+    <div class="row wow text-center">
+      <h1>
+        Downloads
+      </h1>
+    </div>
+  </div>
+  <div class="container info_title" id="files">
+    <div class="col-md-12 text-left">
+      <p><strong>Required files:</strong></p>
+      <ul>
+        <li><a href="https://www.vagrantup.com/downloads.html">Vagrant</a> (may also be offered in your distro) - We have tested with 1.7.2, 1.7.4. Right now we are seeing a BAD SSH bug with 1.8.5, please get <a href="https://releases.hashicorp.com/vagrant/1.8.4/"> Vagrant 1.8.4</a></li>
+        <li><a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> (again, may be offered in your distro) - We have tested with 4.3.30, 5.0.4. Do NOT get 5.1.x as that does NOT work with Vagrant yet. We would love to get feedback on newer versions.</li>
+      </ul>
+      <p>&nbsp</p>
+      <p><strong>Client tools (scroll down after clicking the link to get the client downloads):</strong></p>
+      <ul>
+        <li><a href="https://github.com/openshift/origin/releases/tag/v1.3.0" class="analytics">1.3 release</a></li>
+      </ul>
+<!--      <p><strong>Docs:</strong></p>
+      <ul>
+        <li><a href="https://drive.google.com/uc?export=download&id=0Bzan56EkcOsxNFZkQ3VLaW9kams" class="analytics">All-in-One VM setup notes - VERY out of date but somewhat applicable (no need for browser plugins></a></li>
+      </ul>
+-->
+    </div>
+  </div>
+</section>
+<section class="container info_title" id="feedback">
+  <div class="vertical_line">
+    <div class="circle_bottom"></div>
+  </div>
+  <i class="fa fa-check-circle-o right"></i>
+  <div class="row wow info_vertical animated fadeInUp">
+    <h1>Feedback</h1>
+  </div>
+  <div class="row wow info_vertical animated fadeInDown">
+    <div class="col-md-12 text-left">
+      <p>Please send any and all feedback to <a href="mailto:thesteve0@redhat.com">TheSteve0</a>, but please note this is not an "officially supported" product.</p>
+      <p>&nbsp;</p>
+      <p>You can also come chat about it in <a href="irc://irc.freenode.org/#openshift">IRC at FreeNode, #openshift channel</a> with thesteve0 or jmorales</p>
+    </div>
+  </div>
+</section>
