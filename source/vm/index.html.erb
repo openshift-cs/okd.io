@@ -48,7 +48,7 @@ title: Running OpenShift Origin in a Virtual Machine
         <p>Please follow <a href="https://github.com/minishift/minishift/blob/master/README.md#installation" target="_blank">the instructions</a> for installing Minishift. Be aware that Minishift is currently in <strong>Beta</strong> and will be changing rapidly. The Minishift maintainers also appreciate GitHub Issues when you find problems.</p>
         <p>We, the OpenShift Evangelists, also have some suggestions that we have found helpful:
           <ul>
-            <li>When you start Minishift for the first time, a configuration file for the VM is placed in a .minishift directory in your home directory. This configuration will be used to create characteristics of the VM, such as memory or CPUs, that lasts until you do <pre>minishift destroy</pre>
+            <li>When you start Minishift for the first time, a configuration file for the VM is placed in a .minishift directory in your home directory. This configuration will be used to create characteristics of the VM, such as memory or CPUs, that lasts until you do <pre>minishift delete</pre>
             We recommend the first time you run Minishift, you pass in the memory and CPUs you want to give to the VM. For example<br>
             <pre>minishift start --memory 12048 --cpus 3</pre>
             starts a VM with ~12 gigs of RAM and 3 vCPUs. The full list of flags are <a href="https://github.com/minishift/minishift/blob/master/docs/minishift_start.md" target="_blank">described here</a></li>
