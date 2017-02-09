@@ -1,0 +1,123 @@
+---
+title: Minishift - Containerized OpenShift Cluster
+---
+
+<% content_for :header do %>
+<h1 class="animated fadeInDown delay">
+  Minishift
+</h1>
+<p class="animated fadeInUp delay">Develop Applications Locally in a Containerized OpenShift Cluster</p>
+<% end %>
+
+<% content_for :navbar do %>
+<div class="nav_logo animated fadeIn">
+  <div class="container">
+    <div class="row">
+      <nav class="col-md-12">
+        <ul class="sf-menu" id="menu">
+          <li>
+            <a href="#about">ABOUT</a>
+          </li>
+          <li>
+            <a href="#getting-started">GET STARTED</a>
+          </li>
+          <li>
+            <a href="#resources">RESOURCES</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+<% end %>
+
+<section class="container" id="about">
+  <div class="info_title info_vertical">
+    <div class="row wow info_vertical animated fadeInDown">
+      <div class="col-md-12 text-left">
+        <p>
+          Minishift is a tool that helps you run OpenShift locally by launching a single-node
+          OpenShift cluster inside a virtual machine. With Minishift you can try out OpenShift or
+          develop with it, day-to-day, on your local machine.
+        </p>
+        <p>
+          You can run Minishift on Windows, Mac OS, and GNU/Linux operating systems. Minishift
+          uses <a href="https://github.com/docker/machine/tree/master/libmachine">libmachine</a>
+          for provisioning virtual machines, and <a href="https://github.com/openshift/origin">OpenShift Origin</a>
+          for running the cluster.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container" id="getting-started">
+    <div class="vertical_line">
+      <div class="circle_bottom"></div>
+    </div>
+    <div class="row wow info_vertical animated fadeInUp">
+      <h1>Get Started</h1>
+        <div class="col-md-12 text-left">
+          <p>
+          Minishift requires a hypervisor to run the virtual machine containing OpenShift. Depending on your
+          host operating system, you have the choice of the following hypervisors:
+          </p>
+        <p>
+          <ul>
+          <li>OS X: <a href="https://github.com/mist64/xhyve">xhyve</a> (default), <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a>, <a href="https://www.vmware.com/products/fusion">VMWare Fusion</a>
+          </li>
+          <li>GNU/Linux: <a href="https://github.com/minishift/minishift/blob/master/docs/docker-machine-drivers.md">KVM</a> (default), <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a>
+            <!--TODO: After docs are published, change KVM link to doc page link-->
+          </li>
+          <li>Windows: <a href="https://technet.microsoft.com/en-us/library/mt169373.aspx">Hyper-V</a> (default), <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a>
+          </li>
+        </ul>
+        </p>
+        <p>
+          To download the latest <span>Minishift</span> release and view release notes, visit the
+          Minishift <a href="https://github.com/minishift/minishift/releases">releases page</a>.
+        </p>
+        <p>
+          For detailed installation instructions, see the <a href="https://github.com/minishift/minishift/blob/master/README.md#installation">installation document</a>.
+          <!--TODO: When docs are published, changed README link to install page link-->
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container info_title" id="resources">
+  <div class="vertical_line">
+    <div class="circle_bottom"></div>
+  </div>
+  <i class="fa fa-check-circle-o right"></i>
+  <div class="row wow info_vertical animated fadeInUp">
+    <h1>Resources</h1>
+  </div>
+  <div class="padding_bottom">
+    <div class="container wow fadeInUp">
+      <div class="row text-center">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <h2>Download</h2>
+          <p>
+            Get the latest Minishift binaries and view release notes on the Minishift <a href="https://github.com/minishift/minishift/releases">releases page</a>.
+            <!--TODO: Change to doc library link-->
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <h2>Documentation</h2>
+          <p>
+            Want to learn how to use, troubleshoot, and develop Minishift? Check out the available <a href="https://github.com/minishift/minishift/blob/master/README.md#documentation">documentation</a>.
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <h2>Community</h2>
+          <p>
+            Minishift is an open-source project forked from <a href="https://github.com/kubernetes/minikube">Minikube</a>, and we welcome <a href="https://github.com/minishift/minishift#community">contributions</a>!
+            Get in touch with Minishift developers at the #minishift channel on IRC (freenode).
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
