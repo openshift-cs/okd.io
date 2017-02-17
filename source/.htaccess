@@ -504,5 +504,5 @@ AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
 
 # custom permanent redirects
 <IfModule mod_rewrite.c>
-  RewriteRule ^vm/instructions1.*$ /vm/index.html [R=301,L]
+  RewriteRule ^vm/instructions1_[2|3].*$ /vm/instructions1_4.html [R=301,L]
 </IfModule>
