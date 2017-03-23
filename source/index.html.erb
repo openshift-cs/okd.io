@@ -106,12 +106,22 @@ title: OpenShift Origin - Open Source Container Application Platform
   </div>
   <div class="">
     <div class="container wow fadeInUp">
-      <div class="row text-center">
-        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
-        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-          <pre class="code">$ oc cluster up    <a id="get-started" href="https://github.com/openshift/origin/blob/master/docs/cluster_up_down.md" target="_blank">Get Started</a></pre>
+      <div class="row">
+        <div class="col-md-6 col-sm-8 col-centered">
+          <div class="row text-center">
+            <div class="col-md-12">
+              <pre class="code">$ <%= link_to "oc", "/download.html#oc-platforms" %> cluster up</pre>
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col-sm-offset-2 col-sm-4">
+              <a id="get-started" class="code-button" href="https://github.com/openshift/origin/blob/master/docs/cluster_up_down.md" target="_blank">Get&nbsp;Started</a>
+            </div>
+            <div class="col-sm-4">
+              <%= link_to "Download&nbsp;oc", "/download.html#oc-platforms", class: "code-button" %>
+            </div>
+          </div>
         </div>
-        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
       </div>
     </div>
   </div>
@@ -123,23 +133,21 @@ title: OpenShift Origin - Open Source Container Application Platform
   <div class="padding_bottom">
     <div class="container wow fadeInUp">
       <div class="row text-center">
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-          <h2>Run Origin in a Container</h2>
-          <p>
-            Want to get started quickly and easily? Just <a href="https://docs.openshift.org/latest/getting_started/administrators.html#running-in-a-docker-container">run Origin in a Docker container</a> by itself.
-          </p>
-        </div>
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-          <h2>Run the All-In-One VM with&nbsp;Minishift</h2>
-          <p>
-            Try out a fully functioning Origin instance with an integrated Docker registry, running locally on your machine with <%= link_to "Minishift", "/minishift/index.html" %>.
-          </p>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-          <h2>Download the Binary</h2>
-          <p>
-            Red Hat periodically publishes binaries to GitHub, which you can download on the OpenShift Origin <a href="https://github.com/openshift/origin/releases">Releases</a> page.
-          </p>
+        <div class="col-sm-10 col-centered">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <h2>Run Origin in a Container</h2>
+              <p>
+                Want to get started quickly and easily? Just <a href="https://docs.openshift.org/latest/getting_started/administrators.html#running-in-a-docker-container">run Origin in a Docker container</a> by itself.
+              </p>
+            </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <h2>Run the All-In-One VM with&nbsp;Minishift</h2>
+              <p>
+                Try out a fully functioning Origin instance with an integrated Docker registry, running locally on your machine with <%= link_to "Minishift", "/minishift/index.html" %>.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

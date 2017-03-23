@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title><%= current_page.data.title || settings.site_title %></title>
-  <meta name="description" content="The next generation open source app hosting platform by Red Hat">
+  <meta name="description" content="<%= current_page.data.description || "The next generation open source app hosting platform by Red Hat" %>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="9jyGvNki3NSELTYJ7t_XbF-YQZ8jjfm7LqQQGNq4SSg">
   <link class="skin_color" href="#" media="screen" rel="stylesheet">
@@ -74,6 +74,7 @@
     <%= javascript_include_tag "parallax/nbw-parallax.js" %>
     <%= javascript_include_tag "bootstrap/bootstrap.js" %>
     <%= javascript_include_tag "main.js" %>
+    <%= yield_content(:javascript) %>
     
     <!-- Google Remarekting -->
     <script type="text/javascript">
@@ -100,6 +101,6 @@
     });
     </script>
     <!-- Place this tag right after the last button or just before your close body tag. -->
-<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
   </body>
 </html>

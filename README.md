@@ -25,3 +25,5 @@ ssh key set up with the current Openshift app (or be on osdevelopers), and then 
     bundle exec middleman deploy
 
 This makes sure that `middleman build` is also executed and **all the current** changes on the folder will be deployed (including uncommitted ones).
+
+Make sure to populate the `OPENSHIFT_GITHUB_ID` and `OPENSHIFT_GITHUB_SECRET` env variables to ensure authenticated GitHub API usage (and prevent request throttling).

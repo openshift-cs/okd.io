@@ -22,6 +22,7 @@ page "/sitemap.xml", layout: false
 configure :development do
   set :site_url, 'https://org-openshift.c9.io/'
   set :openshift_assets, 'https://assets-openshift.c9.io/content'
+  activate :php
 end
 
 # Build-specific configuration

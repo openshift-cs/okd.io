@@ -1,0 +1,71 @@
+---
+title: Download OpenShift Origin
+description: Download the OpenShift Origin server binaries and command line client tools.
+---
+
+<% content_for :header do %>
+<h1 class="animated fadeInDown delay">
+  Download OpenShift Origin
+</h1>
+<p class="animated fadeInUp delay">Download the latest OpenShift Origin Server and Client Tools Binaries</p>
+<% end %>
+
+<% content_for :navbar do %>
+<div class="nav_logo animated fadeIn">
+</div>
+<% end %>
+
+<% content_for :javascript do %>
+<%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/showdown/1.6.3/showdown.min.js" %>
+<%= javascript_include_tag "download.js" %>
+<% end %>
+
+<section class="paddings" id="downloads">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-centered">
+        <div class="row animated fadeInDown padding_bottom" id="server-platforms">
+          <h2>Download Origin Server</h2>
+          <div class="row instructions"><small>
+            <a href="https://docs.openshift.org/latest/getting_started/administrators.html#downloading-the-binary" target="_blank">Installation Instructions</a>
+          </small></div>
+          <div class="row">
+            <div class="col-md-offset-4 col-md-4 linux-platform"><h4><i class="fa fa-linux left"></i> Linux</h4></div>
+          </div>
+        </div>
+        <div class="row animated fadeInDown padding_bottom" id="oc-platforms">
+          <h2>Download oc Client Tools</h2>
+          <div class="row instructions"><small>
+            <div class="col-sm-5 col-centered">
+              <div class="row">
+                <div class="col-xs-6">
+                  <a href="https://docs.openshift.org/latest/cli_reference/get_started_cli.html" target="_blank">CLI&nbsp;Reference</a>
+                </div>
+                <div class="col-xs-6">
+                  <a href="https://github.com/openshift/origin/blob/master/docs/cluster_up_down.md" target="_blank"><code>oc&nbsp;cluster</code>&nbsp;Reference</a>
+                </div>
+              </div>
+            </div>
+          </small></div>
+          <div class="col-md-4 mac-platform"><h4><i class="fa fa-apple left"></i> Mac OS X</h4></div>
+          <div class="col-md-4 linux-platform"><h4><i class="fa fa-linux left"></i> Linux</h4></div>
+          <div class="col-md-4 windows-platform"><h4><i class="fa fa-windows left"></i> Windows</h4></div>
+        </div>
+        <div class="row" id="more-details">
+          <div class="info-verticle">
+            To see more details, including source code, check out our <%= link_to "<i class='fa fa-github'></i> Releases page", "https://github.com/openshift/origin/releases/latest" %>!
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="opacy_bg_01 paddings" id="release-notes">
+  <div class="container">
+    <div class="row animated fadeInUp">
+      <div class="col-md-10 col-centered release-content">
+      </div>
+    </div>
+  </div>
+</section>

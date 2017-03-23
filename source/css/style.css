@@ -243,6 +243,11 @@ h1, h2, h3, h4, h5, h6 {
 .paddings{
 	padding: 70px 0;
 }
+@media (max-width: 991px) {
+	.paddings{
+		padding: 70px 0 140px;
+	}
+}
 .padding-top{
 	padding-top: 70px;
 }
@@ -868,7 +873,7 @@ header .container{
 	float:left;
 	list-style: none;
 	line-height: 20px;
-	margin:0 40px 0 0;
+	margin:0 40px 15px 0;
 }
 .sf-menu > li:last-child {
 	margin:0;
@@ -1858,24 +1863,4 @@ aside .search .btn{
     background: #122637;
     color: #fff;
     font-size: 20pt;
-}
-
-#get-started {
-    display: inline-block;
-    vertical-align: center;
-    background: #ee2d31;
-    color: #fff;
-    text-align: center;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: normal;
-    padding: 15px 19px;
-    text-decoration: none;
-    transition: all .3s ease-in-out;
-}
-
-#get-started:hover {
-	opacity:0.8;
 }
