@@ -391,9 +391,9 @@ ul.social {
         position: absolute;
     }
     li {
-    padding-top: 12px;
+    padding-top: 10px;
     position: relative;
-    width: 12%;
+    width: 11%;
     float: left;
     label {
         max-width: 200px;
@@ -488,7 +488,7 @@ ul.social {
         opacity: .1;
     }
     #timeline .date {
-        top: -120px;
+        top: -114px;
     }
     ul.social {
         float: right;
@@ -511,7 +511,7 @@ ul.social {
     .nav_logo {
         background-color: transparent;
         top: 0;
-        .commons & { 
+        .commons & {
             background-color: transparent;
         }
     }
