@@ -18,28 +18,26 @@ set :js_dir, 'js'
 ###
 page "/sitemap.xml", layout: false
 
-# Reload the browser automatically whenever files change
+###
+# Extra Helpers
+###
+helpers do
+  def label_to_name(label)
+    label.downcase.gsub(" ","_")
+  end
+end
+
+# Development-specific configuration
 configure :development do
-  set :site_url, 'https://org-openshift.c9.io/'
-  set :openshift_assets, 'https://assets-openshift.c9.io/content'
   activate :php
 end
 
 # Build-specific configuration
 configure :build do
   config.ignored_sitemap_matchers[:source_dotfiles] = proc { |file|
-    file =~ %r{/\.} && file !~ %r{/\.(openshift|htaccess|htpasswd|nojekyll|git)}
+    file =~ %r{/\.} && file !~ %r{/\.(s2i|openshift|htaccess|htpasswd|nojekyll|git)|containers}
   }
 
   activate :minify_css
   activate :minify_javascript
-end
-
-# Deployment configuration
-activate :deploy do |deploy|
-  deploy.method = :git
-  deploy.build_before = false # default: false
-  deploy.remote = 'production' # remote name or git url, default: origin
-  deploy.strategy = :force_push
-  deploy.branch = 'master' # default: gh-pages
 end

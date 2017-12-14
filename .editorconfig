@@ -1,0 +1,16 @@
+# EditorConfig enables consistent styles to be shared across different
+# editors and IDEs. For details, see: http://editorconfig.org/
+
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+charset = utf-8
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+max_line_length = 100  # supported by Emacs, vim
+
+[*.md]
+trim_trailing_whitespace = false

@@ -6,12 +6,10 @@
 
 # Ignore bundler config
 /.bundle
+/bundle
 
 # Ignore the build directory
 /build
-
-# Ignore custom extension
-/middleman-cdn
 
 # Ignore cache
 /.sass-cache

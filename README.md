@@ -1,7 +1,5 @@
 # OpenShift.org
 
-[![Build Status](https://travis-ci.org/openshift/openshift.org.svg?branch=master)](https://travis-ci.org/openshift/openshift.org)
-
 This repo contains the sources for the [OpenShift.org](https://www.openshift.org/).
 
 ## Development
@@ -19,11 +17,6 @@ should be able to preview your changes at http://localhost:4567
 
 ## Deployment
 
-To deploy your changes to http://openshift.org/ you need to have your
-ssh key set up with the current Openshift app (or be on osdevelopers), and then execute:
-
-    bundle exec middleman deploy
-
-This makes sure that `middleman build` is also executed and **all the current** changes on the folder will be deployed (including uncommitted ones).
+To deploy your changes please submit a pull request while following [our contribution guidelines](./CONTRIBUTING.MD)
 
 Make sure to populate the `OPENSHIFT_GITHUB_ID` and `OPENSHIFT_GITHUB_SECRET` env variables to ensure authenticated GitHub API usage (and prevent request throttling).
