@@ -1,10 +1,10 @@
-/*	
-	- Template Name: Jekas - Software,Studio And Corporate Template 
+/*
+	- Template Name: Jekas - Software,Studio And Corporate Template
 	- Autor: Iwthemes
 	- Email: support@iwthemes.com
 	- Name File: main.js
 	- Version 1.5 - Update on 30/08/2014
-	- Website: http://www.iwthemes.com 
+	- Website: http://www.iwthemes.com
 	- Copyright: (C) 2014
 */
 
@@ -39,9 +39,9 @@ $(document).ready(function($) {
 
 	$('nav ul li a').click(function(){
         var el = $(this).attr('href');
-        var elWrapped = $(el);  
+        var elWrapped = $(el);
         scrollToDiv(elWrapped,40);
-        return false;    
+        return false;
     });
 
     function scrollToDiv(element,navheight){
@@ -55,39 +55,39 @@ $(document).ready(function($) {
 
 	//=================================== Totop  ===================================//
 
-	$().UItoTop({ 		
+	$().UItoTop({
 		scrollSpeed:500,
 		easingType:'linear'
-	});	
+	});
 
 	//=================================== Subtmit Form  =================================//
 
-	$('#form').submit(function(event) {  
-	  event.preventDefault();  
-	  var url = $(this).attr('action');  
-	  var datos = $(this).serialize();  
-	  $.get(url, datos, function(resultado) {  
-	    $('#result').html(resultado);  
-	  });  
-	});  
+	$('#form').submit(function(event) {
+	  event.preventDefault();
+	  var url = $(this).attr('action');
+	  var datos = $(this).serialize();
+	  $.get(url, datos, function(resultado) {
+	    $('#result').html(resultado);
+	  });
+	});
 
 	//=================================== Subtmit Form Newslleter ===========================//
 
-	$('#newsletterForm').submit(function(event) {  
-	      event.preventDefault();  
+	$('#newsletterForm').submit(function(event) {
+	      event.preventDefault();
 	      var url = $(this).attr('action');
-	      var datos = $(this).serialize();  
-	       $.get(url, datos, function(resultado) {  
-	        $('#result-newsletter').html(resultado);  
+	      var datos = $(this).serialize();
+	       $.get(url, datos, function(resultado) {
+	        $('#result-newsletter').html(resultado);
 		});
-	}); 
+	});
 
     //=================================== Accordion  =================================//
-	
-	$('.accordion-container').hide(); 
+
+	$('.accordion-container').hide();
 	$('.accordion-trigger:first').addClass('active').next().show();
 	$('.accordion-trigger').click(function(){
-		if( $(this).next().is(':hidden') ) { 
+		if( $(this).next().is(':hidden') ) {
 			$('.accordion-trigger').removeClass('active').next().slideUp();
 			$(this).toggleClass('active').next().slideDown();
 		}
@@ -95,10 +95,10 @@ $(document).ready(function($) {
 	});
 
 	//=================================== Parallax Efect =====================================//
-   
+
   	$('.bg_parallax').parallax("50%", .12);
 
-	//=================================== Ligbox  ===================================//	
+	//=================================== Ligbox  ===================================//
 
 	$("a[class*=ligbox-image]").fancybox({
 		overlayOpacity	:	0.7,
@@ -132,14 +132,14 @@ $(document).ready(function($) {
     		}
     	}
 	});
-	
+
 	//=============================  tooltip demo ===========================================//
 
     $('.tooltip-hover').tooltip({
         selector: "[data-toggle=tooltip]",
         container: "body"
     });
-	
+
 
 	//================================== Grid Gallery ====================================//
 
@@ -355,35 +355,118 @@ $(document).ready(function($) {
 
 	//=================================== Portfolio Filters  ==============================//
 
-		$(window).load(function(){
-	     var $container = $('.portfolioContainer');
-	     $container.isotope({
-	      filter: '*',
-	              animationOptions: {
-	              duration: 750,
-	              easing: 'linear',
-	              queue: false
-	            }
-	     });
-		 
-	    $('.portfolioFilter a').click(function(){
-	      $('.portfolioFilter .current').removeClass('current');
-	      $(this).addClass('current');
-	       var selector = $(this).attr('data-filter');
-	       $container.isotope({
-	        filter: selector,
-	               animationOptions: {
-	               duration: 750,
-	               easing: 'linear',
-	               queue: false
-	             }
-	        });
-	       return false;
-	      }); 
-	});
+	// 	$(window).load(function(){
+	//      var $container = $('.portfolioContainer');
+	//      $container.isotope({
+	//       filter: '*',
+	//               animationOptions: {
+	//               duration: 750,
+	//               easing: 'linear',
+	//               queue: false
+	//             }
+	//      });
+
+	//     $('.portfolioFilter a').click(function(){
+	//       $('.portfolioFilter .current').removeClass('current');
+	//       $(this).addClass('current');
+	//        var selector = $(this).attr('data-filter');
+	//        $container.isotope({
+	//         filter: selector,
+	//                animationOptions: {
+	//                duration: 750,
+	//                easing: 'linear',
+	//                queue: false
+	//              }
+	//         });
+	//        return false;
+	//       });
+	// });
 
 	//================================ Animations Efect ===================================//
-	
+
 	new WOW().init();
 
+  //================================ User Search ================================//
+
+   var $user_list = $('li', 'ul.users');
+   if ($user_list.length > 0) {
+      $('#user-search').keyup(function(e) {
+          var search_string = e.target.value.toLowerCase();
+          if (search_string) {
+     $user_list.each(function(i, el) {
+        var $el = $(el);
+        if ($el.data('username').indexOf(search_string) < 0) {
+      $el.hide();
+        }
+        else {
+      $el.show();
+        }
+     });
+         }
+         else {
+     $user_list.each(function(i, el) {
+        $(el).show();
+     });
+         }
+      });
+       }
+
 });
+
+  //================================ User Search & Filter Isotope ================================//
+
+
+        // quick search regex
+        var qsRegex;
+        var buttonFilter;
+
+        // init Isotope
+        var $grid = $('.grid').isotope({
+        itemSelector: '.grid-item',
+        percentPosition: true,
+        masonry: {
+          columnWidth: '.grid-sizer'
+                  },
+        filter: function() {
+          var $this = $(this);
+          var searchResult = qsRegex ? $this.text().match( qsRegex ) : true;
+          var buttonResult = buttonFilter ? $this.is( buttonFilter ) : true;
+          return searchResult && buttonResult;
+        }
+        });
+
+        $('#filters').on( 'click', 'button', function() {
+        buttonFilter = $( this ).attr('data-filter');
+        $grid.isotope();
+        });
+
+        // use value of search field to filter
+        var $quicksearch = $('#quicksearch').keyup( debounce( function() {
+        qsRegex = new RegExp( $quicksearch.val(), 'gi' );
+        $grid.isotope();
+        }) );
+
+
+        // change is-checked class on buttons
+        $('.button-group').each( function( i, buttonGroup ) {
+        var $buttonGroup = $( buttonGroup );
+        $buttonGroup.on( 'click', 'button', function() {
+          $buttonGroup.find('.is-checked').removeClass('is-checked');
+          $( this ).addClass('is-checked');
+        });
+        });
+
+        // debounce so filtering doesn't happen every millisecond
+        function debounce( fn, threshold ) {
+        var timeout;
+        threshold = threshold || 100;
+        return function debounced() {
+          clearTimeout( timeout );
+          var args = arguments;
+          var _this = this;
+          function delayed() {
+            fn.apply( _this, args );
+          }
+          timeout = setTimeout( delayed, threshold );
+        };
+        }

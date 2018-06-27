@@ -1,0 +1,34 @@
+<div id="user-carousel" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+  <!-- carousel slides -->
+
+  <% users_carousel.shuffle.each_slice(5).with_index do |slice, index| %>
+    <% if index == 0 %>
+    <div class="item active">
+    <% else %>
+    <div class="item">
+    <% end %>
+      <% slice.each do |user| %>
+      <div class="user-logo">
+        <a href="<%= user.link.present? ? user.link : '#users' %>" title="<%= user.name %>">
+          <% if user.logo.presence && user.logo.length > 0 %>
+          <%= image_tag user.logo, :alt => user.name %>
+          <% else %>
+          <%= image_tag '/img/users/default.png', :alt => user.name %><br>
+          <%= user.name %>
+          <% end %>
+        </a>
+      </div>
+      <% end %>
+    </div>
+  <% end %>
+  </div>
+
+  <!-- carousel controls -->
+  <a class="left carousel-control" href="#user-carousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#user-carousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>

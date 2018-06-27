@@ -44,11 +44,11 @@
           </section>
         </section>
       </header>
-      
+
       <!-- main content -->
       <%= yield %>
       <!-- end main content -->
-      
+
       <%= partial "layouts/footer" %>
     </div>
 
@@ -65,7 +65,8 @@
     <%= javascript_include_tag "gallery/jquery.gridrotator.js" %>
     <%= javascript_include_tag "team/modernizr.custom.63321.js" %>
     <%= javascript_include_tag "team/jquery.catslider.js" %>
-    <%= javascript_include_tag "filters/jquery.isotope.js" %>
+    <!-- <%= javascript_include_tag "filters/jquery.isotope.js" %> -->
+    <%= javascript_include_tag "filters/isotope.pkgd.js" %> <!-- Isotope PACKAGED v3.0.6 -->
     <%= javascript_include_tag "theme-options/theme-options.js" %>
     <%= javascript_include_tag "theme-options/jquery.cookies.js" %>
     <%= javascript_include_tag "twitter/jquery.tweet.js" %>
@@ -75,7 +76,7 @@
     <%= javascript_include_tag "bootstrap/bootstrap.js" %>
     <%= javascript_include_tag "main.js" %>
     <%= yield_content(:javascript) %>
-    
+
     <!-- Google Remarekting -->
     <script type="text/javascript">
     /* <![CDATA[ */
