@@ -27,6 +27,9 @@ helpers do
   end
 end
 
+#ignore accelerators page(s)
+ignore 'accelerators/*'
+
 # Development-specific configuration
 configure :development do
   activate :php

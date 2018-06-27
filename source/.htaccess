@@ -504,4 +504,5 @@ AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
   # RewriteRule ^vm/instructions1_[2|3].*$ /vm/instructions1_4.html [R=301,L]
   RewriteRule ^vm/Vagrantfile$ - [L]
   RewriteRule ^vm/?.*$ /minishift/ [R=301,L]
+  RewriteRule ^accelerators/?.*$ / [R=301,L]
 </IfModule>
