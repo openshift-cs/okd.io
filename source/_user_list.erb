@@ -1,0 +1,20 @@
+<div class="grid-item col-lg-4 col-xs-6"><!-- items use Bootstrap .col- classes -->
+  <div class="grid-item-content"><!-- wrap item content in its own element -->
+    <li data-userName="<%= user_list.name.downcase %>">
+      <div class="col-sm-5 logo">
+        <% if user_list.logo.presence && user_list.logo.length > 0 %>
+          <%= image_tag user_list.logo, :alt => user_list.name %>
+          <% else %>
+          <%= image_tag '/img/users/default.png', :alt => user_list.name %><br>
+        <% end %>
+      </div>
+      <div class="col-sm-7 hidden-xs user-name">
+        <% if user_list.link.presence && user_list.link.length > 0 %>
+        <%= link_to user_list.name, user_list.link, target: "_blank" %>
+        <% else %>
+        <%= link_to user_list.name, '', onclick: "return false;" %>
+        <% end %>
+      </div>
+    </li>
+  </div>
+</div>
