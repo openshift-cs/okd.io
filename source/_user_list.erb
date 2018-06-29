@@ -3,7 +3,7 @@
     <li data-userName="<%= user_list.name.downcase %>">
       <div class="col-sm-5 logo">
         <% if user_list.logo.presence && user_list.logo.length > 0 %>
-          <%= image_tag user_list.logo, :alt => user_list.name %>
+          <%= image_tag "/img/users/#{user_list.logo}", :alt => user_list.name %>
           <% else %>
           <%= image_tag '/img/users/OKDPandaInCannon.png', :alt => user_list.name %><br>
         <% end %>

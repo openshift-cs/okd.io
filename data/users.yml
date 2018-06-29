@@ -1,31 +1,23 @@
 users:
-  - name: User0
-    link:"https://wolterskluwer.com/"
-    logo:"users/OKDPandaInCannon.png"
+  - name: Wolters Kluwer
+    link: https://wolterskluwer.com/
   - name: User1
     link:
-    logo:"users/OKDPandaInCannon.png"
+    logo: default.png
   - name: User2
     link:
-    logo:"users/OKDPandaInCannon.png"
   - name: User3
     link:
-    logo:"users/OKDPandaInCannon.png"
   - name: User4
     link:
-    logo:"users/OKDPandaInCannon.png"
   - name: User5
     link:
-    logo:
+    logo: default.png
   - name: User6
     link:
-    logo:"users/OKDPandaInCannon.png"
   - name: User7
     link:
-    logo:"users/OKDPandaInCannon.png"
   - name: User8
     link:
-    logo:"users/OKDPandaInCannon.png"
   - name: User9
     link:
-    logo:"users/OKDPandaInCannon.png"
