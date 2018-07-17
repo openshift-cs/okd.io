@@ -8,10 +8,6 @@ if [ "$(ls /tmp/artifacts/ 2>/dev/null)" ]; then
     mv /tmp/artifacts/* $HOME/.
 fi
 
-# Download and store OpenShift Commons participants yaml data file
-wget https://raw.githubusercontent.com/openshift-cs/commons.openshift.org/master/data/participants.yml
-mv participants.yml data/participants.yml
-
 echo "---> Updating bundler gem..."
 gem install bundler
 
@@ -20,6 +16,10 @@ source ${STI_SCRIPTS_PATH}/assemble
 
 # You can write S2I scripts in any programming language, as long as the
 # scripts are executable inside the builder image.
+
+# Download and store OpenShift Commons participants yaml data file
+wget https://raw.githubusercontent.com/openshift-cs/commons.openshift.org/master/data/participants.yml
+mv participants.yml data/participants.yml
 
 # Build the middleman static site and invalidate CDN cache
 bundle exec middleman build | egrep '^\s*(update|create)' | {
