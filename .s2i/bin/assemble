@@ -8,6 +8,10 @@ if [ "$(ls /tmp/artifacts/ 2>/dev/null)" ]; then
     mv /tmp/artifacts/* $HOME/.
 fi
 
+# Download and store OpenShift Commons participants yaml data file
+wget https://raw.githubusercontent.com/openshift-cs/commons.openshift.org/master/data/participants.yml
+mv participants.yml data/participants.yml
+
 echo "---> Updating bundler gem..."
 gem install bundler
 
