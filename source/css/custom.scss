@@ -613,7 +613,7 @@ a.list-link {
   font-size: 24px;
   line-height: 70px;
   padding: 10px;
-  margin: 2em auto;
+  margin: 20px auto;
   text-align: center;
 
   img {
@@ -622,11 +622,13 @@ a.list-link {
   }
 
   .user-logo {
-    display: inline-block;
+    display: flex;
     width: 140px;
-    height: 60px;
+    height: 140px;
     margin: 5px 20px;
-    line-height: 1.5;
+    flex-direction: column;
+    justify-content: space-around;
+    line-height: 1;
   }
 
   &.carousel.slide {
@@ -635,8 +637,17 @@ a.list-link {
 
   &>.carousel-inner {
     // width: 100%;
-    display: table;
-    margin: 0 auto;
+    //display: table;
+    //margin: 0 auto;
+
+    .item {
+      display: flex;
+      justify-content: center;
+    }
+
+    .item:not(.active) {
+      display: none;
+    }
   }
 
   .carousel-control {
