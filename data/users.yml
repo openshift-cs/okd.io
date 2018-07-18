@@ -1,7 +1,6 @@
 users:
   - name: Wolters Kluwer
     link: https://wolterskluwer.com/
-    logo: default.png
   - name: Duke University
     link: https://www.duke.edu/
     logo: duke.svg
@@ -22,10 +21,7 @@ users:
     logo: getupcloud.png
   - name: McMaster University
     link: https://www.mcmaster.ca/
-    logo: default.png
   - name: User8
-    link: 
-    logo: default.png
+    link:
   - name: User9
     link:
-    logo: default.png
