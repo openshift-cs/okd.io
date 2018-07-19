@@ -103,7 +103,7 @@ a.strong {
 }
 
 .image_03_parallax {
-    background-image: url("../img/parallax/bg_teal-dual-honeycombs.png");
+    background-image: url("../img/parallax/bg_teal-container-honeycomb.png");
     background-repeat: repeat-x;
 }
 /* ------------------------------------------------------------
@@ -152,6 +152,8 @@ License: https://creativecommons.org/licenses/by/2.0/
     }
     p {
         font-size: 27px;
+        text-align: left;
+        margin: 0;
     }
 }
 
