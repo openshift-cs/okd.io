@@ -103,7 +103,7 @@ a.strong {
 }
 
 .image_03_parallax {
-    background-image: url("../img/parallax/twirl-full.jpg");
+    background-image: url("../img/parallax/bg_teal-dual-honeycombs.png");
     background-repeat: repeat-x;
 }
 /* ------------------------------------------------------------
@@ -142,7 +142,7 @@ License: https://creativecommons.org/licenses/by/2.0/
 }
 
 .bg_parallax {
-    background-size: initial;
+    background-size: cover;
     z-index: 2;
 }
 
@@ -151,8 +151,6 @@ License: https://creativecommons.org/licenses/by/2.0/
         padding-top: 10px
     }
     p {
-        text-align: left;
-        margin: 0;
         font-size: 27px;
     }
 }
