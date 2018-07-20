@@ -1,6 +1,7 @@
 users:
   - name: Wolters Kluwer
     link: https://wolterskluwer.com/
+    logo: wk_logo.png
   - name: Duke University
     link: https://www.duke.edu/
     logo: duke.svg
@@ -21,7 +22,8 @@ users:
     logo: getupcloud.png
   - name: McMaster University
     link: https://www.mcmaster.ca/
-  - name: User8
-    link:
-  - name: User9
-    link:
+    logo: mcmaster.png
+  - name: ING
+    link: https://kubernetes.io/case-studies/ing/
+    logo: ing_feature.png
+
