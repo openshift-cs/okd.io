@@ -25,7 +25,7 @@ users:
     logo: mcmaster.png
   - name: ING
     link: https://kubernetes.io/case-studies/ing/
-    logo: ing_feature.png
+    logo: ing.png
   - name: ARRIS
     link: https://www.arris.com/
     logo: arris.png
