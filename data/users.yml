@@ -26,4 +26,9 @@ users:
   - name: ING
     link: https://kubernetes.io/case-studies/ing/
     logo: ing_feature.png
-
+  - name: ARRIS
+    link: https://www.arris.com/
+    logo: arris.png
+  - name: Rackspace
+    link: https://www.rackspace.com/
+    logo: rackspace.png"
