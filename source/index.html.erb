@@ -3,10 +3,8 @@ title: OKD - Enterprise Open Source Kubernetes Distribution
 ---
 
 <% content_for :header do %>
-<h1 class="animated fadeInDown delay" style="font-size: 48px;">
-  The Enterprise Open Source Kubernetes Distribution
-</h1>
-<p class="animated fadeInUp delay">OKD is the upstream community project that powers <a href="https://www.openshift.com" class="headerlink" target="_blank" style="font-weight: 400;">OpenShift</a>. Built around a core of Docker container packaging and Kubernetes container cluster management, OKD is also augmented by application lifecycle management functionality and DevOps tooling. OKD provides a complete open source container application platform.</p>
+<h1 class="animated fadeInDown delay" style="font-size: 48px;"></h1>
+<p class="animated fadeInUp delay">OKD is the upstream community project that powers <a href="https://www.openshift.com" class="headerlink" target="_blank" style="font-weight: 400;">Red Hat OpenShift</a>. Built around a core of Docker container packaging and Kubernetes container cluster management, OKD is also augmented by application lifecycle management functionality and DevOps tooling. OKD provides a complete open source container application platform.</p>
 <% end %>
 
 <div class="info_title wow fadeInDown" id="try">
@@ -121,7 +119,7 @@ title: OKD - Enterprise Open Source Kubernetes Distribution
               <div class="col-md-6 col-xs-12">
                 <p>
                   OKD embeds Kubernetes and extends it with <strong>security</strong> and other integrated concepts. OKD is also referred to as Origin in github and in the documentation. An OKD release corresponds
-                  to the Kubernetes distribution - for example, OKD 1.7 includes Kubernetes 1.7.
+                  to the Kubernetes distribution - for example, OKD 1.7 includes Kubernetes 1.7. If you are looking for enterprise-level support, or information on partner certification, Red Hat also offers Red Hat OpenShift Container Platform.
                 </p>
                 <p>
                   Check the <a href="https://github.com/openshift/origin/blob/master/README.md" target="_blank">README file</a> for more
@@ -204,6 +202,15 @@ title: OKD - Enterprise Open Source Kubernetes Distribution
                 <p>A lightweight container runtime for Kubernetes.</p>
                 <a href="http://cri-o.io/">Learn more</a>
               </div>
+          <div class="col-sm-4">
+            <div class="technology-section">
+              <div class="head-tech">
+                <%= image_tag 'prometheus.png', {:alt => 'Prometheus logo', :class => 'logo_tech'} %>
+              </div>
+              <div class="caption-tech">
+                <p>Prometheus is a systems and service monitoring system that collects metrics from configured targets at given intervals, evaluates rule expressions, displays the results, and can trigger alerts if some condition is observed to be true.</p>
+                <a href="https://prometheus.io/">Learn more</a>
+              </div>
             </div>
           </div>
         </div>
@@ -277,10 +284,16 @@ title: OKD - Enterprise Open Source Kubernetes Distribution
                   <a href="https://github.com/docker/docker">Docker</a>
                 </li>
                 <li>
-                  <a href="https://github.com/projectatomic/">CoreOS</a>
+                  <a href="https://coreos.com/os/docs/latest/">CoreOS</a>
                 </li>
                 <li>
-                  <a href="https://github.com/projectatomic/">Operator Framework</a>
+                  <a href="https://github.com/operator-framework">Operator Framework</a>
+                </li>
+                <li>
+                  <a href="http://cri-o.io/">Cri-O</a>
+                </li>
+                 <li>
+                  <a href="https://github.com/prometheus/prometheus">Prometheus</a>
                 </li>
               </ul>
             </li>
