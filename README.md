@@ -1,6 +1,6 @@
-# OpenShift.org
+# OKD.io
 
-This repo contains the sources for the [OpenShift.org](https://www.openshift.org/).
+This repo contains the sources for the [OKD.io](https://www.okd.io/).
 
 ## Development
 
