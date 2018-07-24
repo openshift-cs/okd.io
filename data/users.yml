@@ -32,3 +32,6 @@ users:
   - name: Rackspace
     link: https://www.rackspace.com/
     logo: rackspace.png
+  - name: Datto
+    link: https://www.datto.com/
+    logo: datto.png
