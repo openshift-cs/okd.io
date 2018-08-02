@@ -1,12 +1,12 @@
 ---
-title: Running OpenShift Origin in a Virtual Machine
+title: Running OKD in a Virtual Machine
 ---
 
 <% content_for :header do %>
 <h1 class="animated fadeInDown delay">
   Minishift (Beta)
 </h1>
-<p class="animated fadeInUp delay">Get Origin Up and Running From the Comfort of Your Own Laptop</p>
+<p class="animated fadeInUp delay">Get OKD Up and Running From the Comfort of Your Own Laptop</p>
 <% end %>
 
 <% content_for :navbar do %>
@@ -37,11 +37,11 @@ title: Running OpenShift Origin in a Virtual Machine
       <div class="col-md-12 text-left">
         <p>
           Welcome to the instructions for running
-          <a href="https://github.com/openshift/origin" target="_blank">OpenShift Origin</a>
-          , the FOSS PaaS from Red Hat, in a local VM on your machine. On this page you will find instructions on how to use <a href="https://github.com/minishift/minishift/blob/master/README.md" target="_blank">Minishift</a> for local application development with OpenShift.
+          <a href="https://github.com/openshift/origin" target="_blank">OKD</a>
+          , the FOSS PaaS from Red Hat, in a local VM on your machine. On this page you will find instructions on how to use <a href="https://github.com/minishift/minishift/blob/master/README.md" target="_blank">Minishift</a> for local application development with OKD.
         </p>
         <p>
-          This image is based off of OpenShift Origin and is a fully functioning OpenShift instance with an integrated Docker registry. The intent of this project is to allow Web developers and other interested parties to run OpenShift V3 on their own computer.
+          This image is based off of OKD and is a fully functioning OKD instance with an integrated Docker registry. The intent of this project is to allow Web developers and other interested parties to run OKD V3 on their own computer.
           Given the way it is configured, the VM will appear to your local machine as if it was running somewhere off the machine.
         </p>
         <p><strong>Install instructions</strong><br/></p>
@@ -83,12 +83,12 @@ title: Running OpenShift Origin in a Virtual Machine
         <p>The old Vagrant based all in one has been retired and is no longer supported. Due to instability in
           Vagrant builds it became impossible to maintain and troubleshoot the all in one. The old versions are still <a href="https://atlas.hashicorp.com/openshift/boxes/origin-all-in-one" target="_blank">on Atlas</a>, with instructions <a href="https://www.openshift.org/vm/instructions1_4.html" target="_blank">here</a>, but are not supported. </p>
           <p><strong>Intended Use</strong> </p>
-          <p>This VM is intended for local development on top of OpenShift. It is not intended to be used in production. There is no official support for this image, support is community based and best effort (but we care a lot about you and your happiness).
+          <p>This VM is intended for local development on top of OKD. It is not intended to be used in production. There is no official support for this image, support is community based and best effort (but we care a lot about you and your happiness).
           <br/>
           If you need a supported VM version running on Red Hat Enterprise Linux with OpenShift Container Platform, please use the <a href="https://developers.redhat.com/products/cdk/overview/" target="_blank">Container Development Kit (CDK)</a>.
           </p>
           <p>
-            <strong>WARNING:</strong> To allow developers to use any Docker image they want, turning off some security in OpenShift is required. By default, OpenShift will not allow a container to run as root or even a non-random container assigned userid.
+            <strong>WARNING:</strong> To allow developers to use any Docker image they want, turning off some security in OKD is required. By default, OKD will not allow a container to run as root or even a non-random container assigned userid.
             Most Docker images in the Dockerhub do not follow this best practice and instead run as root. As a double negative, a large majority of Dockerhub images are not patched for well known vulnerabilities. Therefore, please use images from Dockerhub with caution. We think some of the risk is mitigated because you are running OpenShift in a VM, but still - be careful which Docker images you run.
           </p>
         </div>

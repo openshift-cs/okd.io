@@ -4,18 +4,18 @@ If you wish to contribute to this repository please follow the guidelines below.
 
 ## Forking this repository
 
-The first thing you need to do is to [fork this repository](https://github.com/openshift/openshift.org#fork-destination-box) into your own github account.
+The first thing you need to do is to [fork this repository](https://github.com/openshift-cs/okd.io#fork-destination-box) into your own github account.
 
 Then, clone it into your local machine:
 
 ```bash
-$ git clone git@github.com:your-username/openshift.org
+$ git clone git@github.com:your-username/okd.io
 ```
 
 And add the `upstream` remote to follow this repository's changes:
 
 ```bash
-$ git remote add upstream git@github.com:openshift/openshift.org
+$ git remote add upstream git@github.com:openshift-cs/okd.io
 $ git fetch upstream
 $ git rebase upstream/master
 ```
@@ -39,4 +39,4 @@ $ git commit
 $ git push origin my-feature-branch
 ```
 
-Finally, submit a [submit a Pull Request](https://github.com/openshift/openshift.org/compare)
+Finally, submit a [submit a Pull Request](https://github.com/openshift-cs/okd.io/compare)

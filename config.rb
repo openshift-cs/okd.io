@@ -1,8 +1,8 @@
 ###
 # Settings
 ###
-set :site_title, "OpenShift Origin"
-set :site_url, 'https://www.openshift.org/'
+set :site_title, "OKD"
+set :site_url, 'https://www.okd.io/'
 set :openshift_assets, 'https://assets.openshift.net/content'
 
 ###
