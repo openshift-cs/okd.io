@@ -501,6 +501,9 @@ AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
 
 # custom permanent redirects
 <IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteCond %{HTTP_HOST} ^okd.io [NC]
+  RewriteRule ^(.*)$ http://www.okd.io/$1 [L,R=301,NC]
   # RewriteRule ^vm/instructions1_[2|3].*$ /vm/instructions1_4.html [R=301,L]
   RewriteRule ^vm/Vagrantfile$ - [L]
   RewriteRule ^vm/?.*$ /minishift/ [R=301,L]
