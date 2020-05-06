@@ -8,15 +8,19 @@ This repo contains the sources for the [OKD.io](https://www.okd.io/).
 
 Firstly install the necessary packages on your machine:
 
-    bundle install
+```
+bundle install
+```
 
 To develop on your local machine run the middleman server and you
 should be able to preview your changes at http://localhost:4567
 
-    bundle exec middleman server
+```
+bundle exec middleman server
+```
 
 ## Deployment
 
-To deploy your changes please submit a pull request while following [our contribution guidelines](./CONTRIBUTING.MD)
+To deploy your changes please submit a pull request while following [our contribution guidelines](./CONTRIBUTING.md)
 
 Make sure to populate the `OPENSHIFT_GITHUB_ID` and `OPENSHIFT_GITHUB_SECRET` env variables to ensure authenticated GitHub API usage (and prevent request throttling).
