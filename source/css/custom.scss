@@ -659,6 +659,56 @@ a.list-link {
   }
 }
 
+#screenshot-carousel {
+    width: 100%;
+    overflow: hidden;
+    font-size: 24px;
+    line-height: 70px;
+    padding: 10px;
+    margin: 20px auto;
+    text-align: center;
+  
+    img {
+      max-width: 800px;
+      max-height: 500px;
+    }
+  
+    .user-logo {
+      display: flex;
+      width: 800px;
+      height: 500px;
+      margin: 5px 20px;
+      flex-direction: column;
+      justify-content: space-around;
+      line-height: 1;
+    }
+  
+    &.carousel.slide {
+      max-width: 100%;
+    }
+  
+    &>.carousel-inner {
+      // width: 100%;
+      //display: table;
+      //margin: 0 auto;
+  
+      .item {
+        display: flex;
+        justify-content: center;
+      }
+  
+      .item:not(.active) {
+        display: none;
+      }
+    }
+  
+    .carousel-control {
+      background: none;
+    }
+  }
+
+
+
 ul.users.list {
   list-style-type: none;
   margin: 0;
