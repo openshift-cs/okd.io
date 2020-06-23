@@ -1,0 +1,62 @@
+---
+title: Signing keys
+description: GPG keys used to sign releases and updates
+---
+
+<% content_for :header do %>
+<p class="animated fadeInUp delay">Download signing keys to verify server and client tools binaries </p>
+<% end %>
+
+<% content_for :navbar do %>
+<div class="nav_logo animated fadeIn">
+</div>
+<% end %>
+
+<% content_for :javascript do %>
+<%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/showdown/1.6.3/showdown.min.js" %>
+<%= javascript_include_tag "download.js" %>
+<% end %>
+
+<section class="paddings" id="signingkeys">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-centered">
+        <div class="row animated fadeInDown padding_bottom" id="server-platforms">
+          <p>Use the following <a href="/vrutkovs.pub">public PGP key</a> to verify release signatures:</p>
+          <pre>
+          $ curl https://okd.io/vrutkovs.pub | gpg --import
+          gpg: key 3D54B6723B20C69F: public key "Vadim Rutkovsky <vadim@vrutkovs.eu>" imported
+          gpg: Total number processed: 1
+          gpg:               imported: 1
+
+          $ gpg --verify sha256sum.txt.asc sha256sum.txt
+          gpg: Signature made Mon May 25 18:48:22 2020 CEST
+          gpg:                using RSA key DB861D01D4D1138A993ADC1A3D54B6723B20C69F
+          gpg: Good signature from "Vadim Rutkovsky <vadim@vrutkovs.eu>" [ultimate]
+          gpg:                 aka "Vadim Rutkovsky <vrutkovs@redhat.com>" [ultimate]
+          gpg: WARNING: This key is not certified with a trusted signature!
+          gpg:          There is no indication that the signature belongs to the owner.
+          Primary key fingerprint: DB86 1D01 D4D1 138A 993A  DC1A 3D54 B672 3B20 C69F
+
+          $ sha256sum -c sha256sum.txt
+          release.txt: OK
+          openshift-client-linux-4.4.0-0.okd-2020-05-23-055148-beta5.tar.gz: OK
+          openshift-client-mac-4.4.0-0.okd-2020-05-23-055148-beta5.tar.gz: OK
+          openshift-client-windows-4.4.0-0.okd-2020-05-23-055148-beta5.zip: OK
+          openshift-install-linux-4.4.0-0.okd-2020-05-23-055148-beta5.tar.gz: OK
+          openshift-install-mac-4.4.0-0.okd-2020-05-23-055148-beta5.tar.gz: OK
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="opacy_bg_01 paddings" id="release-notes">
+  <div class="container">
+    <div class="row animated fadeInUp">
+      <div class="col-md-10 col-centered release-content">
+      </div>
+    </div>
+  </div>
+</section>
