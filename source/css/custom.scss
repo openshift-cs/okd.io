@@ -525,7 +525,57 @@ ul.social {
           }
       }
   }
+
+  .pandarocket {
+      background-size: 150px 200px !important;
+      width: 22em;
+      height: 266px;
+      position:absolute; 
+      right:0px;
+      top:130px;
+  }
+
+  .panda {
+    background-size: 150px 180px !important;
+    width: 12.5em;
+    height: 266px;
+    position:absolute; 
+    right:0px;
+    top:130px;
+  }  
 }
+
+@media (min-width: 1300px) {
+    .opacy_bg_02, .opacy_bg_05 {
+        padding: 70px 0 130px;
+    }
+  
+    .timeline-responsive {
+        .opacy_bg_03 {
+            #timeline .date {
+                top: -85px;
+            }
+        }
+    }
+  
+    .pandarocket {
+        background-size: 250px 335px !important;
+        width: 30em;
+        height: 266px;
+        position:absolute; 
+        right:0px;
+        top:130px;
+    }
+
+    .panda {
+        background-size: 250px 300px !important;
+        width: 30em;
+        height: 266px;
+        position:absolute; 
+        right:0px;
+        top:130px;
+    }    
+  }
 
 @media (max-width: 991px) {
     #oc-platforms {
@@ -533,6 +583,14 @@ ul.social {
             padding-bottom: 20px;
         }
     }
+
+    .panda {
+        display: none;
+    }
+
+    .pandarocket {
+        display: none;
+    }    
 }
 
 @media (max-width: 980px) {
@@ -567,6 +625,15 @@ ul.social {
             margin: 0 15px;
         }
     }
+
+    .panda {
+        background-size: 250px 335px;
+        width: 30em;
+        height: 266px;
+        position:absolute; 
+        right:0px;
+        top:130px;
+    }    
 }
 
 // Users
