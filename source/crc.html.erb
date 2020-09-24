@@ -1,0 +1,60 @@
+---
+title: Download CRC for OKD
+description: Download CRC for OKD.
+---
+
+<% content_for :header do %>
+<h1 class="animated fadeInDown delay">
+  Download CRC for OKD - The Community Distribution of Kubernetes that powers Red Hat OpenShift
+</h1>
+<p class="animated fadeInUp delay">Download the latest CRC for OKD</p>
+<% end %>
+
+<% content_for :navbar do %>
+<div class="nav_logo animated fadeIn">
+</div>
+<% end %>
+
+<% content_for :javascript do %>
+<%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/showdown/1.6.3/showdown.min.js" %>
+<%= javascript_include_tag "download.js" %>
+<% end %>
+
+<section class="paddings" id="downloads">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-centered">
+        <div class="row animated fadeInDown padding_bottom" id="server-platforms">
+          <h2>Run a developer instance of OKD4 on your local workstation with CRC built for OKD</h2>
+          <p></p>
+          <div class="row instructions"><large>
+            <a href="https://dl.fedoraproject.org/pub/alt/okd-crc/macos-amd64/" target="_blank">CRC for OKD4 - Mac OS image</a>
+          </large></div>
+          <div class="row instructions"><large>
+            <a href="https://dl.fedoraproject.org/pub/alt/okd-crc/linux-amd64/" target="_blank">CRC for OKD4 - Linux image</a>
+          </large></div>
+          <div class="row instructions"><large>
+            <a href="https://dl.fedoraproject.org/pub/alt/okd-crc/windows-amd64/" target="_blank">CRC for OKD4 - Windows image</a>
+          </large></div>
+          <div class="row instructions"><large>
+            <a href="https://code-ready.github.io/crc/" target="_blank">Getting Started Guide</a>
+          </large></div>
+        </div>
+        <div class="row" id="more-details">
+          <div class="info-verticle">
+            To see more details, including source code, check out our <%= link_to "<i class='fa fa-github'></i> Releases page", "https://github.com/openshift/okd/releases/latest" %>!
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="opacy_bg_01 paddings" id="release-notes">
+  <div class="container">
+    <div class="row animated fadeInUp">
+      <div class="col-md-10 col-centered release-content">
+      </div>
+    </div>
+  </div>
+</section>
