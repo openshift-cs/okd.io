@@ -1,0 +1,68 @@
+---
+title: OKD Recipes
+description:  A community of users, developers and contributors come together to collaborate and work together.
+---
+
+<% content_for :header do %>
+<h1 class="animated fadeInDown delay">
+  OKD Users
+</h1>
+<p class="animated fadeInUp delay">
+  A community of users, developers and contributors come together to collaborate and work together
+</p>
+<% end %>
+
+<div class="crumbs border_bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul>
+          <li>
+            <a href="/index.html">Home</a>
+          </li>
+          <li>/</li>
+          <li>
+            <a href="/users.html">OKD End User Community</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row info_title wow animated fadeInUp">
+  <div class="vertical_line">
+    <div class="circle_bottom"></div>
+  </div>
+  <div class="info_vertical">
+    <h1>
+      OKD
+      <span>Users</span>
+    </h1>
+  </div>
+</div>
+
+<!-- Search Users -->
+<section class="content_info">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="search">
+          <!--<input id="user-search" placeholder="Search users">-->
+          <input type="text" id="quicksearch" placeholder="Search users" />
+        </div>
+      </div>
+    </div>
+    <br>
+
+<!-- List Users -->
+<div class="container-fluid">
+  <div class="grid"><!-- add extra container element for Masonry -->
+    <div class="grid-sizer col-lg-4 col-xs-6"></div><!-- add sizing element for columnWidth -->
+      <%= partial "users_list", :object => data.users.users %>
+  </div>
+</div>
+
+
+</div>
+</section>
