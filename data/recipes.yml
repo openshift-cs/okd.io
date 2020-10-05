@@ -1,7 +1,7 @@
 recipes:
   - name: OpenDataHub Disconnected Install
     link: https://github.com/cgruver/openshift-recipes/blob/main/opendatahub-disconnected-install/README.md
-    logo: wk_logo.png
+    logo: opendatahub.png
   - name: Rook Ceph Disconnected Install
     link: https://github.com/cgruver/openshift-recipes/tree/main/rook-ceph-disconnected-install/README.md
-    logo: duke.svg
+    logo: rook_ceph.png
