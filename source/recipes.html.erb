@@ -55,14 +55,13 @@ description:  A Community Curated Cookbook of OKD Recipes.
     </div>
     <br>
 
-<!-- List Users -->
-<div class="container-fluid">
-  <div class="grid"><!-- add extra container element for Masonry -->
-    <div class="grid-sizer col-lg-4 col-xs-6"></div><!-- add sizing element for columnWidth -->
-      <%= partial "recipes_list", :object => data.recipes.recipes %>
+    <!-- List Users -->
+    <div class="container-fluid">
+      <div class="grid"><!-- add extra container element for Masonry -->
+        <div class="grid-sizer col-lg-4 col-xs-6"></div><!-- add sizing element for columnWidth -->
+          <%= partial "recipes_list", :object => data.recipes.recipes %>
+      </div>
+    </div>
   </div>
-</div>
-
-
-</div>
+  <br><br>
 </section>

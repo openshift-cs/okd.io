@@ -9,6 +9,8 @@ title: OKD - The Community Distribution of Kubernetes that powers Red Hat OpenSh
 <h1 class="animated fadeInDown delay" style="font-size: 36px;"></h1>
 <p class="animated fadeInUp delay">Built around a core of OCI container packaging and Kubernetes container cluster management, OKD is also augmented by application lifecycle management functionality and DevOps tooling. OKD provides a complete open source container application platform.</p>
 <% end %>
+
+
 <div class="info_title wow" id="try" style="position:relative;">
   <div class="pandarocket" style="background: url(img/okd-panda-flat_rocketeer_with_number.svg) no-repeat center center;">
   </div>
@@ -17,7 +19,7 @@ title: OKD - The Community Distribution of Kubernetes that powers Red Hat OpenSh
   </div>
   <div class="info_vertical animated">
     <h1>
-      <span>OKD 4</span> now officially GA!
+      <span>OKD 4</span>
     </h1>
   </div>
   <div class="">
@@ -25,17 +27,20 @@ title: OKD - The Community Distribution of Kubernetes that powers Red Hat OpenSh
       <div class="row">
         <div class="col-md-6 col-sm-8 col-centered">
           <div class="row text-center">
-            <div class="col-md-12">
-              <pre class="code">$ openshift-install create cluster</pre>
+            <div class="col-md-20">
+              <pre class="code"><nobr> $ openshift-install create cluster</nobr></pre>
             </div>
           </div>
-          <div class="row text-center">
-            <div class="col-sm-offset-2 col-sm-4">
-              <a id="get-started" class="code-button" href="https://github.com/openshift/okd#getting-started" target="_blank">Get&nbsp;started</a>
+          <div class="row">
+            <div class="col-sm-4">
+              <a id="get-started" class="code-button" href="https://github.com/openshift/okd#getting-started" target="_blank"><nobr>Get&nbsp;started</nobr></a>
             </div>
             <div class="col-sm-4">
-              <a id="get-started" class="code-button" href="https://origin-release.svc.ci.openshift.org/" target="_blank">Changelogs</a>
+              <a id="changelogs" class="code-button" href="https://origin-release.svc.ci.openshift.org/" target="_blank"><nobr>Changelogs</nobr></a>
             </div>
+            <div class="col-sm-4">
+              <a id="slack" class="code-button" href="https://kubernetes.slack.com/messages/openshift-dev" target="_blank"><nobr>Join us on Slack</nobr></a>
+            </div>            
           </div>
         </div>
       </div>
@@ -44,7 +49,7 @@ title: OKD - The Community Distribution of Kubernetes that powers Red Hat OpenSh
   <div class="info_vertical">
     <br>
   </div>
-  <div class="padding_bottom">
+  <div>
     <div class="container wow">
       <div class="row text-center">
         <div class="col-sm-10 col-centered">
@@ -55,7 +60,7 @@ title: OKD - The Community Distribution of Kubernetes that powers Red Hat OpenSh
               Automatic updates not only for OKD but also for the host OS, Kubernetes v1.18.3, k8s Operators are first class citizens, a fancy UI, and much much more. Visit our docs page at <a href="https://docs.okd.io/latest/welcome/index.html">https://docs.okd.io</a>
               </p>
             </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <h2>CodeReady Containers for OKD: local OKD 4 cluster for development</h2>
               <p>
                 CodeReady Containers brings a minimal OpenShift 4 cluster to your local laptop or desktop computer!  Download it here: <a href="/crc.html">CodeReady Containers for OKD Images</a>
@@ -68,127 +73,11 @@ title: OKD - The Community Distribution of Kubernetes that powers Red Hat OpenSh
   </div>
 </div>
 
-<section id="users">
-  <div class="opacy_bg_01 paddings">
-    <div class="info_title wow" id="tech" style="position:relative;">
-      <div class="panda" style="background: url(img/okd-panda-flat_nerd_with_number.svg) no-repeat center center;">
-      </div>
-      <div class="info_vertical animated container">
-        <div class="row">
-          <h1>
-            Impressions of <span>OKD 4</span>
-          </h1>
-          <p><span>OKD 4</span> has many features that will make developers and ops engineers more productive. And this is what it looks like: </p>
-        </div>
-      </div>
-
-
-      <div class="container wow">
-        <div class="row">
-          <div class="col-md-12">
-            <%= partial "image_carousel", :object => data.screenshots.screenshots %>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<div class="info_title wow fadeInDown" id="try">
-  <i class="fa fa-download left"></i>
+<section class="content_info latest-news" id="v4">
   <div class="vertical_line">
     <div class="circle_bottom"></div>
   </div>
-  <div class="info_vertical animated">
-    <h1>
-      Looking for <span>OKD 3.11</span>&nbsp;?
-    </h1>
-  </div>
-  <div class="">
-    <div class="container wow fadeInUp">
-      <div class="row">
-        <div class="col-md-6 col-sm-8 col-centered">
-          <div class="row text-center">
-            <div class="col-md-12">
-              <pre class="code">$ <%= link_to "oc", "/download.html#oc-platforms" %> cluster up</pre>
-            </div>
-          </div>
-          <div class="row text-center">
-            <div class="col-sm-offset-2 col-sm-4">
-              <a id="get-started" class="code-button" href="https://github.com/openshift/origin/blob/v4.0.0-alpha.0/docs/cluster_up_down.md" target="_blank">Get&nbsp;Started</a>
-            </div>
-            <div class="col-sm-4">
-              <%= link_to "Download&nbsp;oc", "/download.html#oc-platforms", class: "code-button" %>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="info_vertical animated">
-    <h3>
-      OR
-    </h3>
-  </div>
-  <div class="padding_bottom">
-    <div class="container wow fadeInUp">
-      <div class="row text-center">
-        <div class="col-sm-10 col-centered">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-              <h2>Run OKD 3.11 in a Container</h2>
-              <p>
-                Want to get started quickly and easily? Just <a href="https://docs.okd.io/3.11/getting_started/administrators.html#running-in-a-docker-container">run OKD in a container</a> by itself.
-              </p>
-            </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-              <h2>Run the All-In-One VM with&nbsp;Minishift</h2>
-              <p>
-                Try out a fully functioning OKD 3.11 instance with an integrated container registry, running locally on your machine with <%= link_to "Minishift", "/minishift/index.html" %>.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<section id="users">
-  <div class="opacy_bg_01 paddings">
-    <div class="info_title wow fadeInUp" id="tech">
-      <i class="fa fa-users left"></i>
-      <div class="info_vertical animated container">
-        <div class="row">
-          <h1>
-            OKD
-            <span>End User Community</span>
-          </h1>
-        </div>
-      </div>
-      <div class="container wow fadeInUp">
-        <div class="row">
-          <div class="col-md-12">
-            <%= partial "users_carousel", :object => data.users.users %>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <a class="list-link" target="_blank" href="https://commons.openshift.org/participants.html">View the OpenShift Commons Participants List (<%= data.participants.participants.count %>)</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="content_info latest-news" id="v3">
-  <div class="vertical_line">
-    <div class="circle_bottom"></div>
-  </div>
-  <div class="info_title">
+  <div class="info_title opacy_bg_01 paddings">
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center">
@@ -227,97 +116,7 @@ title: OKD - The Community Distribution of Kubernetes that powers Red Hat OpenSh
   </div>
 </section>
 
-<section class="content_info">
-  <div class="opacy_bg_01 paddings">
-    <div class="info_title wow fadeInUp" id="tech">
-      <i class="fa fa-cubes left"></i>
-      <div class="info_vertical animated container">
-        <div class="row">
-          <h1>
-            Standardization through
-            <span>Containerization</span>
-          </h1>
-          <p>Standards are powerful forces in the software industry. They can drive technology forward by bringing together the combined efforts of multiple developers, different communities, and even competing vendors.</p>
-        </div>
-      </div>
-      <div class="container wow fadeInUp" style="padding-top: 30px;">
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="technology-section">
-              <div class="head-tech">
-                <%= image_tag 'logo-kubernetes-h.svg', {:alt => 'Kubernetes logo', :class => 'logo_tech'} %>
-              </div>
-              <div class="caption-tech">
-                <p>Open source container orchestration and cluster management at scale.</p>
-                <a href="http://kubernetes.io/">Learn more</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="technology-section">
-              <div class="head-tech">
-                <%= image_tag 'podman.svg', {:alt => 'Podman logo', :class => 'logo_tech'} %>
-              </div>
-              <div class="caption-tech">
-                <p>Standardized Linux container packaging for applications and their dependencies.</p>
-                <a href="https://www.podman.io/">Learn more</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="technology-section">
-              <div class="head-tech">
-                <%= image_tag 'fedora-coreos-logo.png', {:alt => 'Fedora CoreOS logo', :class => 'logo_tech'} %>
-              </div>
-              <div class="caption-tech">
-                <p>A container-focused OS that's designed for painless management in large clusters.</p>
-                <a href="https://getfedora.org/en/coreos/">Learn more</a><br>
-                <a href="https://www.youtube.com/watch?v=JepNm7R0LSo">Watch video</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="technology-section">
-              <div class="head-tech">
-                <%= image_tag 'logo-operator-h.svg', {:alt => 'Operator Framework logo', :class => 'logo_tech'} %>
-              </div>
-              <div class="caption-tech">
-                <p>An open source project that provides developer and runtime Kubernetes tools, enabling you to accelerate the development of an Operator. </p>
-                <a href="https://coreos.com/operators/">Learn more</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="technology-section">
-              <div class="head-tech">
-                <%= image_tag 'logo-crio-h.svg', {:alt => 'CRI-O logo', :class => 'logo_tech'} %>
-              </div>
-              <div class="caption-tech">
-                <p>A lightweight container runtime for Kubernetes.</p>
-                <a href="http://cri-o.io/">Learn more</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="technology-section">
-              <div class="head-tech">
-                <%= image_tag 'prometheus.png', {:alt => 'Prometheus logo', :class => 'logo_tech'} %>
-              </div>
-              <div class="caption-tech">
-                <p>Prometheus is a systems and service monitoring toolkit that collects metrics from configured targets at given intervals, evaluates rule expressions, displays the results, and can trigger alerts if some condition is observed to be true.</p>
-                <a href="https://prometheus.io/">Learn more</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="content_info contributions" id="contribute">
+<div class="content_info contributions" id="community">
   <div class="vertical_line">
     <div class="circle_bottom"></div>
   </div>
@@ -342,24 +141,9 @@ title: OKD - The Community Distribution of Kubernetes that powers Red Hat OpenSh
               <br><a href="https://github.com/openshift/okd/issues">Open issues</a>
               <br><a href="https://groups.google.com/forum/#!forum/okd-wg">OKD-WG google group</a>
           </p>
-          <h2>Extend OKD</h2>
-          <p>You can add new runtimes and frameworks to OKD with community images and templates. Learn how to create and use custom <a href="https://docs.okd.io/latest/creating_images/guidelines.html">images</a> and <a href="https://docs.okd.io/latest/dev_guide/templates.html#writing-templates">templates</a> with OKD.</p>
-          <h2>Join OpenShift Commons</h2>
-          <p><a href="https://commons.openshift.org">OpenShift Commons</a> is where the community goes to collaborate and work together on OpenShift. OpenShift Commons is open to all community participants: users, operators, enterprises, startups, non-profits, educational institutions, partners, and service providers.</p>
-          <ul>
-            <li>
-              <a href="https://commons.openshift.org/index.html#join">Join Commons</a>
-            </li>
-            <li>
-              View upcoming and recorded <a href="https://commons.openshift.org/briefings.html">Events &amp; Briefings</a>
-            </li>
-            <li>
-              View a list of Commons <a href="https://commons.openshift.org/index.html#colleagues">Participants</a>
-            </li>
-          </ul>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-          <h2>Contribute to the Source</h2>
+          <h2>Connect to the community</h2>
           <ul>
             <li>
               Join the
@@ -380,29 +164,6 @@ title: OKD - The Community Distribution of Kubernetes that powers Red Hat OpenSh
             <li>
               Read the
               <a href="https://docs.okd.io/latest/welcome/index.html">documentation</a>
-            </li>
-            <li>
-              Check out the other repositories we're working on:
-              <ul>
-                <li>
-                  <a href="https://github.com/kubernetes/kubernetes">Kubernetes</a>
-                </li>
-                <li>
-                  <a href="http://kubevirt.io/">Kubevirt</a>
-                </li>
-                <li>
-                  <a href="https://getfedora.org/en/coreos/">Fedora CoreOS</a>
-                </li>
-                <li>
-                  <a href="https://github.com/operator-framework">Operator Framework</a>
-                </li>
-                <li>
-                  <a href="http://cri-o.io/">CRI-O</a>
-                </li>
-                 <li>
-                  <a href="https://github.com/prometheus/prometheus">Prometheus</a>
-                </li>
-              </ul>
             </li>
           </ul>
           <h2>File a Bug</h2>
@@ -428,14 +189,125 @@ title: OKD - The Community Distribution of Kubernetes that powers Red Hat OpenSh
   </div>
 </div>
 
-<section class="content_info" id="join">
+<section class="content_info">
   <div class="opacy_bg_01 paddings">
-    <div class="info_title wow fadeInUp" id="try">
+    <div class="info_title wow fadeInUp" id="tech">
+      <i class="fa fa-cubes left"></i>
+      <div class="info_vertical animated container">
+        <div class="row">
+          <h1>
+            Standardization through
+            <span>Containerization</span>
+          </h1>
+          <p>Standards are powerful forces in the software industry. They can drive technology forward by bringing together the combined efforts of multiple developers, different communities, and even competing vendors.</p>
+        </div>
+      </div>
+      <div class="container wow fadeInUp" style="padding-top: 30px;">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="technology-section">
+              <div class="head-tech">
+                <%= image_tag 'logo-kubernetes-h.svg', {:alt => 'Kubernetes logo', :class => 'logo_tech'} %>
+              </div>
+              <div class="caption-tech">
+                <p>Open source container orchestration and cluster management at scale.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="technology-section">
+              <div class="head-tech">
+                <%= image_tag 'podman.svg', {:alt => 'Podman logo', :class => 'logo_tech'} %>
+              </div>
+              <div class="caption-tech">
+                <p>Standardized Linux container packaging for applications and their dependencies.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="technology-section">
+              <div class="head-tech">
+                <%= image_tag 'fedora-coreos-logo.png', {:alt => 'Fedora CoreOS logo', :class => 'logo_tech'} %>
+              </div>
+              <div class="caption-tech">
+                <p>A container-focused OS that's designed for painless management in large clusters.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="technology-section">
+              <div class="head-tech">
+                <%= image_tag 'logo-operator-h.svg', {:alt => 'Operator Framework logo', :class => 'logo_tech'} %>
+              </div>
+              <div class="caption-tech">
+                <p>An open source project that provides developer and runtime Kubernetes tools, enabling you to accelerate the development of an Operator. </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="technology-section">
+              <div class="head-tech">
+                <%= image_tag 'logo-crio-h.svg', {:alt => 'CRI-O logo', :class => 'logo_tech'} %>
+              </div>
+              <div class="caption-tech">
+                <p>A lightweight container runtime for Kubernetes.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="technology-section">
+              <div class="head-tech">
+                <%= image_tag 'prometheus.png', {:alt => 'Prometheus logo', :class => 'logo_tech'} %>
+              </div>
+              <div class="caption-tech">
+                <p>Prometheus is a systems and service monitoring toolkit that collects metrics from configured targets at given intervals, evaluates rule expressions, displays the results, and can trigger alerts if some condition is observed to be true.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="users">
+  <div class="opacy_bg_01 paddings">
+    <div class="info_title wow fadeInUp" id="tech">
+      <i class="fa fa-users left"></i>
+      <div class="info_vertical animated container">
+        <div class="row">
+          <h1>
+            OKD
+            <span>End User Community</span>
+          </h1>
+        </div>
+      </div>
+      <div class="container wow fadeInUp">
+        <div class="row">
+          <div class="col-md-12">
+            <%= partial "users_carousel", :object => data.users.users %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <a class="list-link" target="_blank" href="https://commons.openshift.org/participants.html">View the OpenShift Commons Participants List (<%= data.participants.participants.count %>)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content_info" id="join">
+  <div>
+    <div class="info_title wow" id="try"> <!-- class="info_title wow fadeInUp" id="try"> -->
       <i class="fa fa-compass left"></i>
       <div class="container">
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1">
-            <div class="info_vertical animated">
+            <div> <!-- class="info_vertical animated"> -->
               <h1>
                 Become a part of something
                 <span>bigger</span>
