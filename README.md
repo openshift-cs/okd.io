@@ -9,7 +9,9 @@ This repo contains the sources for the [OKD.io](https://www.okd.io/).
 Firstly install the necessary packages on your machine:
 
 ```
-bundle install
+sudo apt-get install ruby-full
+sudo gem install bundler
+sudo bundle install
 ```
 
 To develop on your local machine run the middleman server and you
