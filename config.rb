@@ -46,10 +46,6 @@ activate :blog do |blog|
     blog.prefix = "blog"
 end
 
-#activate :autoprefixer do |prefix|
-#    prefix.browsers = "last 2 versions"
-#end
-
 activate :syntax #, :line_numbers => true
 
 set :markdown_engine, :redcarpet
