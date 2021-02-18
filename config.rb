@@ -5,6 +5,7 @@ set :site_title, "OKD"
 set :site_url, 'https://www.okd.io/'
 set :openshift_assets, 'https://assets.openshift.net/content'
 
+
 ###
 # Assets
 ###
@@ -17,6 +18,8 @@ set :js_dir, 'js'
 # Page command
 ###
 page "/sitemap.xml", layout: false
+page "/", :layout => "layout"
+#page "/blog.html", :layout => "blog"
 
 ###
 # Extra Helpers
@@ -31,8 +34,18 @@ end
 ignore 'accelerators/*'
 
 # Development-specific configuration
-configure :development do
-  activate :php
+#configure :development do
+#  activate :php
+#end
+
+activate :blog do |blog|
+    # set options on blog
+    blog.tag_template = "tag.html"
+    blog.calendar_template = "calendar.html"    
+end
+
+activate :autoprefixer do |prefix|
+    prefix.browsers = "last 2 versions"
 end
 
 # Build-specific configuration
