@@ -46,7 +46,6 @@ per_page: 10
 
 <div class="info_title wow" id="try" style="position:relative;">
     <div class="container">
-
         <% if paginate && num_pages > 1 %>
         <p>Page <%= page_number %> of <%= num_pages %></p>
 
@@ -56,7 +55,7 @@ per_page: 10
         <% end %>
 
         <% page_articles.each_with_index do |article, i| %>
-        <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
+        <h2><%= link_to article.title, article %> <span> (<%= article.date.strftime('%b %e') %>)</span></h2>
         <!-- use article.summary(250) if you have Nokogiri available to show just
             the first 250 characters -->
         <%= article.body %>
@@ -69,28 +68,27 @@ per_page: 10
         <% end %>
 
 
-
         <aside>
-        <h2>Recent Articles</h2>
-        <ol>
-            <% blog.articles[0...10].each do |article| %>
-            <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
-            <% end %>
-        </ol>
+            <h2>Recent Articles</h2>
+            <ol>
+                <% blog.articles[0...10].each do |article| %>
+                <li><%= link_to article.title, article %> <span> (<%= article.date.strftime('%b %e') %>)</span></li>
+                <% end %>
+            </ol>
 
-        <h2>Tags</h2>
-        <ol>
-            <% blog.tags.each do |tag, articles| %>
-            <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
-            <% end %>
-        </ol>
+            <h2>Tags</h2>
+            <ol>
+                <% blog.tags.each do |tag, articles| %>
+                <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
+                <% end %>
+            </ol>
 
-        <h2>By Year</h2>
-        <ol>
-            <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
-            <li><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
-            <% end %>
-        </ol>
+            <h2>By Year</h2>
+            <ol>
+                <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
+                <li><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
+                <% end %>
+            </ol>
         </aside>
     </div>
 </div>        

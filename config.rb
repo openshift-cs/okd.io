@@ -17,7 +17,7 @@ set :js_dir, 'js'
 ###
 # Page command
 ###
-page "/sitemap.xml", layout: false
+#page "/sitemap.xml", layout: false
 page "/", :layout => "layout"
 #page "/blog.html", :layout => "blog"
 
@@ -41,12 +41,18 @@ ignore 'accelerators/*'
 activate :blog do |blog|
     # set options on blog
     blog.tag_template = "tag.html"
-    blog.calendar_template = "calendar.html"    
+    blog.calendar_template = "calendar.html" 
+    blog.layout = "article_layout"   
 end
 
 activate :autoprefixer do |prefix|
     prefix.browsers = "last 2 versions"
 end
+
+activate :syntax #, :line_numbers => true
+
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true, :tables => true, :quote => true
 
 # Build-specific configuration
 configure :build do
