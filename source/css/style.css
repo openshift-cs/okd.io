@@ -1864,3 +1864,16 @@ aside .search .btn{
     color: #fff;
     font-size: 20pt;
 }
+
+/* jo.meier@gmx.de : Fixes for Blog articles. */
+table, th, td {
+	border: 2px dashed darkgray;
+}
+
+td, th {
+	padding: 10px;
+}
+
+th {
+	text-align: center;
+}
