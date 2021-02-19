@@ -2,7 +2,6 @@
 title: OKD upgrade from v4.5 to v4.6
 date: 2021-02-18
 tags: upgrade
-image: "/source/img/screenshots/cluster-overview.jpg"
 ---
 
 Some upgrades from OKD 4 to a newer version require fixes to work. This article describes them.

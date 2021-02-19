@@ -42,22 +42,9 @@ activate :blog do |blog|
     # set options on blog
     blog.tag_template = "tag.html"
     blog.calendar_template = "calendar.html" 
-<<<<<<< HEAD
     blog.layout = "article_layout"
     blog.prefix = "blog"
-=======
-    blog.layout = "article_layout"   
->>>>>>> okdio/master
 end
-
-#activate :autoprefixer do |prefix|
-#    prefix.browsers = "last 2 versions"
-#end
-
-activate :syntax #, :line_numbers => true
-
-set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true, :smartypants => true, :tables => true, :quote => true
 
 activate :syntax #, :line_numbers => true
 
