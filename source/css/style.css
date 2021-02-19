@@ -1865,7 +1865,9 @@ aside .search .btn{
     font-size: 20pt;
 }
 
+/*--------------------------------------------*/
 /* jo.meier@gmx.de : Fixes for Blog articles. */
+/*--------------------------------------------*/
 table, th, td {
 	border: 2px dashed darkgray;
 }
@@ -1876,4 +1878,8 @@ td, th {
 
 th {
 	text-align: center;
+}
+
+.copy-bg {
+	margin-left: 2vw;
 }

@@ -1,40 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    
-    <meta name="description" content="<%= current_page.data.description || "The next generation open source app hosting platform by Red Hat" %>">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="9jyGvNki3NSELTYJ7t_XbF-YQZ8jjfm7LqQQGNq4SSg">
-    <link class="skin_color" href="#" media="screen" rel="stylesheet">
-    <%= stylesheet_link_tag "style.css", :media => "screen, print" %>
-    <%= stylesheet_link_tag "theme-responsive.css", :media => "screen" %>
-    <%= stylesheet_link_tag "custom.css", :media => "screen" %>
-    <%= stylesheet_link_tag "highlighting.css", :media => "screen" %>
-    sdf
-    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700", :media => "screen" %>
-    <%= favicon_tag "/img/icons/apple-touch-icon.png", :rel => "apple-touch-icon-precomposed" %>
-    <%= favicon_tag "/img/icons/favicon.png" %>
-    <!--[if IE]>
-      <%= stylesheet_link_tag "ie/ie.css", :media => "screen" %>
-    <![endif]-->
-    <!--[if lte IE 8]>
-      <%= javascript_include_tag "responsive/html5shiv.js" %>
-      <%= javascript_include_tag "responsive/respond.js" %>
-    <![endif]-->
-    <%= partial "layouts/tracking" %>
-
-    <meta charset="utf-8" />
-    <meta http-equiv='X-UA-Compatible' content='ie=edge' />
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <title>Blog Title<%= ' - ' + current_article.title unless current_article.nil? %></title>
-    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
-    <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site" %>
-  </head>
-
+<head>
+  <meta charset="utf-8">
+  <title><%= current_page.data.title || settings.site_title %></title>
+  <meta name="description" content="<%= current_page.data.description || "The next generation open source app hosting platform by Red Hat" %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="9jyGvNki3NSELTYJ7t_XbF-YQZ8jjfm7LqQQGNq4SSg">
+  <link class="skin_color" href="#" media="screen" rel="stylesheet">
+  <%= stylesheet_link_tag "style.css", :media => "screen, print" %>
+  <%= stylesheet_link_tag "theme-responsive.css", :media => "screen" %>
+  <%= stylesheet_link_tag "custom.css", :media => "screen" %>
+  <%= stylesheet_link_tag "highlighting.css", :media => "screen" %>
+  <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700", :media => "screen" %>
+  <%= favicon_tag "/img/icons/apple-touch-icon.png", :rel => "apple-touch-icon-precomposed" %>
+  <%= favicon_tag "/img/icons/favicon.png" %>
+  <!--[if IE]>
+    <%= stylesheet_link_tag "ie/ie.css", :media => "screen" %>
+  <![endif]-->
+  <!--[if lte IE 8]>
+    <%= javascript_include_tag "responsive/html5shiv.js" %>
+    <%= javascript_include_tag "responsive/respond.js" %>
+  <![endif]-->
+  <%= partial "layouts/tracking" %>
+</head>
   <body>
     <div class="layout-wide" id="layout">
       <header class="index_static">
@@ -65,36 +53,8 @@
       <%= partial "layouts/footer" %>
     </div>
 
-    <div id="main" role="main">
-      <%= yield %>
-    </div>
-
-    <aside>
-      <h2>Recent Articles</h2>
-      <ol>
-        <% blog.articles[0...10].each do |article| %>
-          <li><%= link_to article.title, article %> <span> (<%= article.date.strftime('%b %e') %>)</span></li>
-        <% end %>
-      </ol>
-
-      <h2>Tags</h2>
-      <ol>
-        <% blog.tags.each do |tag, articles| %>
-          <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
-        <% end %>
-      </ol>
-
-      <h2>By Year</h2>
-      <ol>
-        <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
-          <li><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
-        <% end %>
-      </ol>
-    </aside>
-
-
-
     <%= javascript_include_tag "jquery.js" %>
+    <%= javascript_include_tag "search.js" %>
     <%= javascript_include_tag "nav/tinynav.js" %>
     <%= javascript_include_tag "nav/superfish.js" %>
     <%= javascript_include_tag "nav/hoverIntent.js" %>
@@ -144,6 +104,6 @@
     });
     </script>
     <!-- Place this tag right after the last button or just before your close body tag. -->
-    <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
   </body>
 </html>

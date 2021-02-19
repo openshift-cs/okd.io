@@ -31,4 +31,3 @@ sudo grep enabled=1 /etc/yum.repos.d/*
 sudo find /etc/yum.repos.d/ -type f -exec sudo sed -i 's/enabled=1/enabled=0/g' {} +
 sudo grep enabled=1 /etc/yum.repos.d/*
 ```
-
