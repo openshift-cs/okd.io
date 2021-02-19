@@ -3,24 +3,68 @@ title: Tags
 pageable: true
 per_page: 12
 ---
-<h1>Articles tagged '<%= tagname %>'</h1>
 
-<% if paginate && num_pages > 1 %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
-
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
+<% content_for :header do %>
+    <h1 class="animated fadeInDown delay">
+      Blog Tags
+    </h1>
+    <p class="animated fadeInUp delay">
+      Detailed info about blog tags.
+    </p>
 <% end %>
 
-<ul>
-  <% page_articles.each_with_index do |article, i| %>
-    <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
-  <% end %>
-</ul>
+<div class="crumbs border_bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul>
+          <li>
+            <a href="/index.html">Home</a>
+          </li>
+          <li>/</li>
+          <li>
+            <a href="/tag.html">OKD Blog</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
-<% if paginate %>
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
-  <% end %>
-<% end %>
+<div class="row info_title wow animated fadeInUp">
+  <div class="vertical_line">
+    <div class="circle_bottom"></div>
+  </div>
+  <div class="info_vertical">
+    <h1>
+      Blog
+      <span>Tags</span>
+    </h1>
+  </div>
+</div>
+
+<div class="info_title wow" id="try" style="position:relative;">
+    <div class="container paddings">
+        <h1>Articles tagged '<%= tagname %>'</h1>
+
+        <% if paginate && num_pages > 1 %>
+        <p>Page <%= page_number %> of <%= num_pages %></p>
+
+        <% if prev_page %>
+            <p><%= link_to 'Previous page', prev_page %></p>
+        <% end %>
+        <% end %>
+
+        <ul>
+        <% page_articles.each_with_index do |article, i| %>
+            <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
+        <% end %>
+        </ul>
+
+        <% if paginate %>
+        <% if next_page %>
+            <p><%= link_to 'Next page', next_page %></p>
+        <% end %>
+        <% end %>
+    </div>
+</div>
