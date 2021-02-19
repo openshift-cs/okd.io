@@ -1865,13 +1865,9 @@ aside .search .btn{
     font-size: 20pt;
 }
 
-<<<<<<< HEAD
 /*--------------------------------------------*/
 /* jo.meier@gmx.de : Fixes for Blog articles. */
 /*--------------------------------------------*/
-=======
-/* jo.meier@gmx.de : Fixes for Blog articles. */
->>>>>>> Blog test page for OKD upgrade fixes.
 table, th, td {
 	border: 2px dashed darkgray;
 }
@@ -1882,11 +1878,8 @@ td, th {
 
 th {
 	text-align: center;
-<<<<<<< HEAD
 }
 
 .copy-bg {
 	margin-left: 2vw;
-=======
->>>>>>> Blog test page for OKD upgrade fixes.
 }
