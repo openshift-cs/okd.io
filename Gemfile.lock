@@ -71,10 +71,13 @@ GEM
       servolux
       tilt (~> 2.0.9)
       uglifier (~> 3.0)
+<<<<<<< HEAD
     middleman-search (0.10.0)
       middleman-core (>= 3.2)
       nokogiri (~> 1.6)
       therubyracer (~> 0.12.2)
+=======
+>>>>>>> okdio/master
     middleman-syntax (3.2.0)
       middleman-core (>= 3.2)
       rouge (~> 3.2)
@@ -95,7 +98,10 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     redcarpet (3.5.1)
+<<<<<<< HEAD
     ref (2.0.0)
+=======
+>>>>>>> okdio/master
     rexml (3.2.4)
     rouge (3.26.0)
     sassc (2.4.0)
@@ -120,7 +126,10 @@ DEPENDENCIES
   execjs
   middleman (~> 4.2)
   middleman-blog
+<<<<<<< HEAD
   middleman-search
+=======
+>>>>>>> okdio/master
   middleman-syntax
   redcarpet
   tzinfo-data

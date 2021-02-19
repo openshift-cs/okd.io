@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% wrap_layout :layout do %>
   <% content_for :header do %>
     <h1 class="animated fadeInDown delay">
@@ -50,3 +51,56 @@
     </article>
   </div>
 <% end %>
+=======
+        <% wrap_layout :layout do %>
+            <article>
+
+            <% content_for :header do %>
+              <h1 class="animated fadeInDown delay">
+                OKD Blog
+              </h1>
+              <p class="animated fadeInUp delay">
+                <%= current_article.title %> - (<%= current_article.date.strftime('%b %e %Y') %>)
+              </p>
+              <% end %>
+              
+              <div class="crumbs border_bottom">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <ul>
+                        <li>
+                          <a href="/index.html">Home</a>
+                        </li>
+                        <li>/</li>
+                        <li>
+                          <a href="/blog.html">Blog</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row info_title wow animated fadeInUp">
+                <div class="vertical_line">
+                  <div class="circle_bottom"></div>
+                </div>
+                <div class="info_vertical">
+                  <h1>
+                    <%= current_article.title %>
+                  </h1>
+                  <h4>
+                    <%= current_article.date.strftime('%b %e %Y') %>
+                  </h4>
+                </div>
+              </div>
+
+              <div class="info_title wow" id="try" style="position:relative;">
+                <div class="container paddings">
+                  <%= yield %>
+                </div>
+              </div>
+            </article>
+        <% end %>
+>>>>>>> okdio/master
