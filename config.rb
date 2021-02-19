@@ -19,7 +19,7 @@ set :js_dir, 'js'
 ###
 #page "/sitemap.xml", layout: false
 page "/", :layout => "layout"
-#page "/blog.html", :layout => "blog"
+page "/blog.html", :layout => "blog"
 
 ###
 # Extra Helpers
@@ -42,12 +42,22 @@ activate :blog do |blog|
     # set options on blog
     blog.tag_template = "tag.html"
     blog.calendar_template = "calendar.html" 
+<<<<<<< HEAD
+    blog.layout = "article_layout"
+    blog.prefix = "blog"
+=======
     blog.layout = "article_layout"   
+>>>>>>> okdio/master
 end
 
-activate :autoprefixer do |prefix|
-    prefix.browsers = "last 2 versions"
-end
+#activate :autoprefixer do |prefix|
+#    prefix.browsers = "last 2 versions"
+#end
+
+activate :syntax #, :line_numbers => true
+
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true, :tables => true, :quote => true
 
 activate :syntax #, :line_numbers => true
 
@@ -62,4 +72,18 @@ configure :build do
 
   activate :minify_css
   activate :minify_javascript
+end
+
+activate :search do |search|
+  search.resources = ['blog/']
+  search.index_path = 'search/lunr-index.json' # defaults to `search.json` 
+  search.lunr_dirs = ['source/vendor/lunr-custom/'] # optional alternate paths where to look for lunr js files
+  #search.language = 'es' # defaults to 'en'
+
+  search.fields = {
+    title:   {boost: 100, store: true, required: true},
+    content: {boost: 50},
+    url:     {index: false, store: true},
+    author:  {boost: 30}
+  }
 end

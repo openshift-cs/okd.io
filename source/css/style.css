@@ -1865,7 +1865,13 @@ aside .search .btn{
     font-size: 20pt;
 }
 
+<<<<<<< HEAD
+/*--------------------------------------------*/
 /* jo.meier@gmx.de : Fixes for Blog articles. */
+/*--------------------------------------------*/
+=======
+/* jo.meier@gmx.de : Fixes for Blog articles. */
+>>>>>>> okdio/master
 table, th, td {
 	border: 2px dashed darkgray;
 }
@@ -1876,4 +1882,11 @@ td, th {
 
 th {
 	text-align: center;
+<<<<<<< HEAD
+}
+
+.copy-bg {
+	margin-left: 2vw;
+=======
+>>>>>>> okdio/master
 }
