@@ -5,7 +5,7 @@ gem 'middleman', '~> 4.2'
 gem 'middleman-blog'
 gem 'middleman-syntax'
 gem 'middleman-search'
-gem 'execjs'
+#gem 'execjs'
 gem 'redcarpet'
 
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby, :x64_mingw]
