@@ -21,6 +21,23 @@ should be able to preview your changes at http://localhost:4567
 bundle exec middleman server
 ```
 
+## Create Blog article
+
+Create a file in the directory **source/blog**. 
+
+The filename must be in the format: **yyyy-mm-dd-\<title\>.html.markdown**
+
+The first lines of the file must contain this:
+```
+---
+title: <TITLE>
+date: yyyy-mm-dd (exactly the same date as for the filename!)
+tags: upgrade (choose tags to categorize articles)
+---
+
+< MARKDOWN :-) >
+```
+
 ## Deployment
 
 To deploy your changes please submit a pull request while following [our contribution guidelines](./CONTRIBUTING.md)
