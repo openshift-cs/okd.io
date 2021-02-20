@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    
+    <title><%= current_page.data.title || settings.site_title %></title>
     <meta name="description" content="<%= current_page.data.description || "The next generation open source app hosting platform by Red Hat" %>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="9jyGvNki3NSELTYJ7t_XbF-YQZ8jjfm7LqQQGNq4SSg">
@@ -25,13 +25,7 @@
 
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='ie=edge' />
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <title>Blog Title<%= ' - ' + current_article.title unless current_article.nil? %></title>
-    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
-    <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site" %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   </head>
 
   <body>
