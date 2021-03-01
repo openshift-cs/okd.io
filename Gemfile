@@ -5,6 +5,7 @@ gem 'middleman', '~> 4.2'
 gem 'middleman-blog'
 gem 'middleman-syntax'
 gem 'middleman-search'
+gem 'nokogiri', '1.7.1'
 #gem 'execjs'
 gem 'redcarpet'
 
