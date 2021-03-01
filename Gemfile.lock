@@ -19,7 +19,7 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     fast_blank (1.0.0)
-    fastimage (2.2.2)
+    fastimage (2.2.3)
     ffi (1.14.2)
     haml (5.2.1)
       temple (>= 0.8.0)
@@ -78,9 +78,10 @@ GEM
     middleman-syntax (3.2.0)
       middleman-core (>= 3.2)
       rouge (~> 3.2)
-    minitest (5.14.3)
-    nokogiri (1.11.1-x86_64-linux)
-      racc (~> 1.4)
+    mini_portile2 (2.1.0)
+    minitest (5.14.4)
+    nokogiri (1.7.1)
+      mini_portile2 (~> 2.1.0)
     padrino-helpers (0.13.3.4)
       i18n (~> 0.6, >= 0.6.7)
       padrino-support (= 0.13.3.4)
@@ -89,7 +90,6 @@ GEM
       activesupport (>= 3.1)
     parallel (1.20.1)
     public_suffix (4.0.6)
-    racc (1.5.2)
     rack (2.2.3)
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
@@ -121,6 +121,7 @@ DEPENDENCIES
   middleman-blog
   middleman-search
   middleman-syntax
+  nokogiri (= 1.7.1)
   redcarpet
   tzinfo-data
   wdm (~> 0.1)
