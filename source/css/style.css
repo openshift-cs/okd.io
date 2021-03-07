@@ -1868,18 +1868,20 @@ aside .search .btn{
 /*--------------------------------------------*/
 /* jo.meier@gmx.de : Fixes for Blog articles. */
 /*--------------------------------------------*/
-table, th, td {
-	border: 2px dashed darkgray;
-}
+@media screen, print {
+	table, th, td {
+		border: 2px dashed darkgray;
+	}
 
-td, th {
-	padding: 10px;
-}
+	td, th {
+		padding: 10px;
+	}
 
-th {
-	text-align: center;
-}
+	th {
+		text-align: center;
+	}
 
-.copy-bg {
-	margin-left: 2vw;
+	.copy-bg {
+		margin-left: 2vw;
+	}
 }

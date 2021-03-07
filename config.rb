@@ -44,6 +44,10 @@ activate :blog do |blog|
     blog.calendar_template = "calendar.html" 
     blog.layout = "article_layout"
     blog.prefix = "blog"
+
+    blog.paginate = true
+    blog.page_link = "p{num}"
+    blog.per_page = 10    
 end
 
 activate :syntax #, :line_numbers => true
