@@ -1,7 +1,0 @@
----
-title: I like laola
-date: 2021-02-19
-tags: nonsense
----
-
-Try to search me. Laola wave! Upgrade test.
