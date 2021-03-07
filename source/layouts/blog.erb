@@ -6,16 +6,15 @@
     <meta name="description" content="<%= current_page.data.description || "The next generation open source app hosting platform by Red Hat" %>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="9jyGvNki3NSELTYJ7t_XbF-YQZ8jjfm7LqQQGNq4SSg">
-    <link class="skin_color" href="#" media="screen" rel="stylesheet">
-    <%= stylesheet_link_tag "style.css", :media => "screen, print" %>
-    <%= stylesheet_link_tag "theme-responsive.css", :media => "screen" %>
-    <%= stylesheet_link_tag "custom.css", :media => "screen" %>
-    <%= stylesheet_link_tag "highlighting.css", :media => "screen" %>
-    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700", :media => "screen" %>
+    <%= stylesheet_link_tag "style.css", :media => "screen, print", :type => "text/css" %>
+    <%= stylesheet_link_tag "theme-responsive.css", :media => "screen", :type => "text/css" %>
+    <%= stylesheet_link_tag "custom.css", :media => "screen", :type => "text/css" %>
+    <%= stylesheet_link_tag "highlighting.css", :media => "screen", :type => "text/css" %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700", :media => "screen", :type => "text/css" %>
     <%= favicon_tag "/img/icons/apple-touch-icon.png", :rel => "apple-touch-icon-precomposed" %>
     <%= favicon_tag "/img/icons/favicon.png" %>
     <!--[if IE]>
-      <%= stylesheet_link_tag "ie/ie.css", :media => "screen" %>
+      <%= stylesheet_link_tag "ie/ie.css", :media => "screen", :type => "text/css" %>
     <![endif]-->
     <!--[if lte IE 8]>
       <%= javascript_include_tag "responsive/html5shiv.js" %>
