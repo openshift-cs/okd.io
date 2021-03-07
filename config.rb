@@ -53,9 +53,10 @@ set :markdown, :fenced_code_blocks => true, :smartypants => true, :tables => tru
 
 # Build-specific configuration
 configure :build do
-  config.ignored_sitemap_matchers[:source_dotfiles] = proc { |file|
-    file =~ %r{/\.} && file !~ %r{/\.(s2i|openshift|htaccess|htpasswd|nojekyll|git)|containers}
-  }
+  # JM: Creates warnings in the build process. I'm not sure if we even need that.
+  #  config.ignored_sitemap_matchers[:source_dotfiles] = proc { |file|
+  #    file =~ %r{/\.} && file !~ %r{/\.(s2i|openshift|htaccess|htpasswd|nojekyll|git)|containers}
+  #  }
 
   activate :minify_css
   activate :minify_javascript
