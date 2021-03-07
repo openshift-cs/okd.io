@@ -6,7 +6,7 @@ tags: demo
 
 # This is a demo article
 
-See [this file in the okd.io Github repository](https://raw.githubusercontent.com/openshift-cs/okd.io/blob/master/source/blog/2021-02-18-demo-article-for-authors.html.markdown) if you want to learn how this article was written with Github markdown syntax.
+See [this file in the okd.io Github repository](https://raw.githubusercontent.com/openshift-cs/okd.io/master/source/blog/2021-02-18-demo-article-for-authors.html.markdown) if you want to learn how this article was written with Github markdown syntax.
 
 ## Here's a table
 | OKD Version   | Initial FCOS Version  | Mirror Fix needed  | Repo Disable Fix needed |

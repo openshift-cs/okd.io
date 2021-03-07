@@ -25,7 +25,7 @@ Here's how to do it:
     dd = Day (two digits)
 
     e.g.:
-    source/blog/2021-03-08-my-first-article.html.markdown
+    source/blog/2021-03-07-my-first-article.html.markdown
     ```
 * The date must not be in the future !
 * Each article must contain a header section like this one:
@@ -33,7 +33,7 @@ Here's how to do it:
     ```
     ---
     title: <THIS TITLE WILL BE DISPLAYED IN THE BLOG>
-    date: 2021-03-08  <- THIS DATE MUST EXACTLY MATCH THE DATE OF THE FILENAME
+    date: 2021-03-07  <- THIS DATE MUST EXACTLY MATCH THE DATE IN THE FILENAME
     tags: blog  <- CHOOSE ONE OR MORE TAGS (COMMA SEPARATED)
     ---
 
@@ -41,7 +41,6 @@ Here's how to do it:
     ```
 * Test your changes locally. This [README.md](https://github.com/openshift-cs/okd.io) file will tell you how to do that.
 * Create a pull request, if your article is ready to be published.
-
 
 <img src="/blog/2021/03/07/new-blog/okd-panda-flat_rocketeer_with_number.svg" width="100" />
 
