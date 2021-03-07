@@ -1,6 +1,6 @@
 ---
 title: okd.io now has a blog
-date: 2021-03-08
+date: 2021-03-07
 tags: blog
 ---
 
@@ -27,6 +27,7 @@ Here's how to do it:
     e.g.:
     source/blog/2021-03-08-my-first-article.html.markdown
     ```
+* The date must not be in the future !
 * Each article must contain a header section like this one:
 
     ```
@@ -42,6 +43,6 @@ Here's how to do it:
 * Create a pull request, if your article is ready to be published.
 
 
-<img src="/blog/2021/03/08/new-blog/okd-panda-flat_rocketeer_with_number.svg" width="100" />
+<img src="/blog/2021/03/07/new-blog/okd-panda-flat_rocketeer_with_number.svg" width="100" />
 
 
