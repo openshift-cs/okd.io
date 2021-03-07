@@ -4,7 +4,7 @@
       OKD Blog
     </h1>
     <p class="animated fadeInUp delay">
-      <%= current_article.title %> - (<%= current_article.date.strftime('%b %e %Y') %>)
+      <%= current_article.title %> - (<%= current_article.date.strftime('%b %e, %Y') %>)
     </p>
   <% end %>
     
@@ -37,7 +37,7 @@
             <%= current_article.title %>
           </h1>
           <h4>
-            <%= current_article.date.strftime('%b %e %Y') %>
+            <%= current_article.date.strftime('%b %e, %Y') %>
           </h4>
         </div>
       </div>
