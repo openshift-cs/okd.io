@@ -14,7 +14,7 @@ Then we will break into tracks specific to the deployment target platforms for d
 
 There will be 4 track break-out rooms set-up for 3 hours of deployment walk thrus and Q/A with session leads:
 
-> Vsphere/UPI - lead by Jamie Magiera (UMich) and Josef Meier (Rohde & Schwarz)
+> Vsphere/UPI - lead by Jaime Magiera (UMich) and Josef Meier (Rohde & Schwarz)
 
 > Bare Metal/UPI - lead by Andrew Sullivan (Red Hat) and Jason Pittman (Red Hat)
 
