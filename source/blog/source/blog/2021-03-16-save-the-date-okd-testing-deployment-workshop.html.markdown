@@ -12,12 +12,15 @@ The day will start with all attendees together in the ‘main stage’ area for 
 
 Then we will break into tracks specific to the deployment target platforms for deep dive demos with Q/A, try and answer any questions you have about your specific deployment target's configurations, identify any missing pieces in the documentation and triage the documenation as we go.  
 
-There will be 4 track break-out rooms set-up for 3 hours:
+There will be 4 track break-out rooms set-up for 3 hours of deployment walk thrus and Q/A with session leads:
 
-Vsphere/UPI - lead by Jamie Magiera (UMich) and Josef Meier (Rohde & Schwarz)
-Bare Metal/UPI - lead by Andrew Sullivan (Red Hat) and Jason Pittman (Red Hat)
-Single Node Cluster - lead by Charro Gruver (Red Hat) and Bruce Link (BCIT)
-Home Lab Setup - lead by Craig Robinson (Red Hat) and Sri Ramanujam (Datto)
+> Vsphere/UPI - lead by Jamie Magiera (UMich) and Josef Meier (Rohde & Schwarz)
+
+> Bare Metal/UPI - lead by Andrew Sullivan (Red Hat) and Jason Pittman (Red Hat)
+
+> Single Node Cluster - lead by Charro Gruver (Red Hat) and Bruce Link (BCIT)
+
+> Home Lab Setup - lead by Craig Robinson (Red Hat) and Sri Ramanujam (Datto)
 
 Our goal is to triage our exisiting community documentation, identify any short comings and encourage your participation in the [OKD-Working Group](okd.io)'s testing of the installation and upgrade processes for each OKD release. 
 
