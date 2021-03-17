@@ -1,4 +1,12 @@
-On March 20th, OKD Working Group is hosting a one day event to bring together people from the OKD and related Open Source project communities to collaborate on testing and documentation of the OKD 4 install and upgrade processes for the various platforms that people are deploying OKD 4 on as well to identify any issues with the current documentation for these processes and triage them together.
+---
+title: Save The Date! OKD Testing and Deployment Workshop (March 20) Registration Now Open
+date: 2021-03-16
+tags: workshop, event
+---
+
+# The OKD Working Group is hosting a virtual workshop on testing and deploying OKD4
+
+On March 20th, OKD Working Group is hosting a one day event to bring together people from the OKD and related Open Source project communities to collaborate on testing and [documentation of the OKD 4 install and upgrade processes for the various platforms](https://okd.io) that people are deploying OKD 4 on as well to identify any issues with the current documentation for these processes and triage them together.
 
 The day will start with all attendees together in the ‘main stage’ area for 2 hours where we will give an short welome and describe the logisitics for the day, give a brief introduction to OKD4 itself then walk thru a install deployment to Vsphere using UPI approach along with a few other more universal best practices such as DNS/DHCP server configuration) that apply to all deployment targets. 
 
@@ -7,10 +15,11 @@ Then we will break into tracks specific to the deployment target platforms for d
 There will be 4 track break-out rooms set-up for 3 hours:
 
 Vsphere/UPI - lead by Jamie Magiera (UMich) and Josef Meier (Rohde & Schwarz)
-Bare Metal/UPI - lead by Andrew Sullivan (Red Hat) and TBD
-Single Node Cluster - lead by Charro Gruver (Red Hat) and TBD
+Bare Metal/UPI - lead by Andrew Sullivan (Red Hat) and Jason Pittman (Red Hat)
+Single Node Cluster - lead by Charro Gruver (Red Hat) and Bruce Link (BCIT)
 Home Lab Setup - lead by Craig Robinson (Red Hat) and Sri Ramanujam (Datto)
-Our goal is to triage our exisiting community documentation, identify any short comings and encourage your participation in the OKD-Working Group's testing of the installation and upgrade processes for each OKD release. 
+
+Our goal is to triage our exisiting community documentation, identify any short comings and encourage your participation in the [OKD-Working Group](okd.io)'s testing of the installation and upgrade processes for each OKD release. 
 
 This is community event NOT meant as a substitute for Red Hat technical support. 
 
@@ -20,4 +29,5 @@ We are committed to fostering an open and welcoming environment at our working g
 
 You can Register for the workshop here:
 
-https://hopin.com/events/okd-testing-and-deployment-workshop
+[https://hopin.com/events/okd-testing-and-deployment-workshop](https://hopin.com/events/okd-testing-and-deployment-workshop)
+
