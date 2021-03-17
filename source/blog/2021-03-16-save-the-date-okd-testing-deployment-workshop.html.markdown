@@ -1,5 +1,5 @@
 ---
-title: Save The Date! OKD Testing and Deployment Workshop (March 20) Registration Now Open
+title: Save The Date! OKD Testing and Deployment Workshop (March 20) Register Now!
 date: 2021-03-16
 tags: workshop, event
 ---
