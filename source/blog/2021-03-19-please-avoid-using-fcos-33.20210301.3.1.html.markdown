@@ -20,8 +20,8 @@ Note, that only fresh installs are affected. Also, you won't be left
 with outdated packages, as OKD does update themselves to latest stable
 FCOS content during installation/update.
 
-https://bugzilla.redhat.com/show_bug.cgi?id=1936927
-https://github.com/openshift/okd/issues/566
+[1] https://bugzilla.redhat.com/show_bug.cgi?id=1936927 <br>
+[2] https://github.com/openshift/okd/issues/566
 
 --
 Cheers,
