@@ -1,7 +1,7 @@
 ---
 title: Recap: OKD Testing and Deployment Workshop - Videos and Additional Resources
 date: 2021-03-22
-tags: workshop, event, recap, videos 
+tags: workshop, event, recap, videos
 ---
 
 # The OKD Working Group held a virtual community-hosted workshop on testing and deploying OKD4 on March 20th
