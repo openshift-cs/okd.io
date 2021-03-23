@@ -1,5 +1,5 @@
 ---
-title: OKD Testing and Deployment Workshop - Videos and Additional Resources
+title: Recap OKD Testing and Deployment Workshop - Videos and Additional Resources
 date: 2021-03-22
 tags: workshop, event, recap, videos
 ---
@@ -35,6 +35,8 @@ Our goal was to triage our exisiting community documentation, identify any short
 #Resources:
 
 [Link to Playlist](https://www.youtube.com/playlist?list=PLaR6Rq6Z4Iqfe0yvNnyYZnYR3Z3Emb_Zm)
+
 [OKD Workshop Slides - Charro Gruver](https://github.com/openshift-cs/okd.io/blob/master/source/blog/slides/OKD-Workshop.pdf)
+
 [DNS DHCP Load Balancer Diagram - Josef Meier](https://github.com/openshift-cs/okd.io/blob/master/source/blog/slides/workshop-okd-2021-03-20-josef-meier-dns-diagram.pdf)
 
