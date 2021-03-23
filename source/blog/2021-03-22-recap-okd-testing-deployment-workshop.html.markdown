@@ -1,6 +1,6 @@
 ---
 title: Recap: OKD Testing and Deployment Workshop - Videos and Additional Resources
-date: 2021-03-20
+date: 2021-03-22
 tags: workshop, event, recap, videos
 ---
 
