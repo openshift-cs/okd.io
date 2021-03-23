@@ -1,21 +1,24 @@
 ---
-title: Recap: OKD Testing and Deployment Workshop (March 20) Videos and Additional Resources
+title: Recap: OKD Testing and Deployment Workshop - Videos and Additional Resources
 date: 2021-03-20
-tags: workshop, event
+tags: workshop, event, recap, videos
 ---
 
-# The OKD Working Group hosted a virtual workshop on testing and deploying OKD4
+# The OKD Working Group held a virtual community-hosted workshop on testing and deploying OKD4 on March 20th
 
 On March 20th, [OKD-Working Group](https://groups.google.com/g/okd-wg hosted a day-long to bring together people from the OKD and related Open Source project communities to collaborate on testing and [documentation of the OKD 4 install and upgrade processes for the various platforms](https://github.com/elmiko/okd-deployment-configuration-guides) that people are deploying OKD 4 on as well to identify any issues with the current documentation for these processes and triage them together.
 
 The day started with all attendees together in the ‘main stage’ area for 2 hours where community members gave an short welome along with the following four presentations:
 
 > What is OKD4 (with a Release Update) - by Charro Gruver (Red Hat)
+
 > Walk Thru of the OKD Release and Build Processes - Vadim Rutkovsky (Red Hat)
+
 > Walk Thru of the OKD Deployment and Configuration Guides - Jaimie Magiera (UMich)
+> 
 > Best Practices such as DNS/DHCP server and Load Balancer Configuration) - Josef Meier (Rohde and Schwarz) 
 
-Then we broke into tracks specific to the deployment target platforms for deep dive demos with live Q/A, answered as maany questions as possible about that specific deployment target's configurations, attempted to identify any missing pieces in the documentation and triage the documenation as we went along.  
+Then attendees then broke into track sessions specific to the deployment target platforms for deep dive demos with live Q/A, answered as maany questions as possible about that specific deployment target's configurations, attempted to identify any missing pieces in the documentation and triage the documenation as we went along.  
 
 The 4 track break-out rooms set-up for 2.5 hours of deployment walk thrus and Q/A with session leads:
 
