@@ -22,11 +22,11 @@ Then attendees then broke into track sessions specific to the deployment target 
 
 The 4 track break-out rooms set-up for 2.5 hours of deployment walk thrus and Q/A with session leads:
 
-[Vsphere/UPI - lead by Jaime Magiera (UMich) and Josef Meier (Rohde & Schwarz)](https://www.youtube.com/playlist?list=PLaR6Rq6Z4Iqfe0yvNnyYZnYR3Z3Emb_Zm)
+[Automated Installation on vSphere UPI - lead by Jaime Magiera (UMich) and Josef Meier (Rohde & Schwarz)](https://youtu.be/vCoznRt3_2I)
 
-[Bare Metal/UPI - lead by Andrew Sullivan (Red Hat) and Jason Pittman (Red Hat)](https://www.youtube.com/playlist?list=PLaR6Rq6Z4Iqfe0yvNnyYZnYR3Z3Emb_Zm)
+[Bare Metal/UPI - lead by Andrew Sullivan (Red Hat) and Jason Pittman (Red Hat)](https://youtu.be/eM_pYnf_xFw)
 
-[Single Node Cluster - lead by Charro Gruver (Red Hat) and Bruce Link (BCIT)](https://www.youtube.com/playlist?list=PLaR6Rq6Z4Iqfe0yvNnyYZnYR3Z3Emb_Zm)
+[Single Node Cluster - lead by Charro Gruver (Red Hat) and Bruce Link (BCIT)](https://youtu.be/lI382l3u4fM)
 
 [Home Lab Setup - lead by Craig Robinson (Red Hat), Sri Ramanujam (Datto) and Vadim Rutkovsky(Red Hat)](https://youtu.be/nDDhguTZgLE)
 
