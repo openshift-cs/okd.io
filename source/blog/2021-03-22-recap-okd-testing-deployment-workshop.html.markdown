@@ -6,7 +6,7 @@ tags: workshop, event, recap, videos
 
 # The OKD Working Group held a virtual community-hosted workshop on testing and deploying OKD4 on March 20th
 
-On March 20th, [OKD-Working Group](https://groups.google.com/g/okd-wg) hosted a day-long to bring together people from the OKD and related Open Source project communities to collaborate on testing and [documentation of the OKD 4 install and upgrade processes for the various platforms](https://github.com/elmiko/okd-deployment-configuration-guides) that people are deploying OKD 4 on as well to identify any issues with the current documentation for these processes and triage them together.
+On March 20th, [OKD-Working Group](https://groups.google.com/g/okd-wg) hosted a day-long event to bring together people from the OKD and related Open Source project communities to collaborate on testing and [documentation of the OKD 4 install and upgrade processes for the various platforms](https://github.com/elmiko/okd-deployment-configuration-guides) that people are deploying OKD 4 on as well to identify any issues with the current documentation for these processes and triage them together.
 
 The day started with all attendees together in the ‘main stage’ area for 2 hours where community members gave an short welome along with the following four presentations:
 
