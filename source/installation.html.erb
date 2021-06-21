@@ -1,5 +1,6 @@
 ---
 title: Installation
+blog: guides
 ---
 
 <% content_for :header do %>
@@ -40,6 +41,19 @@ title: Installation
     <ul>
       <li><a href="https://docs.okd.io/latest/installing/index.html" target="_blank">Latest official installation documentation</a></li>
       <li><a href="https://github.com/openshift/okd/" target="_blank">OKD community repository (FAQ, Report Issues, etc.)</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="row info_title wow">
+  <div class="info_vertical">
+    <h1> <span>Deployment Guides</span> </h1>
+  </div>
+  <div class="container">
+    <ul>
+    <% blog.articles.each do |article| %>
+      <li><%= link_to article.title, article %></li>
+    <% end %>
     </ul>
   </div>
 </div>
