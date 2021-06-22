@@ -4,7 +4,7 @@ gem 'middleman', '~> 4.2'
 gem 'middleman-blog'
 gem 'middleman-syntax'
 gem 'middleman-search'
-gem 'nokogiri', '1.11.0'
+gem 'nokogiri', '1.11.4'
 gem 'redcarpet'
 
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby, :x64_mingw]
