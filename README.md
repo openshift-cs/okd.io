@@ -24,7 +24,7 @@ bundle exec middleman server
 ### Developing with a local container
 
 To test a local version of the site using a containerized builder/server, please
-see the [local containerized server instructions](hack/local-containerized-server/readme.md).
+see the [local containerized server instructions](https://github.com/openshift-cs/okd.io/blob/master/hack/local-container-server/readme.md).
 
 ## Create Blog article
 
