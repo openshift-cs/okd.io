@@ -66,7 +66,7 @@
 # ----------------------------------------------------------------------
 
 # Allow access from all domains for webfonts.
-# Alternatively you could only whitelist your
+# Alternatively you could only allow your
 # subdomains like "subdomain.example.com".
 
 <IfModule mod_headers.c>
@@ -202,7 +202,7 @@ AddType text/vtt                            vtt
 <IfModule mod_expires.c>
   ExpiresActive on
 
-# Perhaps better to whitelist expires rules? Perhaps.
+# Perhaps better to allowlist expires rules? Perhaps.
   ExpiresDefault                          "access plus 1 month"
 
 # cache.appcache needs re-requests in FF 3.6 (thanks Remy ~Introducing HTML5)
