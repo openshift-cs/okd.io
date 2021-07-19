@@ -40,6 +40,7 @@ ignore 'accelerators/*'
 
 activate :blog do |blog|
     # set options on blog
+    blog.name = "blog"
     blog.tag_template = "tag.html"
     blog.calendar_template = "calendar.html" 
     blog.layout = "article_layout"
@@ -49,6 +50,12 @@ activate :blog do |blog|
     blog.page_link = "p{num}"
     blog.per_page = 10    
 end
+
+activate :blog do |blog|
+  blog.name = "guides"
+  blog.prefix = "guides"
+  blog.layout = "article_layout"
+end  
 
 activate :syntax #, :line_numbers => true
 
