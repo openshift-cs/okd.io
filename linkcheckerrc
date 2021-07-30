@@ -1,15 +1,17 @@
 [filtering]
 checkextern=1
 ignore=
-  ^https://github.com/binnes/homeLab
-  ^https://binnes.github.io/homeLab
+  ^https://github.com/binnes/okd.io
+  ^https://binnes.github.io/okd.io
   xml.gz$
-  ^https://ccp-ui.csplab.intranet.ibm.com
-  ^https://ccp-ui.apps.labprod.ocp.csplab.local
-  ^https://computingforgeeks.com/
   public/404.html$
   public/sitemap.xml$
-  fonts.gstatic.com
+  .js$
+  .php$
+  ^https://fonts.gstatic.com
+  stylesheets/carousel/owl.video.play.png$
+  js/rs-plugin/assets/transparent.png$
+
 
 [checking]
 robotstxt=0
