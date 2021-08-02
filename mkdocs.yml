@@ -10,7 +10,7 @@ site_dir: public
 edit_uri: edit/main/docs
 theme:
     name: material
-    logo: img/okdLogo.png
+    logo: img/okd_logo_resized.svg
     favicon: img/okdLogo.png
     palette:
       scheme: okd
@@ -43,7 +43,7 @@ markdown_extensions:
   - admonition
   - toc:
       permalink: true
-      toc_depth: 3
+      toc_depth: 4
   - pymdownx.superfences
   - pymdownx.highlight
   - pymdownx.tabbed
@@ -55,7 +55,17 @@ extra:
 copyright: Copyright © 2021 Brian Innes
 nav:
   - Home: index.md
+  - Getting Started: 
+      - Installation: installation.md
+      - CRC: crc.md
+      - Guides: guides.md
+  - Documentation: https://docs.okd.io/latest/welcome/index.html
+  - Blog: blog.md
   - Community:
-      - End User: endUser.md
-      - Contributor: contributor.md
-  - Help: help.md
+      - OKD Community: community.md
+      - Contributor: 
+          - Contributor: contributor.md
+          - okd.io review: okd-io.md
+  - Help: 
+    - Getting Help: help.md
+    - FAQ: faq.md

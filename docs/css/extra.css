@@ -3,8 +3,8 @@
 [data-md-color-scheme=okd] {
     --md-hue: 207;
     --md-default-fg-color: hsla(var(--md-hue), 75%, 95%, 1);
-    --md-default-fg-color--light: hsla(var(--md-hue), 75%, 85%, 1);
-    --md-default-fg-color--lighter: hsla(var(--md-hue), 75%, 90%, 1);
+    --md-default-fg-color--light: hsla(var(--md-hue), 75%, 90%, 1);
+    --md-default-fg-color--lighter: hsla(var(--md-hue), 75%, 92%, 1);
     --md-default-fg-color--lightest: hsla(var(--md-hue), 75%, 95%, 0.3);
     --md-default-bg-color: hsla(var(--md-hue), 37%, 21%, 1);
     --md-default-bg-color--light: hsla(var(--md-hue), 37%, 23%, 1);
@@ -38,14 +38,14 @@
 
 [data-md-color-primary='okd-blue'] {
     --md-primary-fg-color: hsla(var(--md-hue), 37%, 21%, 1);
-    --md-primary-fg-color--light: hsla(var(--md-hue), 37%, 26%, 1);
+    --md-primary-fg-color--light: hsla(var(--md-hue), 37%, 70%, 1);
     --md-primary-fg-color--dark: hsla(var(--md-hue), 37%, 16%, 1);
     --md-primary-bg-color: hsla(var(--md-hue), 37%, 95%, 1);
     --md-primary-bg-color--light: hsla(var(--md-hue), 75%, 95%, 1);
 }
 
 [data-md-color-accent='okd-light-green'] {
-    --md-accent-fg-color: hsla(97, 81%, 48%, 1);
+    --md-accent-fg-color: rgb(222, 23, 26);
     --md-accent-fg-color--transparent: hsla(97, 81%, 48%, 0.1);
     --md-accent-bg-color: hsla(0, 0%, 100%, 1);
     --md-accent-bg-color--light: hsla(0, 0%, 90%, 1);
