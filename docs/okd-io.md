@@ -20,7 +20,7 @@ The site also needs to provide a basic search capability, especially if we incre
 MkDocs is a good fit for a documentation site, as it:
 
 - uses standard Markdown for content, but allows extensions to produce better looking content, with features such as syntax highlighting in code, tabs, admonition (information) box, image size and justification
-- provides a rich feature set to allow customization of a site and also a [community of site theme producers](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes){: target=_blank}.  It also allos individual pages to use a custom theme, so the home page can have a different look and feel.  To demonstrate this I did a rough copy of the existing home page and added it to the proof of technology site
+- provides a rich feature set to allow customization of a site and also a [community of site theme producers](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes){: target=_blank}.  It also allows individual pages to use a custom theme, so the home page can have a different look and feel.  To demonstrate this I did a rough copy of the existing home page and added it to the proof of technology site
 - Provides both site and in-page navigation which is customizable both in terms of depth and also visual layout and structure.
 - provides a client-side full site search capability
 - provides a live preview when creating content.  Tooling can be installed and run locally or from a container
