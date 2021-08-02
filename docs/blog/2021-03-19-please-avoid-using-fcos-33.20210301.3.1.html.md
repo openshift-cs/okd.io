@@ -1,5 +1,7 @@
 # Please avoid using FCOS 33.20210301.3.1 for new OKD installs
 
+<!--- cSpell:ignore Vadim -->
+
 Hi,
 
 Due to several issues ([1] and [2]) fresh installations using FCOS
@@ -14,7 +16,7 @@ Note, that only fresh installs are affected. Also, you won't be left
 with outdated packages, as OKD does update themselves to latest stable
 FCOS content during installation/update.
 
-1. [https://bugzilla.redhat.com/show_bug.cgi?id=1936927](https://bugzilla.redhat.com/show_bug.cgi?id=1936927) <br>
+1. [https://bugzilla.redhat.com/show_bug.cgi?id=1936927](https://bugzilla.redhat.com/show_bug.cgi?id=1936927)
 2. [https://github.com/openshift/okd/issues/566](https://github.com/openshift/okd/issues/566)
 
 --
