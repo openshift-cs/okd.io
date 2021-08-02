@@ -1,5 +1,7 @@
 # okd.io Blog
 
+<!--- cSpell:ignore Kubecon Rohde Schwarz's -->
+
 We look forward to sharing news and useful information about OKD in this blog.
 
 You are also invited to participate: share your experiences and tips with the community by creating your own blog articles for okd.io.
