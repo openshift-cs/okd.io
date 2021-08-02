@@ -48,6 +48,7 @@ If MkDocs or a different technology is selected, then we need to decide how the 
 - navigation
 - additional visual styling, such as font, additional visual sections
 - content of header and footer
+- does a section need a different template, such as the blogs?
 
 ## Content and content location
 
