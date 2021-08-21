@@ -43,6 +43,27 @@ tags: upgrade (choose tags to categorize articles)
 < MARKDOWN :-) >
 ```
 
+## Create a Guide
+
+Create a Markdown file in the directory **source/guides**.
+
+The filename must be in the format: **yyyy-mm-dd-\<title\>.html.markdown**.
+It is recommended that you reference the platform and deployment method in
+your title, for example `2021-12-31-vSphere-UPI-Disconnected-Network.html.markdown`.
+
+The first lines of the file must contain this [frontmatter](https://middlemanapp.com/basics/frontmatter/) data:
+```
+---
+title: <TITLE>
+authors:
+  - "@<Github handle>"
+last-updated: "yyyy-mm-dd"
+okd-version: "X.Y.Z"
+---
+
+< MARKDOWN :-) >
+```
+
 ## Deployment
 
 To deploy your changes please submit a pull request while following [our contribution guidelines](./CONTRIBUTING.md)
