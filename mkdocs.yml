@@ -1,0 +1,71 @@
+site_name: OKD.io
+site_description: >-
+  The Community Distribution of Kubernetes that powers Red Hat OpenShift
+site_url: https://binnes.github.io/okd-io
+site_author: Brian Innes
+repo_name: "okd-io"
+repo_url: https://github.com/binnes/okd-io
+docs_dir: docs
+site_dir: public
+edit_uri: edit/main/docs
+theme:
+    name: material
+    logo: img/okd_logo_resized.svg
+    favicon: img/okdLogo.png
+    palette:
+      scheme: okd
+      primary: okd blue
+      accent: okd light green
+    font:
+      text: Open Sans
+      code: Roboto Mono
+    language: en
+    custom_dir: overrides
+    features:
+      - content.code.annotate
+      - content.tabs.link
+#      - navigation.instant
+      - naviagation.sections
+      - navigation.tracking
+      - navigation.tabs
+#      - navigation.tabs.sticky
+      - navigation.top
+      - search.suggest
+      - search.highlight
+use_directory_urls: true
+plugins:
+  - search:
+      lang: en
+  - minify:
+      minify_html: true
+markdown_extensions:
+  - attr_list
+  - admonition
+  - toc:
+      permalink: true
+      toc_depth: 4
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.tabbed
+  - pymdownx.details
+extra_css:
+    - css/extra.css
+extra:
+  generator: false
+copyright: Copyright © 2021 Brian Innes
+nav:
+  - Home: index.md
+  - Getting Started: 
+      - Installation: installation.md
+      - CRC: crc.md
+      - Guides: guides.md
+  - Documentation: https://docs.okd.io/latest/welcome/index.html
+  - Blog: blog.md
+  - Community:
+      - OKD Community: community.md
+      - Contributor: 
+          - Contributor: contributor.md
+          - okd.io review: okd-io.md
+  - Help: 
+    - Getting Help: help.md
+    - FAQ: faq.md

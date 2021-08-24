@@ -1,0 +1,663 @@
+{% extends "main.html" %}
+
+<link rel="stylesheet" href="{{ 'assets/stylesheets/home.css' | url }}" />
+
+<!-- Site Nav -->
+{% block site_nav %}{% endblock %}
+
+<!-- Content -->
+{% block content %}
+<link rel="stylesheet" href="{{ 'assets/stylesheets/style.css' | url }}" media="screen, print" type="text/css" />
+<link rel="stylesheet" href="{{ 'assets/stylesheets/theme-responsive.css' | url }}" media="screen" type="text/css" />
+<link rel="stylesheet" href="{{ 'assets/stylesheets/custom.css" media="screen' | url }}" type="text/css" />
+<link rel="stylesheet" href="{{ 'assets/stylesheets/highlighting.css' | url }}" media="screen" type="text/css" />
+<link href="{{'https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' | url }}" rel="stylesheet" media="screen"
+  type="text/css" />
+<link href="{{'/img/icons/apple-touch-icon.png' | url }}" rel="apple-touch-icon-precomposed' | url }}" type="image/png" />
+<link href="{{'/img/icons/favicon.png' | url }}" rel="icon" type="image/png" />
+<link rel="stylesheet" href="{{ 'assets/stylesheets/home.css' | url }}" />
+<!-- <% content_for :header do %>  -->
+<div class="layout-wide style-light" id="layout">
+  <header class="index_static">
+    <section class="content_info">
+      <div class="bg_parallax image_03_parallax" style="background-position: 50% 0px;"></div>
+      <section class="opacy_bg_02 paddings">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="logo wow fadeIn delay animated" style="visibility: visible; animation-name: fadeIn;">
+                <a href="index.html" title="Back to Home">
+                  <img class="logo_img" src="img/okd_logo.svg" alt="OKD logo" />
+                </a>
+              </div>
+              <h1 class="animated fadeInDown delay">
+                The Community Distribution of Kubernetes that powers <a href="https://www.openshift.com"
+                  class="headerlink" id="OpenShiftLink" target="_blank" style="font-weight: 400;">Red Hat OpenShift</a>.
+              </h1>
+              <h1 class="animated fadeInDown delay" style="font-size: 36px;"></h1>
+              <p class="animated fadeInUp delay">
+                Built around a core of OCI container packaging and Kubernetes container cluster
+                management, OKD is also augmented by application lifecycle management functionality and DevOps
+                tooling. OKD provides a complete open source container application platform.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </header>
+
+  <!-- <% end %> -->
+  <div class="info_title wow animated" id="try" style="position:relative;">
+    <div class="pandarocket"
+      style="background: url(img/okd-panda-flat_rocketeer_with_number.svg) no-repeat center center;">
+    </div>
+    <div class="vertical_line">
+      <div class="circle_bottom"></div>
+    </div>
+    <div class="info_vertical animated style-light">
+      <h1 class="style-light">
+        <span>OKD 4</span>
+      </h1>
+    </div>
+    <div class="">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-8 col-centered">
+            <div class="row text-center">
+              <div class="col-md-20">
+                <pre class="code"><nobr> $ openshift-install create cluster</nobr></pre>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <a id="get-started" class="code-button" href="https://github.com/openshift/okd#getting-started"
+                  target="_blank">
+                  <nobr>Get&nbsp;started</nobr>
+                </a>
+              </div>
+              <div class="col-sm-4">
+                <a id="changelogs" class="code-button" href="https://amd64.origin.releases.ci.openshift.org"
+                  target="_blank">
+                  <nobr>Releases</nobr>
+                </a>
+              </div>
+              <div class="col-sm-4">
+                <a id="slack" class="code-button" href="https://kubernetes.slack.com/messages/openshift-dev"
+                  target="_blank">
+                  <nobr>Join us on Slack</nobr>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="info_vertical">
+      <br>
+    </div>
+    <div>
+      <div class="container wow">
+        <div class="row text-center">
+          <div class="col-sm-10 col-centered">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <h2>Tons of amazing new features</h2>
+                <p>
+                  Automatic updates not only for OKD but also for the host OS, k8s Operators are first
+                  class citizens, a
+                  fancy UI, and much much more.
+                </p>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <h2>CodeReady Containers for OKD: local OKD 4 cluster for development</h2>
+                <p>
+                  CodeReady Containers brings a minimal OpenShift 4 cluster to your local laptop or
+                  desktop computer!
+                  Download it here: <a href="./crc/index.html">CodeReady Containers for OKD Images</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="content_info latest-news" id="v4">
+    <div class="info_title opacy_bg_01 paddings">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div class="info_vertical">
+              <h1  class="style-light">
+                What is
+                <span>OKD</span>?
+              </h1>
+              <div class="row text-left">
+                <div class="col-md-6 col-xs-12">
+                  <p>
+                    OKD is a <strong>distribution of Kubernetes</strong> optimized for continuous
+                    application development
+                    and multi-tenant deployment.
+                    OKD adds <strong>developer and operations-centric</strong> tools on top of Kubernetes
+                    to enable rapid
+                    application development, easy deployment
+                    and scaling, and long-term lifecycle maintenance for small and large teams. OKD is a
+                    <b>sibling</b>
+                    Kubernetes distribution to <b>Red Hat OpenShift</b>.
+                  </p>
+                  <!-- <div class="ytVideoWrapper">
+                                  <iframe width="560" height="315" src="https://www.youtube.com/embed/921NezIOJNw?rel=0&autoplay=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div> -->
+                </div>
+                <div class="col-md-6 col-xs-12">
+                  <p>
+                    OKD embeds Kubernetes and extends it with <strong>security</strong> and other
+                    integrated concepts. OKD
+                    is also referred to as Origin in github and in the documentation.
+                  </p>
+                  <p>
+                    If you are looking for enterprise-level support, or information on partner
+                    certification, Red Hat also
+                    offers <a href="https://www.openshift.com" target="_blank">Red Hat OpenShift Container
+                      Platform.</a>
+                  </p>
+                </div>
+              </div>
+
+
+              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="4000">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <img src="/img/screenshots/cluster-overview.png" alt="...">
+                    <div class="carousel-caption">
+                      ...
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="/img/screenshots/operatorhub.png" alt="...">
+                    <div class="carousel-caption">
+                      ...
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="/img/screenshots/pod-overview.png" alt="...">
+                    <div class="carousel-caption">
+                      ...
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="/img/screenshots/text-editor.png" alt="...">
+                    <div class="carousel-caption">
+                      ...
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="/img/screenshots/explore-api.png" alt="...">
+                    <div class="carousel-caption">
+                      ...
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="/img/screenshots/metrics.png" alt="...">
+                    <div class="carousel-caption">
+                      ...
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="/img/screenshots/monitoring.png" alt="...">
+                    <div class="carousel-caption">
+                      ...
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="/img/screenshots/topology.png" alt="...">
+                    <div class="carousel-caption">
+                      ...
+                    </div>
+                  </div>
+
+                  ...
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="content_info contributions" id="community">
+    <div class="vertical_line">
+      <div class="circle_bottom"></div>
+    </div>
+    <div class="info_title">
+      <div class="info_vertical container">
+        <div class="panda" style="background: url(img/okd-panda-flat_nerd_with_number.svg) no-repeat center center;">
+        </div>
+        <div class="row">
+          <h1  class="style-light">
+            <span>OKD Community</span>
+          </h1>
+          <p>We know you've got great ideas for improving OKD and its network of open source projects. So
+            roll up your
+            sleeves and come join us in the community!</p>
+        </div>
+      </div>
+      <div class="container wow fadeInUp">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <h2>Get Started</h2>
+            <p>All contributions are welcome! OKD uses the Apache 2 license and does not require any
+              contributor agreement
+              to submit patches.
+              Please open issues for any bugs or problems you encounter, ask questions in the
+              <b>#openshift-dev</b> on
+              Kubernetes Slack Channel,
+              or get involved in the OKD-WG by joining the OKD-WG google group.
+              <br>
+            <ul>
+              <li>
+                Get started with the
+                <a href="https://github.com/openshift/okd/blob/master/CONTRIBUTING.md">Contributors
+                  Guide</a>
+              </li>
+              <li>
+                Fork
+                <a href="https://github.com/openshift/origin">the repository</a>
+              </li>
+              <li>
+                Read the
+                <a href="https://docs.okd.io/latest/welcome/index.html">documentation</a>
+              </li>
+              <li>
+                Read our
+                <a href="https://github.com/openshift/community/blob/master/CHARTER.md">charter</a>
+              </li>
+              <li>
+                Help Resolve an
+                <a href="https://github.com/openshift/okd/issues">Open Issue</a>
+              </li>
+              <li>
+                Review our
+                <a href="https://docs.okd.io/latest/welcome/index.html">Apache 2 license</a>
+              </li>
+            </ul>
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <h2>Connect to the community</h2>
+            <ul>
+              <li>
+                Join the
+                <a href="https://groups.google.com/forum/#!forum/okd-wg">OKD Working Group</a>
+              </li>
+              <li>
+                Attend an upcoming
+                <a href="https://github.com/openshift/community/projects/1">OKD Working Group Meeting</a>
+              </li>
+            </ul>
+            <h2>File a Bug</h2>
+            <p>
+              Found a bug? Let us know! OKD uses
+              <a href="https://github.com/openshift/okd/issues">Github issues</a>.
+            </p>
+            <h2>Talk to Us</h2>
+            <ul>
+              <li>
+                Follow the <a href="https://lists.openshift.redhat.com/openshiftmm/listinfo">public user
+                  or development
+                  mailing lists</a>
+              </li>
+              <li>
+                Chat with us on the <a href="https://kubernetes.slack.com/messages/openshift-dev/">#openshift-dev
+                  channel
+                  on Slack</a>
+              </li>
+              <li>
+                Ask or answer questions on <a href="http://stackoverflow.com/questions/tagged/okd">StackOverflow</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="content_info">
+    <div class="opacy_bg_01 paddings">
+      <div class="info_title wow fadeInUp" id="tech">
+        <i class="fa fa-cubes left"></i>
+        <div class="info_vertical animated container">
+          <div class="row">
+            <h1  class="style-light">
+              Standardization through
+              <span>Containerization</span>
+            </h1>
+            <p>Standards are powerful forces in the software industry. They can drive technology forward
+              by bringing
+              together the combined efforts of multiple developers, different communities, and even
+              competing vendors.</p>
+          </div>
+        </div>
+        <div class="container wow fadeInUp" style="padding-top: 30px;">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="technology-section">
+                <div class="head-tech">
+                  <a href="https://kubernetes.io/"> <img class="logo_tech" src="img/logo-kubernetes-h.svg"
+                      alt="Kubernetes logo" /> </a>
+                </div>
+                <div class="caption-tech">
+                  <p>Open source container orchestration and cluster management at scale.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="technology-section">
+                <div class="head-tech">
+                  <a href="https://podman.io/"><img class="logo_tech" src="img/podman.svg" alt="Podman logo" /> </a>
+                </div>
+                <div class="caption-tech">
+                  <p>Standardized Linux container packaging for applications and their dependencies.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="technology-section">
+                <div class="head-tech">
+                  <a href="https://getfedora.org/en/coreos?stream=stable"><img class="logo_tech"
+                      src="img/fedora-coreos-logo.png" alt="Fedora CoreOS logo" /></a>
+                </div>
+                <div class="caption-tech">
+                  <p>A container-focused OS that's designed for painless management in large clusters.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="technology-section">
+                <div class="head-tech">
+                  <a href="https://www.openshift.com/learn/topics/operators"><img class="logo_tech"
+                      src="img/logo-operator-h.svg" alt="Operator Framework logo" /></a>
+                </div>
+                <div class="caption-tech">
+                  <p>An open source project that provides developer and runtime Kubernetes tools, enabling
+                    you to
+                    accelerate the development of an Operator. </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="technology-section">
+                <div class="head-tech">
+                  <a href="https://cri-o.io/"><img class="logo_tech" src="img/logo-crio-h.svg" alt="CRI-O logo" /></a>
+                </div>
+                <div class="caption-tech">
+                  <p>A lightweight container runtime for Kubernetes.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="technology-section">
+                <div class="head-tech">
+                  <a href="https://prometheus.io/"><img class="logo_tech" src="img/prometheus.png"
+                      alt="Prometheus logo" /></a>
+                </div>
+                <div class="caption-tech">
+                  <p>Prometheus is a systems and service monitoring toolkit that collects metrics from
+                    configured targets
+                    at given intervals, evaluates rule expressions, displays the results, and can trigger
+                    alerts if some
+                    condition is observed to be true.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="users">
+    <div>
+      <div class="info_title wow fadeInUp" id="tech">
+        <i class="fa left"></i>
+        <div class="info_vertical animated container">
+          <div class="row">
+            <h1 class="style-light">
+              OKD
+              <span>End User Community</span>
+            </h1>
+          </div>
+        </div>
+        <div class="container wow fadeInUp">
+          <div class="row">
+            <div class="col-md-12">
+              <div id="user-carousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                <!-- carousel slides -->
+              
+                  <div class="item active">
+                    <div class="user-logo">
+                      <a href="https://www.datto.com/" title="Datto" class="user-logo-link">
+                        <img src="/img/users/datto-logo.png" alt="Datto" />
+                      </a>
+                      <a href="https://www.datto.com/" title="Datto" class="user-logo-text">
+                        Datto
+                      </a>
+                    </div>
+                    <div class="user-logo">
+                      <a href="https://wolterskluwer.com/" title="Wolters Kluwer" class="user-logo-link">
+                        <img src="/img/users/wk_logo.png" alt="Wolters Kluwer" />
+                      </a>
+                      <a href="https://wolterskluwer.com/" title="Wolters Kluwer" class="user-logo-text">
+                        Wolters Kluwer
+                      </a>
+                    </div>
+                    <div class="user-logo">
+                      <a href="https://getupcloud.com/index_en.html" title="Getupcloud" class="user-logo-link">
+                        <img src="/img/users/getupcloud.png" alt="Getupcloud" />
+                      </a>
+                      <a href="https://getupcloud.com/index_en.html" title="Getupcloud" class="user-logo-text">
+                        Getupcloud
+                      </a>
+                    </div>
+                    <div class="user-logo">
+                      <a href="http://www.marketamerica.com/" title="Market America" class="user-logo-link">
+                        <img src="/img/users/marketamerica.png" alt="Market America" />
+                      </a>
+                      <a href="http://www.marketamerica.com/" title="Market America" class="user-logo-text">
+                        Market America
+                      </a>
+                    </div>
+                    <div class="user-logo">
+                      <a href="http://harrisburgu.edu/" title="Harrisburg University" class="user-logo-link">
+                        <img src="/img/users/harrisburguniversity.png" alt="Harrisburg University" />
+                      </a>
+                      <a href="http://harrisburgu.edu/" title="Harrisburg University" class="user-logo-text">
+                        Harrisburg University
+                      </a>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="user-logo">
+                      <a href="https://www.mcmaster.ca/" title="McMaster University" class="user-logo-link">
+                        <img src="/img/users/mcmaster.png" alt="McMaster University" />
+                      </a>
+                      <a href="https://www.mcmaster.ca/" title="McMaster University" class="user-logo-text">
+                        McMaster University
+                      </a>
+                    </div>
+                    <div class="user-logo">
+                      <a href="https://www.duke.edu/" title="Duke University" class="user-logo-link">
+                        <img src="/img/users/duke.svg" alt="Duke University" />
+                      </a>
+                      <a href="https://www.duke.edu/" title="Duke University" class="user-logo-text">
+                        Duke University
+                      </a>
+                    </div>
+                    <div class="user-logo">
+                      <a href="https://kubernetes.io/case-studies/ing/" title="ING" class="user-logo-link">
+                        <img src="/img/users/ing.png" alt="ING" />
+                      </a>
+                      <a href="https://kubernetes.io/case-studies/ing/" title="ING" class="user-logo-text">
+                        ING
+                      </a>
+                    </div>
+                    <div class="user-logo">
+                      <a href="https://www.rackspace.com/" title="Rackspace" class="user-logo-link">
+                        <img src="/img/users/rackspace.png" alt="Rackspace" />
+                      </a>
+                      <a href="https://www.rackspace.com/" title="Rackspace" class="user-logo-text">
+                        Rackspace
+                      </a>
+                    </div>
+                    <div class="user-logo">
+                      <a href="http://www.iceinsuretech.com/" title="ICE InsureTech" class="user-logo-link">
+                        <img src="/img/users/iceinsuretech.svg" alt="ICE InsureTech" />
+                      </a>
+                      <a href="http://www.iceinsuretech.com/" title="ICE InsureTech" class="user-logo-text">
+                        ICE InsureTech
+                      </a>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="user-logo">
+                      <a href="https://www.arris.com/" title="ARRIS" class="user-logo-link">
+                        <img src="/img/users/arris.png" alt="ARRIS" />
+                      </a>
+                      <a href="https://www.arris.com/" title="ARRIS" class="user-logo-text">
+                        ARRIS
+                      </a>
+                    </div>
+                    <div class="user-logo">
+                      <a href="https://bluescape.com/" title="Bluescape" class="user-logo-link">
+                        <img src="/img/users/bluescape.png" alt="Bluescape" />
+                      </a>
+                      <a href="https://bluescape.com/" title="Bluescape" class="user-logo-text">
+                        Bluescape
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- carousel controls -->
+                <a class="left carousel-control" href="#user-carousel" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#user-carousel" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+              </div>
+              
+                          </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <a class="list-link" target="_blank" href="https://commons.openshift.org/participants.html">View the
+                OpenShift Commons Participants List (<%= data.participants.participants.count %>)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content_info" id="join">
+    <div class="paddings">
+      <div class="info_title wow" id="try">
+        <!-- class="info_title wow fadeInUp" id="try"> -->
+        <i class="fa fa-compass left"></i>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+              <div>
+                <!-- class="info_vertical animated"> -->
+                <h1  class="style-light">
+                  Become a part of something
+                  <span>bigger</span>
+                </h1>
+                <p>OpenShift Commons is open to all community participants: users, operators, enterprises,
+                  non-profits,
+                  educational institutions, partners, and service providers as well as other open source
+                  technology
+                  initiatives utilized under the hood or to extend the OpenShift platform.</p>
+                <br>
+                <ul>
+                  <li class="text-left">If you are an OpenShift Online or an OpenShift Container Platform
+                    customer or have
+                    deployed OKD on premise or on a public cloud.</li>
+                  <li class="text-left">If you have contributed to the OKD project and want to connect
+                    with your peers and
+                    end users.</li>
+                  <li class="text-left">If you simply want to stay up-to-date on the roadmap and best
+                    practices for using,
+                    deploying and operating OpenShift.</li>
+                </ul>
+                <div class="text-center">
+                  <h3>
+                    Then OpenShift Commons is the right place for you.
+                  </h3>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1 text-center more-btn" id="blog-btn">
+                    <a class="btn btn-primary" href="https://commons.openshift.org/index.html#join">Ready
+                      to Join?</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %}
+
+<!-- Application footer -->
+{% block footer %}
+{{ super() }}
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="{{ 'assets/javascripts/bundle.716f8af4.min.js' | url }}"></script>
+<script src="{{ 'assets/js/jquery.js' | url }}"></script>
+<!-- <script src="{{ 'assets/js/nav/tinynav.js' | url }}"></script> -->
+<!-- <script src="{{ 'assets/js/nav/superfish.js' | url }}"></script> -->
+<!-- <script src="{{ 'assets/js/nav/hoverIntent.js' | url }}"></script> -->
+<!-- <script src="{{ 'assets/js/totop/jquery.ui.totop.js' | url }}"></script> -->
+<script src="{{ 'assets/js/rs-plugin/js/jquery.themepunch.tools.min.js' | url }}"></script>
+<script src="{{ 'assets/js/rs-plugin/js/jquery.themepunch.revolution.min.js' | url }}"></script>
+<script src="{{ 'assets/js/carousel/owl.carousel.js' | url }}"></script>
+<script src="{{ 'assets/js/fancybox/jquery.fancybox.pack.js' | url }}"></script>
+<script src="{{ 'assets/js/gallery/modernizr.custom.26633.js' | url }}"></script>
+<script src="{{ 'assets/js/gallery/jquery.gridrotator.js' | url }}"></script>
+<script src="{{ 'assets/js/team/modernizr.custom.63321.js' | url }}"></script>
+<script src="{{ 'assets/js/team/jquery.catslider.js' | url }}"></script>
+<script src="/js/filters/jquery.isotope.js"></script>
+<script src="{{ 'assets/js/filters/isotope.pkgd.js' | url }}"></script> <!-- Isotope PACKAGED v3.0.6 -->
+<script src="{{ 'assets/js/theme-options/theme-options.js' | url }}"></script>
+<script src="{{ 'assets/js/theme-options/jquery.cookies.js' | url }}"></script>
+<!-- <script src="{{ 'assets/js/twitter/jquery.tweet.js' | url }}"></script> -->
+<script src="{{ 'assets/js/animations/wow.min.js' | url }}"></script>
+<script src="{{ 'assets/js/parallax/jquery.inview.js' | url }}"></script>
+<script src="{{ 'assets/js/parallax/nbw-parallax.js' | url }}"></script>
+<script src="{{ 'assets/js/bootstrap/bootstrap.js' | url }}"></script>
+<script src="{{ 'assets/js/main.js' | url }}"></script>
+{% endblock %}
