@@ -3,6 +3,8 @@ template: home.html
 title: OKD.io
 ---
 
+<!--- cSpell:ignore roadmap -->
+
 Built around a core of OCI container packaging and Kubernetes container cluster management, OKD is also augmented by application lifecycle management functionality and DevOps tooling. OKD provides a complete open source container application platform.
 
 ## OKD 4
@@ -30,7 +32,7 @@ We know you've got great ideas for improving OKD and its network of open source 
 
 ### Get Started
 
-All contributions are welcome! OKD uses the Apache 2 license and does not require any contributor agreement to submit patches. Please open issues for any bugs or problems you encounter, ask questions in the **#openshift-dev** on Kubernetes Slack Channel, or get involved in the OKD-WG by joining the OKD-WG google group. 
+All contributions are welcome! OKD uses the Apache 2 license and does not require any contributor agreement to submit patches. Please open issues for any bugs or problems you encounter, ask questions in the **#openshift-dev** on Kubernetes Slack Channel, or get involved in the OKD-WG by joining the OKD-WG google group.
 
 - Get started with the [Contributors Guide](https://github.com/openshift/okd/blob/master/CONTRIBUTING.md)
 - Fork [the repository](https://github.com/openshift/origin)
@@ -66,7 +68,7 @@ Standards are powerful forces in the software industry. They can drive technolog
 | [![Operator Framework](../img/logo-operator-h.svg){ width=300px }](https://www.openshift.com/learn/topics/operators){: target=_blank} | [![cri-o](../img/logo-cri-o.png){ width=300px }](https://cri-o.io/){: target=_blank} | [![Prometheus](../img/prometheus.png){ width=300px }](https://prometheus.io/){: target=_blank} |
 | An open source project that provides developer and runtime Kubernetes tools, enabling you to accelerate the development of an Operator | A lightweight container runtime for Kubernetes | Prometheus is a systems and service monitoring toolkit that collects metrics from configured targets at given intervals, evaluates rule expressions, displays the results, and can trigger alerts if some condition is observed to be true |
 
-## OKD End User Commuity
+## OKD End User Community
 
 There is a large, vibrant [end user community](https://commons.openshift.org/participants.html){: target=_blank}
 
