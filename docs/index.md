@@ -31,7 +31,7 @@ OKD is also referred to as Origin in github and in the documentation
 
 OKD is a **sibling** Kubernetes distribution to **Red Hat OpenShift** | If you are looking for enterprise-level support, or information on partner certification, Red Hat also offers [Red Hat OpenShift Container Platform](https://www.openshift.com/){: target=_blank}
 
-![OKD web UI](../img/screenshots/topology.png){: width=60% }
+![OKD web UI](img/screenshots/topology.png){: width=60% }
 
 ## OKD Community
 
@@ -69,37 +69,37 @@ Standards are powerful forces in the software industry. They can drive technolog
 
 ---
 
-[![Kubernetes](../img/logo-kubernetes-horizontal-color.png){ width=300px }](https://kubernetes.io/){: target=_blank}
+[![Kubernetes](img/logo-kubernetes-horizontal-color.png){ width=300px }](https://kubernetes.io/){: target=_blank}
 
 Open source container orchestration and cluster management at scale
 
 ---
 
-[![Podman](../img/podman.svg){ width=300px }](https://podman.io/){: target=_blank}
+[![Podman](img/podman.svg){ width=300px }](https://podman.io/){: target=_blank}
 
 Standardized Linux container packaging for applications and their dependencies
 
 ---
 
-[![Fedora CoreOS](../img/fedora-coreos-logo.png){ width=300px }](https://getfedora.org/en/coreos?stream=stable){: target=_blank}
+[![Fedora CoreOS](img/fedora-coreos-logo.png){ width=300px }](https://getfedora.org/en/coreos?stream=stable){: target=_blank}
 
 A container-focused OS that's designed for painless management in large clusters
 
 ---
 
-[![Operator Framework](../img/logo-operator-h.svg){ width=300px }](https://www.openshift.com/learn/topics/operators){: target=_blank}
+[![Operator Framework](img/logo-operator-h.svg){ width=300px }](https://www.openshift.com/learn/topics/operators){: target=_blank}
 
 An open source project that provides developer and runtime Kubernetes tools, enabling you to accelerate the development of an Operator
 
 ---
 
-[![cri-o](../img/logo-cri-o.png){ width=300px }](https://cri-o.io/){: target=_blank}
+[![cri-o](img/logo-cri-o.png){ width=300px }](https://cri-o.io/){: target=_blank}
 
 A lightweight container runtime for Kubernetes
 
 ---
 
-[![Prometheus](../img/prometheus.png){ width=300px }](https://prometheus.io/){: target=_blank}
+[![Prometheus](img/prometheus.png){ width=300px }](https://prometheus.io/){: target=_blank}
 
 Prometheus is a systems and service monitoring toolkit that collects metrics from configured targets at given intervals, evaluates rule expressions, displays the results, and can trigger alerts if some condition is observed to be true
 
@@ -119,4 +119,4 @@ OpenShift Commons is open to all community participants: users, operators, enter
 
  ... then OpenShift Commons is the right place for you
 
- [![Ready to join](../img/readyToJoin.png){ width=200px}](https://commons.openshift.org/index.html#join){: target=_blank}
+ [![Ready to join](img/readyToJoin.png){ width=200px }](https://commons.openshift.org/index.html#join){: target=_blank}
