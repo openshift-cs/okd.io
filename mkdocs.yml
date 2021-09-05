@@ -13,16 +13,18 @@ theme:
     logo: img/okd_logo_resized.svg
     favicon: img/okdLogo.png
     palette:
-      - scheme: okd-dark
+      - media: "(prefers-color-scheme: light)"
+        scheme: okd
         toggle:
           icon: material/toggle-switch-off-outline
           name: Switch to dark mod
-        primary: okd blue
-        accent: okd light green
-      - scheme: okd
+      - media: "(prefers-color-scheme: dark)"
+        scheme: okd-dark
         toggle:
           icon: material/toggle-switch
           name: Switch to light mode
+        primary: okd blue
+        accent: okd light green
     font:
       text: Open Sans
       code: Roboto Mono
@@ -62,7 +64,6 @@ extra:
 copyright: Copyright © 2021 Brian Innes
 nav:
   - Index: index.md
-  - Home: home.md
   - Getting Started: 
       - Installation: installation.md
       - CRC: crc.md
