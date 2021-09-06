@@ -11,6 +11,16 @@ ignore=
   ^https://fonts.gstatic.com
   stylesheets/carousel/owl.video.play.png$
   js/rs-plugin/assets/transparent.png$
+  img/readyToJoin.png$
+  img/prometheus.png$
+  img/logo-cri-o.png$
+  img/logo-operator-h.svg$
+  img/fedora-coreos-logo.png$
+  img/podman.svg$
+  img/logo-kubernetes-horizontal-color.png$
+  img/screenshots/topology.png$
+  img/okd_logo_resized.svg$
+
 
 
 [checking]

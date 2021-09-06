@@ -7,15 +7,26 @@ repo_name: "okd-io"
 repo_url: https://github.com/binnes/okd-io
 docs_dir: docs
 site_dir: public
-edit_uri: edit/main/docs
+edit_uri: edit/beta/docs
 theme:
     name: material
     logo: img/okd_logo_resized.svg
     favicon: img/okdLogo.png
     palette:
-      scheme: okd
-      primary: okd blue
-      accent: okd light green
+      - media: "(prefers-color-scheme: light)"
+        scheme: okd
+        toggle:
+          icon: material/toggle-switch-off-outline
+          name: Switch to dark mod
+        primary: blue-grey
+        accent: red
+      - media: "(prefers-color-scheme: dark)"
+        scheme: okd-dark
+        toggle:
+          icon: material/toggle-switch
+          name: Switch to light mode
+        primary: okd blue
+        accent: okd light green
     font:
       text: Open Sans
       code: Roboto Mono
@@ -24,12 +35,12 @@ theme:
     features:
       - content.code.annotate
       - content.tabs.link
-#      - navigation.instant
+      - navigation.instant
       - naviagation.sections
       - navigation.tracking
-      - navigation.tabs
-#      - navigation.tabs.sticky
-      - navigation.top
+      # - navigation.tabs
+      # - navigation.tabs.sticky
+      # - navigation.top
       - search.suggest
       - search.highlight
 use_directory_urls: true
