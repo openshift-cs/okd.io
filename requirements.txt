@@ -2,5 +2,3 @@
 mkdocs-material==7.2.6
 mkdocs-minify-plugin==0.4.0
 git+https://github.com/linkchecker/linkchecker@v10.0.1#egg=linkchecker
-
-
