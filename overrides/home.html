@@ -22,27 +22,34 @@
 
 {% extends "main.html" %}
 
+<!-- <link rel="stylesheet" href="{{ 'assets/stylesheets/home.css' | url }}" /> -->
+
 <!-- Announcement bar -->
 {% block announce %}{% endblock %}
 
 <!-- Site Nav -->
-{% block site_nav %}{% endblock %}
+<!-- {% block site_nav %}{% endblock %} -->
+
+<!-- Tabs -->
+{% block tabs %}{% endblock %}
 
 <!-- Content -->
 {% block content %}
 
-<link rel="stylesheet" href="{{ 'assets/stylesheets/index.css' | url }}" />
+<link rel="stylesheet" href="{{ 'assets/stylesheets/home.css' | url }}" />
 <!-- Hero for landing page -->
 <section class="mdx-container">
     <div class="md-grid md-typeset">
         <div class="mdx-hero">
             <section>
                 <div class=home-hero>
-                    <div class="col-md-12">
-                        <img class="logo_img" src="img/okd_logo_resized.svg" alt="OKD logo">
-                        <h1>
-                            The Community Distribution of Kubernetes that powers<a href="https://www.openshift.com" class="headerlink" id="OpenShiftLink" target="_blank">Red Hat OpenShift</a>
-                        </h1>
+                    <div class=home-hero-text>
+                        <div class="col-md-12">
+                            <img class="logo_img" src="img/okd_logo_resized.svg" alt="OKD logo">
+                            <h1>
+                                The Community Distribution of Kubernetes that powers<a href="https://www.openshift.com" class="headerlink" id="OpenShiftLink" target="_blank">Red Hat OpenShift</a>
+                            </h1>
+                        </div>
                     </div>
                 </div>
             </section>

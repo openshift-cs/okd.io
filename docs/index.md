@@ -1,5 +1,5 @@
 ---
-template: index.html
+template: home.html
 title: OKD.io
 ---
 
