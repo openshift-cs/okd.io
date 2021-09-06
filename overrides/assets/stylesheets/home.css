@@ -6,9 +6,7 @@
 .home-purpose {
     max-width: 100%;
     width: 100%;
-}
-
-.home-purpose {
+    padding: 0 clamp(0.5rem, 15vw, 8rem);
     font-size: 1.4em;
 }
 
@@ -20,8 +18,7 @@
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 3rem;
-    padding-bottom: 3rem;
-    /* font-size: 1.6em; */
+    padding-bottom: 1rem;
 }
 
 .column {
@@ -30,7 +27,8 @@
     flex-basis: 100%;
     flex: 1;
     height: 100%;
-    /* font-family: IBM Plex Sans VF, Helvetica Neue, Arial, sans-serif; */
+    align-items: left;
+    text-align: left;
 }
 
 .md-main__inner {
@@ -48,7 +46,7 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto 5rem;
-    padding: 1rem clamp(0.5rem, 15vw, 8rem);
+    padding: 1rem;
     align-items: center;
     position: relative;
 }
@@ -97,8 +95,8 @@ h2:after {
 h2:nth-of-type(odd),
 h2:nth-of-type(even) {
     color: var(--md-typeset-a-color);
-    margin: 1rem clamp(0.5rem, 15vw, 8rem);
-    padding: 1rem clamp(0.5rem, 15vw, 8rem);
+    margin: 3rem 0;
+    padding: 3rem 0 3rem;
     text-align: center;
     font-weight: bold;
     position: relative;
@@ -122,7 +120,7 @@ h3:nth-of-type(even) {
     color: var(--md-typeset-a-color);
     font-weight: bold;
     position: relative;
-    margin: 1.5rem clamp(0.5rem, 15vw, 8rem) 0.5rem;
+    margin: 1.5rem 0 0.5rem;
     box-shadow: 0 1px var(--md-default-bg-color--lighter);
     font-size: 1.2rem;
     line-height: 1.2rem;
@@ -132,32 +130,33 @@ h3:nth-of-type(even) {
 
 p:first-child {
     font-size: 1.5rem;
-    padding: 5rem clamp(0.5rem, 15vw, 8rem) 5rem;
+    padding-bottom: 2rem;
     color: var(--md-primary-fg-color--dark);
+    text-align: left;
 }
 
 ul:not([class]) {
-    margin: 0 auto;
-    padding: .5rem clamp(0.5rem, 15vw, 8rem);
+    margin: 0;
+    padding-top: .5rem;
     list-style-position: inside;
 }
 
 h2+p,
 h2+p+p {
     font-size: 1.25rem;
-    margin: 0 auto;
-    padding: 1rem clamp(0.5rem, 15vw, 8rem);
+    margin: 0;
+    padding-top: 1rem;
     color: var(--md-typeset-color);
 }
 
 *+p {
-    margin: 0 auto;
-    padding: .5em clamp(0.5rem, 15vw, 8rem);
+    margin: 0;
+    padding-top: 1em;
     color: var(--md-typeset-color);
 }
 
 .row hr {
-    margin: 0 clamp(0.5rem, 15vw, 8rem);
+    margin-top: 0;
     height: 5px;
     color: var(--md-accent-bg-color);
 }
