@@ -5,8 +5,8 @@
 
 ## How to ask for help
 
-Temp content
+add content
 
 ## Community Etiquette
 
-Temp content
+add content
