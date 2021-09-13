@@ -1,10 +1,10 @@
 site_name: OKD.io
 site_description: >-
   The Community Distribution of Kubernetes that powers Red Hat OpenShift
-site_url: https://binnes.github.io/okd-io
+site_url: https://openshift-cs.github.io/okd.io/index.html
 site_author: Brian Innes
 repo_name: "okd-io"
-repo_url: https://github.com/binnes/okd-io
+repo_url: https://github.com/openshift-cs/okd.io
 docs_dir: docs
 site_dir: public
 edit_uri: edit/beta/docs
@@ -34,7 +34,7 @@ theme:
     custom_dir: overrides
     features:
       - content.code.annotate
-      - content.tabs.link
+      # - content.tabs.link
       - navigation.instant
       - naviagation.sections
       - navigation.tracking
@@ -69,7 +69,17 @@ nav:
   - Getting Started: 
       - Installation: installation.md
       - CRC: crc.md
-      - Guides: guides.md
+      - Guides: 
+        - Overview: guides/overview.md
+        - Automated vSphere install: guides/automated-vsphere-upi.md
+        - Prerequites for vSphere UPI: guides/vsphere-prereqs.md
+        - vSphere IPI Deployment: guides/vsphere-ipi.md
+        - Single Node OKD Installation: guides/sno.md
+        - Vadim's homelab: guides/vadim.md
+        - Sri's homelab: guides/sri.md
+        - Azure IPI Default Deployment: guides/azure-ipi.md
+        - AWS IPI Default Deployment: guides/aws-ipi.md
+        - GCP IPI Default Deployment: guides/gcp-ipi.md
   - Documentation: https://docs.okd.io/latest/welcome/index.html
   - Blog: blog.md
   - Community:
