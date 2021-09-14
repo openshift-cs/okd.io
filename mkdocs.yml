@@ -87,6 +87,7 @@ nav:
       - Contributor: 
           - Contributor: contributor.md
           - okd.io review: okd-io.md
+          - Modifying OKD.io: community/doc-wg/okd-io.md
   - Help: 
     - Getting Help: help.md
     - FAQ: faq.md

@@ -1,6 +1,6 @@
 # Vadim's homelab
 
-<!--- cSpell:ignore Vadim's homelab loadbalancer ceph NVME dnsmasq helpernode autoprovision ostree grafana datasource datasources promtail gitops gitea minio nextcloud navidrome pleroma microblogging wallabag -->
+<!--- cSpell:ignore Vadim's homelab loadbalancer ceph NVME dnsmasq helpernode autoprovision ostree grafana datasource datasources promtail gitops gitea minio nextcloud navidrome pleroma microblogging wallabag neptr -->
 
 This describes the resources used by OpenShift after performing an installation
 to make it similar to my homelab setup.
@@ -10,25 +10,25 @@ to make it similar to my homelab setup.
 1. Ubiquity EdgeRouter ER-X
     - runs DHCP (embedded), custom DNS server via AdGuard
 
-    ![pic](https://dl.vrutkovs.eu/public/homelab/erx.jpg){width=80%}
+    ![pic](./img/erx.jpg){width=80%}
 
 1. NAS/Bastion host
     - haproxy for loadbalancer
     - ceph cluster for PVs
     - NFS server for shared data
 
-    ![pic](https://dl.vrutkovs.eu/public/homelab/neptr-gumball.jpg){width=80%}
+    ![pic](./img/neptr-gumball.jpg){width=80%}
 
 1. control plane
     - Intel i5 CPU, 16+4 GB RAM
     - 120 GB NVME disk
 
-    ![pic](https://dl.vrutkovs.eu/public/homelab/bmo.jpg){width=80%}
+    ![pic](./img/bmo.jpg){width=80%}
 
 1. compute nodes
     - Lenovo X220 laptop
 
-    ![pic](https://dl.vrutkovs.eu/public/homelab/neptr-gumball.jpg){width=80%}
+    ![pic](./img/neptr-gumball.jpg){width=80%}
 
 ## Router setup
 
