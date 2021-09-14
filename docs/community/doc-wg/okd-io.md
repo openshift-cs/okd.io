@@ -74,13 +74,13 @@ HTML can be embedded in Markdown, but in the documentation it is preferred to st
 
 MkDocs uses 4 spaces for tabs, so when indenting code ensure you are working with tabs set to 4 spaces rather than 2, which is commonly used.
 
-When dealling with some features of Markdown indentation is used to identify blocks.
+When using some features of Markdown indentation is used to identify blocks.
 
 ```md
 1. Ubiquity EdgeRouter ER-X
     - runs DHCP (embedded), custom DNS server via AdGuard
 
-    ![pic](https://dl.vrutkovs.eu/public/homelab/erx.jpg){width=80%}
+    ![pic](./img/erx.jpg){width=80%}
 ```
 
 In the code block above you will see the unordered list item is indented, so it aligns with the content of the ordered list (rather than aligning with the number of the ordered list).  The image is also indented so it too aligns with the ordered list text.
