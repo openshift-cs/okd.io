@@ -24,7 +24,7 @@ To work on documentation and be able to view the rendered web site you need to c
 
     - Install [Python 3](https://www.python.org){: target=_blank} on your system
     - Install [Node.js](https://nodejs.org/en/){: target=_blank} on your system
-    - Clone okd.io repository (or your fork of the repository)
+    - Clone **your fork** of the [okd.io repository](https://github.com/openshift-cs/okd.io/){: target=_blank}
     - cd into the local repo directory (./okd.io)
     - Install the required python packages `pip install -r requirements.txt'
     - Install the spell checker using command `npm ci`
@@ -43,11 +43,17 @@ To work on documentation and be able to view the rendered web site you need to c
 
 The site is created using [MkDocs](http://mkdocs.org){: target="_blank" .external } with the [Materials theme](https://squidfunk.github.io/mkdocs-material/){: target="_blank" .external } theme.
 
-MkDocs takes Markdown documents and turns them into a static website, that can be accessed from a filesystem or served from a web server.
+MkDocs takes Markdown documents and turns them into a static website that can be accessed from a filesystem or served from a web server.
 
 A [link checker tool](https://linkchecker.github.io/linkchecker/index.html) is also used to validate all links in the MkDocs generated website.
 
-## Creating content
+## Updating the site
+
+To make your changes live, create a pull request to deliver the changes in your fork of the repo to the main branch of the **okd.io** repo.
+
+Github automation is used to generate the site then publish to github pages, which serves the site.  If your changes contain spelling issues or broken links, then the automation will fail and the github pages site will not be updated, so please do a local test using the **build.sh** script before creating the pull request.
+
+## Changing content
 
 MkDocs supports standard Markdown syntax and a set Markdown extensions provided by plugins.  The exact Markdown syntax supported is based on the [python implementation](https://python-markdown.github.io).
 
@@ -59,14 +65,16 @@ The **mkdoc.yml** file defines the top level navigation for the site.  The level
 
 The following markdown syntax is used within the documentation
 
-!!!Todo
-    Complete the table below
-
 | Syntax | Result
 |--------|-----------
-|`# Title` | a level 1 heading containing.  You can create up to 6 levels of headings by adding additional `#` characters, so `###` is a level 3 heading
+|`# Title` | heading - you can create up to 6 levels of headings by adding additional `#` characters, so `###` is a level 3 heading
 |`**text**` | will display the word ```text``` in **bold**
 |`*text*` | will display the word ```text``` in *italic*
+| `` `code` `` | inline code block
+| ```` ```shell ... ``` ````| multi-line (Fenced) code block
+| `1. list item` | ordered list
+| `- unordered list item` | unordered list
+| `---` | horizontal break
 
 HTML can be embedded in Markdown, but in the documentation it is preferred to stick with pure Markdown with the installed extensions.
 
@@ -100,9 +108,9 @@ MkDocs will warn of any internal broken links, so it is important that links wit
 
 As part of the build process a linkchecker application will check the generated html site for any broken links.  You can run this linkchecker locally using the instructions.  If any links in the documentation should be excluded from the link checker, such as links to localhost, then they should be added as a regex to the linkcheckerrc file, located in the root folder of the project - see [linkchecker documentation](https://linkchecker.github.io/linkchecker/index.html) for additional information
 
-## Extensions used in the prototype
+## Markdown Extensions used in OKD.io
 
-There are a number of Markdown extensions being used in the prototype.  See the mkdocs.yml file to see which extensions are configured.  The documentation for the extensions can be found [here](https://python-markdown.github.io/extensions/)
+There are a number of Markdown extensions being used to create the site.  See the mkdocs.yml file to see which extensions are configured.  The documentation for the extensions can be found [here](https://python-markdown.github.io/extensions/)
 
 ### Link configuration
 

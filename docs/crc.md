@@ -12,7 +12,8 @@ Run a developer instance of OKD4 on your local workstation with CodeReady Contai
 
 The [Getting Started Guide](https://code-ready.github.io/crc/){: target=_blank} explains how to install and use CodeReady Containers.
 
-!!!Todo
-    Provide a link to the CRC for OKD github repo
+If you encounter any problems, please open a discussion item in the [OKD GitHub Community](https://github.com/openshift/okd/discussions){: target=_blank}!
 
-If you encounter any problems, please open an issue at the [OKD GitHub Community](https://github.com/openshift/okd){: target=_blank}!
+## CRC Working group
+
+There is a working group looking at automating the OKD CRC build process.  If you want technical details on how to build OKD CRC see the [working group section of this site](wg_crc/overview.md){: target=_blank}
