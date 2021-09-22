@@ -80,14 +80,20 @@ nav:
         - Azure IPI Default Deployment: guides/azure-ipi.md
         - AWS IPI Default Deployment: guides/aws-ipi.md
         - GCP IPI Default Deployment: guides/gcp-ipi.md
-  - Documentation: https://docs.okd.io/latest/welcome/index.html
+  - Documentation: docs.md
   - Blog: blog.md
   - Community:
       - OKD Community: community.md
       - Contributor: 
           - Contributor: contributor.md
-          - okd.io review: okd-io.md
-          - Modifying OKD.io: community/doc-wg/okd-io.md
+  - OKD Working Groups:
+      - Documentation:
+          - Overview: wg_docs/overview.md
+          - Modifying OKD.io: wg_docs/okd-io.md
+      - CRC Build: 
+          - Overview: wg_crc/overview.md
+      - OKD Virtualization: 
+          - Overview: wg_virt/overview.md
   - Help: 
     - Getting Help: help.md
     - FAQ: faq.md
