@@ -1,5 +1,7 @@
 # Documentation
 
+<!--- cSpell:ignore mburke dmueller -->
+
 There are 2 primary sources of information for OKD:  
 
 - community documentation - [https://okd.io](https://okd.io){: target=blank} (this site)
