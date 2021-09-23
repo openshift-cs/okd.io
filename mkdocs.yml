@@ -66,6 +66,7 @@ extra:
 copyright: Copyright © 2021 Brian Innes
 nav:
   - Home: index.md
+  - About: about.md
   - Getting Started: 
       - Installation: installation.md
       - CRC: crc.md
