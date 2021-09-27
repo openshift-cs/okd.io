@@ -11,7 +11,7 @@ There are 2 primary sources of information for OKD:
 
 If you encounter an issue with the documentation or have an idea to improve the content or add new content then please follow the directions below to learn how you can get changes made.
 
-The source for the documentation is managed in github.  There are different processes for requesting in the community and product documentation:
+The source for the documentation is managed in github.  There are different processes for requesting changes in the community and product documentation:
 
 ### Community documentation
 
