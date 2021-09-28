@@ -1,5 +1,7 @@
 # Frequently Asked Questions (FAQ)
 
+<!--- cSpell:ignore Charro Gruver hoster -->
+
 Below are answers to common questions regarding OKD installation and administration. If you have a suggested question or a suggested improvement to an answer, please feel free to reach out.
 
 ## What are the relations with OCP project? Is OKD4 an upstream of OCP?
@@ -24,7 +26,7 @@ The OKD stable version is released bi-weekly, following Fedora CoreOS schedule, 
 
 Currently, single-node cluster installations cannot be deployed directly by the 4.7 installer. This is a [known issue](https://github.com/openshift/okd/blob/master/KNOWN_ISSUES.md). Single-node cluster installations do work with the 4.8 nightly installer builds. 
 
-As an alternative, if OKD version 4.7 is needed, you may have luck with Charo Gruver's [OKD 4 Single Node Cluster instructions](https://cgruver.github.io/okd4-single-node-cluster/). You can also use [Code Ready Containers (CRC)](https://www.okd.io/crc.html) to run a single-node cluster on your desktop.
+As an alternative, if OKD version 4.7 is needed, you may have luck with Charro Gruver's [OKD 4 Single Node Cluster instructions](https://cgruver.github.io/okd4-single-node-cluster/). You can also use [Code Ready Containers (CRC)](https://www.okd.io/crc.html) to run a single-node cluster on your desktop.
 
 ## What to do in case of errors?
 If you experience problems during installation you *must* collect the bootstrap log bundle, see [instructions](https://docs.okd.io/latest/installing/installing-troubleshooting.html)
@@ -57,9 +59,11 @@ See https://openshift.tips/ for useful Openshift tips
 
 https://amd64.origin.releases.ci.openshift.org/
 
-Note that nightly builds (from `4.x.0-0.okd`) are pruned every 72 hours.
-If your cluster uses these images, consider [mirroring](https://docs.okd.io/latest/installing/install_config/installing-restricted-networks-preparations.html#installing-restricted-networks-preparations) these files to a local registry.
-Builds from the `stable-4` stream are not removed.
+!!!Warning
+    Nightly builds (from `4.x.0-0.okd`) are pruned every 72 hours.
+    If your cluster uses these images, consider [mirroring](https://docs.okd.io/latest/installing/installing-mirroring-installation-images.html) these files to a local registry.
+
+    Builds from the `stable-4` stream are not removed.
 
 ## How can I upgrade my cluster to a new version?
 
