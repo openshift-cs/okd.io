@@ -9,7 +9,7 @@ OKD has an active community of end-users, with many different use-cases.  From e
 We want the OKD community to be a welcoming community, where everyone is treat with respect.
 
 !!!Todo
-    As we don't have an agreed code of conduct for the OKD project should we adopt the [CNCF code of conduct](https://github.com/cncf/foundation/blob/master/code-of-conduct.md){: target=_blank} rather than create our own?
+    Add code of conduct content or link to content
 
 Red Hat supports the [Inclusive Naming Initiative](){: target=_blank} and the OKD project follows the guidelines and recommendations from that project.  All contributions to OKD must also follow their guidelines
 
