@@ -15,7 +15,7 @@ The source for the documentation is managed in github.  There are different proc
 
 ### Community documentation
 
-The [OKD Documentation subgroup](wg_docs/overview.md){: target=_blank} is responsible for the community documentation.  The process for making changes is set out in the [working group section of the documentation](wg_docs/overview.md){: target=_blank}
+The [OKD Documentation subgroup](wg_docs/overview.md){: target=_blank} is responsible for the community documentation.  The process for making changes is set out in the [working group section of the documentation](wg_docs/okd-io.md){: target=_blank}
 
 ### Product documentation
 
