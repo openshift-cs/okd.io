@@ -24,16 +24,17 @@ The OKD stable version is released bi-weekly, following Fedora CoreOS schedule, 
 
 ## Can I run a single node cluster?
 
-Currently, single-node cluster installations cannot be deployed directly by the 4.7 installer. This is a [known issue](https://github.com/openshift/okd/blob/master/KNOWN_ISSUES.md). Single-node cluster installations do work with the 4.8 nightly installer builds. 
+Currently, single-node cluster installations cannot be deployed directly by the 4.7 installer. This is a [known issue](https://github.com/openshift/okd/blob/master/KNOWN_ISSUES.md). Single-node cluster installations do work with the 4.8 nightly installer builds.
 
 As an alternative, if OKD version 4.7 is needed, you may have luck with Charro Gruver's [OKD 4 Single Node Cluster instructions](https://cgruver.github.io/okd4-single-node-cluster/). You can also use [Code Ready Containers (CRC)](https://www.okd.io/crc.html) to run a single-node cluster on your desktop.
 
 ## What to do in case of errors?
+
 If you experience problems during installation you *must* collect the bootstrap log bundle, see [instructions](https://docs.okd.io/latest/installing/installing-troubleshooting.html)
 
 If you experience problems post installation, collect data of your cluster with:
 
-```
+```shell
 oc adm must-gather
 ```
 
@@ -49,36 +50,38 @@ OKD is a community-supported distribution, Red Hat does not provide commercial s
 
 Contact us on Slack:
 
-*  Workspace: Kubernetes, Channel: **#openshift-dev** (for **developer** communication)
+- Workspace: Kubernetes, Channel: **#openshift-dev** (for **developer** communication)
 
-*  Workspace: Kubernetes, Channel: **#openshift-users** (for **users**)
+- Workspace: Kubernetes, Channel: **#openshift-users** (for **users**)
 
-See https://openshift.tips/ for useful Openshift tips
+See [https://openshift.tips/](https://openshift.tips/){: target=_blank} for useful Openshift tips
 
 ## Where can I find upgrades?
 
-https://amd64.origin.releases.ci.openshift.org/
+[https://amd64.origin.releases.ci.openshift.org/](https://amd64.origin.releases.ci.openshift.org/){: target=_blank}
 
 !!!Warning
     Nightly builds (from `4.x.0-0.okd`) are pruned every 72 hours.
+
     If your cluster uses these images, consider [mirroring](https://docs.okd.io/latest/installing/installing-mirroring-installation-images.html) these files to a local registry.
 
-    Builds from the `stable-4` stream are not removed.
+    Builds from the **stable-4** stream are not removed.
 
 ## How can I upgrade my cluster to a new version?
 
 Find a version where a tested upgrade path is available from your version for on
 
-https://amd64.origin.releases.ci.openshift.org/
+[https://amd64.origin.releases.ci.openshift.org/](https://amd64.origin.releases.ci.openshift.org/){: target=_blank}
 
 Upgrade options:
 
 **Preferred** ways:
-* Web Console: Home -> Overview -> Tab: Cluster, Card: Overview -> View settings -> Update Status
 
-* Shell:
+- Web Console: Home -> Overview -> Tab: Cluster, Card: Overview -> View settings -> Update Status
+- Shell:
   Upgrades to latest available version
-  ```
+
+  ```shell
   oc adm upgrade
   ```
 
@@ -86,7 +89,7 @@ Upgrade options:
 
 Upgrade to a certain version (will ignore the update graph!)
 
-  ```
+  ```shell
   oc adm upgrade --force --allow-explicit-upgrade=true --to-image=registry.ci.openshift.org/origin/release:4.4.0-0.okd-2020-03-16-105308
   ```
 
@@ -96,17 +99,20 @@ accessible and user workloads would be evicted and rescheduled as nodes are upda
 ## Interesting commands while an upgrade runs
 
 Check overall upgrade status:
-```
+
+```shell
 oc get clusterversion
 ```
 
 Check the status of your cluster operators:
-```
+
+```shell
 oc get co
 ```
 
 Check the status of your nodes (cluster upgrades may include base OS updates):
-```
+
+```shell
 oc get nodes
 ```
 
@@ -114,11 +120,11 @@ oc get nodes
 
 This one is very helpful if you want to know if a certain commit has landed in your current version:
 
-  ```
+  ```shell
   oc adm release info registry.ci.openshift.org/origin/release:4.4  --commit-urls
   ```
 
-  ```
+  ```text
   Name:      4.4.0-0.okd-2020-04-10-020541
   Digest:    sha256:79b82f237aad0c38b5cdaf386ce893ff86060a476a39a067b5178bb6451e713c
   Created:   2020-04-10T02:14:15Z
@@ -158,8 +164,10 @@ The official installer container is part of every release.
 ```bash
 # Find out the installer image.
 oc adm release info quay.io/openshift/okd:4.7.0-0.okd-2021-04-24-103438 --image-for=installer
+
 # Example output
 # quay.io/openshift/okd-content@sha256:521cd3ac7d826749a085418f753f1f909579e1aedfda704dca939c5ea7e5b105
+
 # Run the container via Podman or Docker to perform tasks. e.g. create ignition configurations
 docker run -v $(pwd):/output -ti quay.io/openshift/okd-content@sha256:521cd3ac7d826749a085418f753f1f909579e1aedfda704dca939c5ea7e5b105 create ignition-configs
 ```

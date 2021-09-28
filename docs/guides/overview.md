@@ -2,8 +2,7 @@
 
 <!--- cSpell:ignore prereqs Vadim homelab -->
 
-!!!Todo
-    Add description of what these guides are
+The guides linked below provide some examples of how community members are using OKD and provide details of the underlying hardware and platform configurations they are using.
 
 - [Implementing an Automated Installation Solution for OKD on vSphere with User Provisioned Infrastructure (UPI)](automated-vsphere-upi.md)
 - [Prerequisites for vSphere UPI](vsphere-prereqs.md)
