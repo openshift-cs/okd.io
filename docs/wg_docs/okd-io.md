@@ -32,6 +32,36 @@ To work on documentation and be able to view the rendered web site you need to c
     !!!note
         sudo command may be needed to install globally, depending on your system configuration
 
+    Above steps on a CentOS Stream 8 or derivative system look like:
+
+    - Switch to a recent nodejs version as default is nodejs 10.
+
+    ```bash
+    dnf module switch-to nodejs:14
+    dnf install -y nodejs npm
+    ```
+
+    - Install pip:
+
+    ```bash
+    dnf install -y python3-pip
+    ```
+
+    Then you can get the needed programs:
+
+
+    ```bash
+    pip3 install --user -r requirements.txt
+    npm ci
+    ```
+
+    You can then build the site locally:
+
+    ```bash
+    export PATH=$PATH:node_modules/.bin/
+    ./build.sh
+    ```
+
     You now have all the tools installed to be able to create the static HTML site from the markdown documents.  The [documentation for MkDocs](https://www.mkdocs.org) provides full instructions for using MkDocs, but the important commands are:
 
     - `mkdocs build` will build the static site.  This must be run in the root directory of the repo, where mkdocs.yml is located
