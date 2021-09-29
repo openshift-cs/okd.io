@@ -94,6 +94,7 @@ nav:
           - Overview: wg_crc/overview.md
       - OKD Virtualization: 
           - Overview: wg_virt/overview.md
+          - Community: wg_virt/community.md
   - Help: 
     - Getting Help: help.md
     - FAQ: faq.md

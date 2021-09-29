@@ -1,4 +1,5 @@
 @import url("font-awesome.min.css");
+@import url("wg_virt.css");
 
 [data-md-color-scheme=okd-dark] {
     --md-hue: 207;
