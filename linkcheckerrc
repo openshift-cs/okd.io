@@ -1,0 +1,17 @@
+[filtering]
+checkextern=1
+ignore=
+  ^https://github.com/openshift-cs/okd.io
+  ^https://openshift-cs.github.io/okd.io/
+  ^https://www.cloudflare.com/learning
+  xml.gz$
+  public/404.html$
+  public/sitemap.xml$
+  .js$
+  .php$
+  ^https://fonts.gstatic.com
+  js/rs-plugin/assets/transparent.png$
+
+[checking]
+robotstxt=0
+localwebroot=./

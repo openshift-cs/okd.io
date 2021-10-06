@@ -1,0 +1,99 @@
+site_name: OKD.io
+site_description: >-
+  The Community Distribution of Kubernetes that powers Red Hat OpenShift
+site_url: https://openshift-cs.github.io/okd.io/index.html
+site_author: Brian Innes
+repo_name: "okd-io"
+repo_url: https://github.com/openshift-cs/okd.io
+docs_dir: docs
+site_dir: public
+edit_uri: edit/beta/docs
+theme:
+    name: material
+    logo: img/okd_logo_resized.svg
+    favicon: img/okdLogo.png
+    palette:
+      - media: "(prefers-color-scheme: light)"
+        scheme: okd
+        toggle:
+          icon: material/toggle-switch-off-outline
+          name: Switch to dark mod
+        primary: blue-grey
+        accent: red
+      - media: "(prefers-color-scheme: dark)"
+        scheme: okd-dark
+        toggle:
+          icon: material/toggle-switch
+          name: Switch to light mode
+        primary: okd blue
+        accent: okd light green
+    font:
+      text: Open Sans
+      code: Roboto Mono
+    language: en
+    custom_dir: overrides
+    features:
+      - content.code.annotate
+      # - content.tabs.link
+      - navigation.instant
+      - naviagation.sections
+      - navigation.tracking
+      # - navigation.tabs
+      # - navigation.tabs.sticky
+      # - navigation.top
+      - search.suggest
+      - search.highlight
+use_directory_urls: true
+plugins:
+  - search:
+      lang: en
+  - minify:
+      minify_html: true
+markdown_extensions:
+  - attr_list
+  - admonition
+  - toc:
+      permalink: true
+      toc_depth: 4
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.tabbed
+  - pymdownx.details
+extra_css:
+    - css/extra.css
+extra:
+  generator: false
+copyright: Copyright © 2021 Brian Innes
+nav:
+  - Home: index.md
+  - About: about.md
+  - Getting Started: 
+      - Installation: installation.md
+      - CRC: crc.md
+      - Guides: 
+        - Overview: guides/overview.md
+        - Automated vSphere install: guides/automated-vsphere-upi.md
+        - Prerequites for vSphere UPI: guides/vsphere-prereqs.md
+        - vSphere IPI Deployment: guides/vsphere-ipi.md
+        - Single Node OKD Installation: guides/sno.md
+        - Vadim's homelab: guides/vadim.md
+        - Sri's homelab: guides/sri.md
+        - Azure IPI Default Deployment: guides/azure-ipi.md
+        - AWS IPI Default Deployment: guides/aws-ipi.md
+        - GCP IPI Default Deployment: guides/gcp-ipi.md
+  - Documentation: docs.md
+  - Blog: blog.md
+  - Community:
+      - OKD Community: community.md
+      - Contributor: contributor.md
+  - OKD Working Groups:
+      - Documentation:
+          - Overview: wg_docs/overview.md
+          - Modifying OKD.io: wg_docs/okd-io.md
+      - CRC Build: 
+          - Overview: wg_crc/overview.md
+      - OKD Virtualization: 
+          - Overview: wg_virt/overview.md
+  - Help: 
+    - Getting Help: help.md
+    - FAQ: faq.md

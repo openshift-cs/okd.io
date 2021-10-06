@@ -1,0 +1,81 @@
+<!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+{% extends "main.html" %}
+
+<link rel="stylesheet" href="{{ 'assets/stylesheets/home.css' | url }}" />
+
+<!-- Announcement bar -->
+{% block announce %}{% endblock %}
+
+<!-- Tabs -->
+{% block tabs %}{% endblock %}
+
+<!-- Content -->
+{% block content %}
+
+<link rel="stylesheet" href="{{ 'assets/stylesheets/home.css' | url }}" />
+<!-- Hero for landing page -->
+<section class="mdx-container">
+    <div class="md-grid md-typeset">
+        <div class="mdx-hero">
+            <section>
+                <div class=home-hero>
+                    <div class=home-hero-text>
+                        <div class="col-md-12">
+                            <img class="logo_img" src="img/okd_logo_resized.svg" alt="OKD logo">
+                            <h1>
+                                The Community Distribution of Kubernetes that powers<a href="https://www.openshift.com" class="headerlink" id="OpenShiftLink" target="_blank">Red Hat OpenShift</a>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class=home-hero-image>
+                    </div>
+                </div>
+            </section>
+            <!-- <section> -->
+            <!-- <div class=home-description> -->
+            <!-- <div class='row'>
+                        <div class='column'>
+                        </div>
+                    </div> -->
+            <!-- </div> -->
+            <!-- </section> -->
+            <section>
+                <div class=home-purpose>
+                    <div class='row'>
+                        <div class='column'>
+                            <!-- Markdown content -->
+                            {{ page.content }}
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+<!-- Application footer -->
+{% block footer %}
+{{ super() }}
+{% endblock %}
