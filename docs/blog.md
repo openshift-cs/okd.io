@@ -18,4 +18,3 @@ You are also invited to participate: share your experiences and tips with the co
 | 2021-04-19 | [Please avoid using FCOS 33.20210301.3.1 for new OKD installs](blog/2021-03-19-please-avoid-using-fcos-33.20210301.3.1.html.md) |
 | 2021-03-16 | [Save The Date! OKD Testing and Deployment Workshop (March 20) Register Now!](blog/2021-03-16-save-the-date-okd-testing-deployment-workshop.html.md) |
 | 2021-03-07 | [okd.io now has a blog](blog/2021-03-07-new-blog.html.md) |
-| 2021-02-18 | [Demo blog article for authors](blog/2021-02-18-demo-article-for-authors.html.md) |
