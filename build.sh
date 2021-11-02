@@ -2,6 +2,6 @@
 
 set -e
 
-cspell "docs/**/*.md"
+./node_modules/cspell/bin.js "docs/**/*.md"
 mkdocs build
 linkchecker -f linkcheckerrc public

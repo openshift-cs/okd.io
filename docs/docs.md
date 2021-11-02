@@ -5,7 +5,7 @@
 There are 2 primary sources of information for OKD:  
 
 - community documentation - [https://okd.io](https://okd.io){: target=blank} (this site)
-- product documentation - [https://docs.okd.io](https://docs.okd.io/latest/welcome/index.html){: target=blank}
+- product documentation - [https://docs.okd.io](https://docs.okd.io){: target=blank}
 
 ## Updates and Issues
 
