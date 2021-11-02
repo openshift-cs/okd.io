@@ -50,7 +50,7 @@ Slack Channel: <https://kubernetes.slack.com/messages/openshift-dev>
 
 HCO main branch gets tested against OKD 4.9: <https://github.com/openshift/release/blob/master/ci-operator/config/kubevirt/hyperconverged-cluster-operator/kubevirt-hyperconverged-cluster-operator-main__okd.yaml>
 
-HCO precondition job: <https://prow.ci.openshift.org/job-history/gs/origin-ci-test/pr-logs/directory/pull-ci-k[…]onverged-cluster-operator-main-okd-hco-e2e-image-index-gcp>
+HCO precondition job: <https://prow.ci.openshift.org/job-history/gs/origin-ci-test/pr-logs/directory/pull-ci-kubevirt-hyperconverged-cluster-operator-main-okd-hco-e2e-image-index-gcp>
 
 KubeVirt is uploaded to operatorhub and on community-operators: <https://github.com/redhat-openshift-ecosystem/community-operators-prod/tree/main/operators/community-kubevirt-hyperconverged>
 
