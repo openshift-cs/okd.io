@@ -8,7 +8,5 @@ COPY ./requirements.txt /site/
 
 # Dependencies
 RUN npm ci && pip install -r requirements.txt
-COPY dev/entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+ENTRYPOINT /usr/local/bin/mkdocs serve --dirtyreload -a 0.0.0.0:8000
 
-ENTRYPOINT ["/entrypoint.sh"]

@@ -51,16 +51,34 @@ You can create the environment by installing the components on your local system
 
     Ensure you have the local container image, built in the previous step, available on your system then run command:
 
-    - if you are using the docker or podman command:
+    - if you are on Mac OS or Linux using the docker or podman command:
 
         ```shell
         docker run -it --rm --name mkdocs-serve -p 8000:8000 -v `pwd`:/site mkdocs-build
         ```
 
-    - if you have npm:
+    - if you are on Windows using the docker command in Powershell:
 
+        ```powershell
+        docker run -it --rm --name mkdocs-build -p 8000:8000 -v "$(pwd):/site" mkdocs-build
+        ```
+
+    - if you are on Windows using the docker command in CMD prompt:
+
+        ```cmd
+        docker run -it --rm --name mkdocs-build -p 8000:8000 -v %cd%:/site mkdocs-build
+        ```
+
+    - if you have npm on Linux or Mac OS:
+    
         ```shell
         npm run docker-serve
+        ```
+
+    - if you have npm on Windows:
+    
+        ```shell
+        npm run win-docker-serve
         ```
 
     You can now open a browser to [localhost:8000](http://localhost:8000){: target=_blank}.  You should see the **okd.io** web site in the browser.  As you change files on your local system the web pages will automatically update.
@@ -71,16 +89,34 @@ You can create the environment by installing the components on your local system
 
     Before you submit any changes to the site in a pull request please check there are no [spelling mistakes](./okd-io.md#spell-checking) or [broken links](./okd-io.md#links-within-mkdocs-generated-content), by running the build script and checking the output.
 
-    - if you are using the docker or podman command:
+    - if you are on Mac OS or Linux using the docker or podman command:
 
         ```shell
-        docker run -it --rm --name mkdocs-build -p 8000:8000 -v `pwd`:/site --entrypoint /site/build.sh mkdocs-build
+        docker run -it --rm --name mkdocs-build -p -v `pwd`:/site --entrypoint /site/build.sh mkdocs-build
         ```
 
-    - if you have npm:
+    - if you are on Windows using the docker command in Powershell:
+
+        ```powershell
+        docker run -it --rm --name mkdocs-build --volume "$(pwd):/site" --entrypoint /site/build.sh mkdocs-build
+        ```
+
+    - if you are on Windows using the docker command in CMD prompt:
+
+        ```cmd
+        docker run -it --rm --name mkdocs-build -v %cd%:/site --entrypoint /site/build.sh mkdocs-build
+        ```
+
+    - if you have npm on Linux or Mac OS:
     
         ```shell
         npm run docker-build
+        ```
+
+    - if you have npm on Windows:
+    
+        ```shell
+        npm run win-docker-build
         ```
 
 === "Local mkdocs and python tooling installation"
