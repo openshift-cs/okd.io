@@ -11,12 +11,161 @@ The source for **okd.io** is in a [github repository](https://github.com/openshi
 
 To work on documentation and be able to view the rendered web site you need to create an environment, which comprises of:
 
+- [MkDocs](https://www.mkdocs.org){: target=_blank} with the [Materials theme](https://squidfunk.github.io/mkdocs-material/){: target=_blank}
+- [CSpell](https://cspell.org/){: target=_blank}
+- [linkchecker](https://linkchecker.github.io/linkchecker/){: target=_blank}
+- [Node.js](https://nodejs.org/en/){: target=_blank}
+- [Python 3](https://www.python.org){: target=_blank}
+
+You can create the environment by installing the components on your local system, alternatively you can run the tooling within a container runtime, so you don't need to do any local installs.
+
 === "Tooling within a container"
 
-    You can use a container and run MkDocs from the container, so no local installation is required:
+    You can use a container to run MkDocs so no local installation is required, however you do need to have [Docker Desktop](https://www.docker.com/products/docker-desktop){: target=_blank} installed if using Mac OS or Windows.  If running on Linux you can use **Docker** or **Podman**.
 
-    !!!Todo
-        Add instructions for building and using a container
+    *If you have a node.js environment installed that includes the npm command then you can make use of the run scripts provided in the project to run the docker or podman commands*
+
+    The following commands all assume you are working in the root directory of your local git clone of your forked copy of the okd.io git repo.  *(your working directory should contain mkdocs.yml and package.json files)*
+
+    !!!Warning
+        If you are using Linux with SELinux enabled, then you need to configure your system to allow the local directory containing the cloned git repo to be mounted inside a container.  The following commands will configure SELinux to allow this:
+
+        (change the path to the location of your okd.io directory)
+
+        ```shell
+        sudo semanage fcontext -a -t container_file_t '/home/brian/Documents/projects/okd.io(/.*)?'
+        sudo restorecon -Rv /home/brian/Documents/projects/okd.io
+        ```
+
+    ### Creating the container
+
+    To create the container image on your local system choose the appropriate command from the list:
+
+    - if you are using the docker command on Linux, Mac OS or Windows:
+
+        ```shell
+        docker build -t mkdocs-build -f ./dev/Dockerfile .
+        ```
+
+    - if you are using the podman command on Linux:
+
+        ```shell
+        podman build -t mkdocs-build -f ./dev/Dockerfile .
+        ```
+
+    - if you have npm and use Docker on Linux, Mac OS or Windows:
+    
+        ```shell
+        npm run docker-build-image
+        ```
+
+    - if you have npm and use Podman on Linux:
+    
+        ```shell
+        npm run podman-build-image
+        ```
+
+    This will build a local container image named mkdocs-build
+
+    ### Live editing of the content
+
+    To change the content of the web site you can use your preferred editing application.  To see the changes you can run a live local copy of **okd.io** that will automatically update as you save local changes.
+
+    Ensure you have the local container image, built in the previous step, available on your system then choose the appropriate command from the list:
+
+    - if you are using the docker command on Linux or Mac OS:
+
+        ```shell
+        docker run -it --rm --name mkdocs-serve -p 8000:8000 -v `pwd`:/site mkdocs-build
+        ```
+
+    - if you are using the podman command on Linux:
+
+        ```shell
+        podman run -it --rm --name mkdocs-serve -p 8000:8000 -v `pwd`:/site mkdocs-build
+        ```
+
+    - if you are on Windows using the docker command in Powershell:
+
+        ```powershell
+        docker run -it --rm --name mkdocs-build -p 8000:8000 -v "$(pwd):/site" mkdocs-build
+        ```
+
+    - if you are on Windows using the docker command in CMD prompt:
+
+        ```cmd
+        docker run -it --rm --name mkdocs-build -p 8000:8000 -v %cd%:/site mkdocs-build
+        ```
+
+    - if you have npm and use Docker on Linux or Mac OS:
+    
+        ```shell
+        npm run docker-serve
+        ```
+
+    - if you have npm on Windows:
+    
+        ```shell
+        npm run win-docker-serve
+        ```
+
+    - if you have npm and use Podman on Linux:
+    
+        ```shell
+        npm run podman-serve
+        ```
+
+    You can now open a browser to [localhost:8000](http://localhost:8000){: target=_blank}.  You should see the **okd.io** web site in the browser.  As you change files on your local system the web pages will automatically update.
+
+    When you have completed editing the site use *Ctrl-c* (hold down the control key then press c) to quit the site.
+
+    ### Build and validate the site
+
+    Before you submit any changes to the site in a pull request please check there are no [spelling mistakes](./okd-io.md#spell-checking) or [broken links](./okd-io.md#links-within-mkdocs-generated-content), by running the build script and checking the output.
+
+    The build script will create or update the static web site in the **public** directory - this is what will be created and published as the live site if you submit a pull request with your modifications.
+
+    - if you are using the docker command on Linux or Mac OS:
+
+        ```shell
+        docker run -it --rm --name mkdocs-build -p -v `pwd`:/site --entrypoint /site/build.sh mkdocs-build
+        ```
+
+    - if you are using the podman command on Linux:
+
+        ```shell
+        podman run -it --rm --name mkdocs-build -p -v `pwd`:/site --entrypoint /site/build.sh mkdocs-build
+        ```
+
+    - if you are on Windows using the docker command in Powershell:
+
+        ```powershell
+        docker run -it --rm --name mkdocs-build -v "$(pwd):/site" --entrypoint /site/build.sh mkdocs-build
+        ```
+
+    - if you are on Windows using the docker command in CMD prompt:
+
+        ```cmd
+        docker run -it --rm --name mkdocs-build -v %cd%:/site --entrypoint /site/build.sh mkdocs-build
+        ```
+
+    - if you have npm and use Docker on Linux or Mac OS:
+    
+        ```shell
+        npm run docker-build
+        ```
+
+    - if you have npm on Windows:
+    
+        ```shell
+        npm run win-docker-build
+        ```
+
+    - if you have npm and use Podman on Linux:
+    
+        ```shell
+        npm run podman-build
+        ```
 
 === "Local mkdocs and python tooling installation"
 
@@ -32,9 +181,9 @@ To work on documentation and be able to view the rendered web site you need to c
     !!!note
         sudo command may be needed to install globally, depending on your system configuration
 
-    You now have all the tools installed to be able to create the static HTML site from the markdown documents.  The [documentation for MkDocs](https://www.mkdocs.org) provides full instructions for using MkDocs, but the important commands are:
+    You now have all the tools installed to be able to create the static HTML site from the markdown documents.  The [documentation for MkDocs](https://www.mkdocs.org){: target=_blank} provides full instructions for using MkDocs, but the important commands are:
 
-    - `mkdocs build` will build the static site.  This must be run in the root directory of the repo, where mkdocs.yml is located
+    - `mkdocs build` will build the static site.  This must be run in the root directory of the repo, where mkdocs.yml is located.  The static site will be created/updated in the **public** directory
     - `mkdocs serve` will build the static site and launch a test server on `http://localhost:8000`.  Every time a document is modified the website will automatically be updated and any browser open will be refreshed to the latest.
     - To check links in the built site (`mkdocs build` must be run first), use the linkchecker, with command `linkchecker -f linkcheckerrc --check-extern public`.  This command should be run in the root folder of the project, containing the **linkcheckerrc** file.
     - To check spelling `cspell docs/**/*.md` should be run in the root folder of the project, containing the **cspell.json** file.
@@ -45,13 +194,19 @@ The site is created using [MkDocs](http://mkdocs.org){: target="_blank" .externa
 
 MkDocs takes Markdown documents and turns them into a static website that can be accessed from a filesystem or served from a web server.
 
-A [link checker tool](https://linkchecker.github.io/linkchecker/index.html) is also used to validate all links in the MkDocs generated website.
-
 ## Updating the site
 
 To make your changes live, create a pull request to deliver the changes in your fork of the repo to the main branch of the **okd.io** repo.
 
 Github automation is used to generate the site then publish to github pages, which serves the site.  If your changes contain spelling issues or broken links, then the automation will fail and the github pages site will not be updated, so please do a local test using the **build.sh** script before creating the pull request.
+
+## Site content maintainability
+
+The site has adopted Markdown as the standard way to create content for the site.  Previously the site used an HTML based framework, which resulted in content not being frequently updated as there was a steep learning curve.
+
+All content on the site should be created using Markdown.  To ensure content is maintainable going forward only markdown features outlined below should be used to create site content.  If you wish to use additional components on a page then please contact the documentation working group to discuss your requirements before creating a pull request containing additional components.
+
+MkDocs includes the ability to create custom page templates.  This facility has been used to create a customized home page for the site.  If any other pages require a custom layout or custom features, then a page template should be used so the content can remain in Markdown.  Creation of custom page templates should be discussed with the documentation working group.
 
 ## Changing content
 
@@ -76,7 +231,7 @@ The following markdown syntax is used within the documentation
 | `- unordered list item` | unordered list
 | `---` | horizontal break
 
-HTML can be embedded in Markdown, but in the documentation it is preferred to stick with pure Markdown with the installed extensions.
+HTML can be embedded in Markdown, but embedded HTML should not be used in the documentation.  All content should use Markdown with the permitted extensions.
 
 ### Indentation
 
@@ -181,7 +336,7 @@ and
 
 ```text
 ??? note
-    This is a note
+    This is a collapsible note
 
     You can add a `+` character to force the box to be initially open `???+`
 ```

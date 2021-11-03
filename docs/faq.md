@@ -26,7 +26,7 @@ The OKD stable version is released bi-weekly, following Fedora CoreOS schedule, 
 
 Currently, single-node cluster installations cannot be deployed directly by the 4.7 installer. This is a [known issue](https://github.com/openshift/okd/blob/master/KNOWN_ISSUES.md). Single-node cluster installations do work with the 4.8 nightly installer builds.
 
-As an alternative, if OKD version 4.7 is needed, you may have luck with Charro Gruver's [OKD 4 Single Node Cluster instructions](https://cgruver.github.io/okd4-single-node-cluster/). You can also use [Code Ready Containers (CRC)](https://www.okd.io/crc.html) to run a single-node cluster on your desktop.
+As an alternative, if OKD version 4.7 is needed, you may have luck with Charro Gruver's [OKD 4 Single Node Cluster instructions](https://cgruver.github.io/okd4-single-node-cluster/). You can also use [Code Ready Containers (CRC)](crc.md) to run a single-node cluster on your desktop.
 
 ## What to do in case of errors?
 

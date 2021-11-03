@@ -1,6 +1,7 @@
 [filtering]
 checkextern=1
 ignore=
+  localhost:8000$
   ^https://github.com/openshift-cs/okd.io
   ^https://openshift-cs.github.io/okd.io/
   ^https://www.cloudflare.com/learning
