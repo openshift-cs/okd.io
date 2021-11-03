@@ -21,26 +21,48 @@ You can create the environment by installing the components on your local system
 
 === "Tooling within a container"
 
-    You can use a container to run MkDocs so no local installation is required, however you do need to have [Docker Desktop](https://www.docker.com/products/docker-desktop){: target=_blank} installed if using Mac OS or Windows.  If running on Linux you can use **Docker** or **Podman** (in the instructions below replace **docker** with **podman** if using podman).
+    You can use a container to run MkDocs so no local installation is required, however you do need to have [Docker Desktop](https://www.docker.com/products/docker-desktop){: target=_blank} installed if using Mac OS or Windows.  If running on Linux you can use **Docker** or **Podman**.
 
     *If you have a node.js environment installed that includes the npm command then you can make use of the run scripts provided in the project to run the docker or podman commands*
 
     The following commands all assume you are working in the root directory of your local git clone of your forked copy of the okd.io git repo.  *(your working directory should contain mkdocs.yml and package.json files)*
 
+    !!!Warning
+        If you are using Linux with SELinux enabled, then you need to configure your system to allow the local directory containing the cloned git repo to be mounted inside a container.  The following commands will configure SELinux to allow this:
+
+        (change the path to the location of your okd.io directory)
+
+        ```shell
+        sudo semanage fcontext -a -t container_file_t '/home/brian/Documents/projects/okd.io(/.*)?'
+        sudo restorecon -Rv /home/brian/Documents/projects/okd.io
+        ```
+
     ### Creating the container
 
-    To create the container image on your local system run command:
+    To create the container image on your local system choose the appropriate command from the list:
 
-    - if you are using the docker or podman command:
+    - if you are using the docker command on Linux, Mac OS or Windows:
 
         ```shell
         docker build -t mkdocs-build -f ./dev/Dockerfile .
         ```
 
-    - if you have npm:
+    - if you are using the podman command on Linux:
+
+        ```shell
+        podman build -t mkdocs-build -f ./dev/Dockerfile .
+        ```
+
+    - if you have npm and use Docker on Linux, Mac OS or Windows:
     
         ```shell
         npm run docker-build-image
+        ```
+
+    - if you have npm and use Podman on Linux:
+    
+        ```shell
+        npm run podman-build-image
         ```
 
     This will build a local container image named mkdocs-build
@@ -49,12 +71,18 @@ You can create the environment by installing the components on your local system
 
     To change the content of the web site you can use your preferred editing application.  To see the changes you can run a live local copy of **okd.io** that will automatically update as you save local changes.
 
-    Ensure you have the local container image, built in the previous step, available on your system then run command:
+    Ensure you have the local container image, built in the previous step, available on your system then choose the appropriate command from the list:
 
-    - if you are on Mac OS or Linux using the docker or podman command:
+    - if you are using the docker command on Linux or Mac OS:
 
         ```shell
         docker run -it --rm --name mkdocs-serve -p 8000:8000 -v `pwd`:/site mkdocs-build
+        ```
+
+    - if you are using the podman command on Linux:
+
+        ```shell
+        podman run -it --rm --name mkdocs-serve -p 8000:8000 -v `pwd`:/site mkdocs-build
         ```
 
     - if you are on Windows using the docker command in Powershell:
@@ -69,7 +97,7 @@ You can create the environment by installing the components on your local system
         docker run -it --rm --name mkdocs-build -p 8000:8000 -v %cd%:/site mkdocs-build
         ```
 
-    - if you have npm on Linux or Mac OS:
+    - if you have npm and use Docker on Linux or Mac OS:
     
         ```shell
         npm run docker-serve
@@ -81,6 +109,12 @@ You can create the environment by installing the components on your local system
         npm run win-docker-serve
         ```
 
+    - if you have npm and use Podman on Linux:
+    
+        ```shell
+        npm run podman-serve
+        ```
+
     You can now open a browser to [localhost:8000](http://localhost:8000){: target=_blank}.  You should see the **okd.io** web site in the browser.  As you change files on your local system the web pages will automatically update.
 
     When you have completed editing the site use *Ctrl-c* (hold down the control key then press c) to quit the site.
@@ -89,10 +123,18 @@ You can create the environment by installing the components on your local system
 
     Before you submit any changes to the site in a pull request please check there are no [spelling mistakes](./okd-io.md#spell-checking) or [broken links](./okd-io.md#links-within-mkdocs-generated-content), by running the build script and checking the output.
 
-    - if you are on Mac OS or Linux using the docker or podman command:
+    The build script will create or update the static web site in the **public** directory - this is what will be created and published as the live site if you submit a pull request with your modifications.
+
+    - if you are using the docker command on Linux or Mac OS:
 
         ```shell
         docker run -it --rm --name mkdocs-build -p -v `pwd`:/site --entrypoint /site/build.sh mkdocs-build
+        ```
+
+    - if you are using the podman command on Linux:
+
+        ```shell
+        podman run -it --rm --name mkdocs-build -p -v `pwd`:/site --entrypoint /site/build.sh mkdocs-build
         ```
 
     - if you are on Windows using the docker command in Powershell:
@@ -107,7 +149,7 @@ You can create the environment by installing the components on your local system
         docker run -it --rm --name mkdocs-build -v %cd%:/site --entrypoint /site/build.sh mkdocs-build
         ```
 
-    - if you have npm on Linux or Mac OS:
+    - if you have npm and use Docker on Linux or Mac OS:
     
         ```shell
         npm run docker-build
@@ -117,6 +159,12 @@ You can create the environment by installing the components on your local system
     
         ```shell
         npm run win-docker-build
+        ```
+
+    - if you have npm and use Podman on Linux:
+    
+        ```shell
+        npm run podman-build
         ```
 
 === "Local mkdocs and python tooling installation"
@@ -135,7 +183,7 @@ You can create the environment by installing the components on your local system
 
     You now have all the tools installed to be able to create the static HTML site from the markdown documents.  The [documentation for MkDocs](https://www.mkdocs.org){: target=_blank} provides full instructions for using MkDocs, but the important commands are:
 
-    - `mkdocs build` will build the static site.  This must be run in the root directory of the repo, where mkdocs.yml is located
+    - `mkdocs build` will build the static site.  This must be run in the root directory of the repo, where mkdocs.yml is located.  The static site will be created/updated in the **public** directory
     - `mkdocs serve` will build the static site and launch a test server on `http://localhost:8000`.  Every time a document is modified the website will automatically be updated and any browser open will be refreshed to the latest.
     - To check links in the built site (`mkdocs build` must be run first), use the linkchecker, with command `linkchecker -f linkcheckerrc --check-extern public`.  This command should be run in the root folder of the project, containing the **linkcheckerrc** file.
     - To check spelling `cspell docs/**/*.md` should be run in the root folder of the project, containing the **cspell.json** file.
@@ -145,8 +193,6 @@ You can create the environment by installing the components on your local system
 The site is created using [MkDocs](http://mkdocs.org){: target="_blank" .external } with the [Materials theme](https://squidfunk.github.io/mkdocs-material/){: target="_blank" .external } theme.
 
 MkDocs takes Markdown documents and turns them into a static website that can be accessed from a filesystem or served from a web server.
-
-A [link checker tool](https://linkchecker.github.io/linkchecker/index.html) is also used to validate all links in the MkDocs generated website.
 
 ## Updating the site
 
