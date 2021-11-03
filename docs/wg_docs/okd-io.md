@@ -140,7 +140,7 @@ You can create the environment by installing the components on your local system
     - if you are on Windows using the docker command in Powershell:
 
         ```powershell
-        docker run -it --rm --name mkdocs-build --volume "$(pwd):/site" --entrypoint /site/build.sh mkdocs-build
+        docker run -it --rm --name mkdocs-build -v "$(pwd):/site" --entrypoint /site/build.sh mkdocs-build
         ```
 
     - if you are on Windows using the docker command in CMD prompt:
