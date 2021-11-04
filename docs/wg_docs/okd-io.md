@@ -1,11 +1,17 @@
 # Contributing to okd.io
 
-<!--- cSpell:ignore linkchecker linkcheckerrc mkdocs mkdoc linenums -->
+<!--- cSpell:ignore linkchecker linkcheckerrc mkdocs mkdoc linenums Runtimes -->
 
-The source for **okd.io** is in a [github repository](https://github.com/openshift-cs/okd.io/){: target=_blank}.  To update or add new content to the site you need to fork the repository in your own github account, make the changes in your local repository then create a pull request to deliver the updates to the primary repository.
+The source for **okd.io** is in a [github repository](https://github.com/openshift-cs/okd.io/){: target=_blank}.
 
-!!!Todo
-    Add more specific instructions to help those less familiar with git
+The site is created using [MkDocs](https://www.mkdocs.org){: target=_blank}. which takes Markdown documents and turns them into a static website that can be accessed from a filesystem or served from a web server.
+
+To update or add new content to the site you need to
+
+- fork the repository in your own github account
+    - it important to leave the repo name as **okd.io** in your github account if you want to use Che/CodeReady Containers to modify the content
+- make the changes in your local repository
+- create a pull request to deliver the updates to the primary repository.
 
 ## Setting up a documentation environment
 
@@ -166,6 +172,71 @@ You can create the environment by installing the components on your local system
         ```shell
         npm run podman-build
         ```
+    
+    You should verify there are no spelling mistakes, by finding the last line of the CSpell output: 
+    
+    ```text
+    CSpell: Files checked: 31, Issues found: 0 in 0 files
+    ```
+    
+    Further down in the console output wil be the summary of the link checker:
+    
+    ```text
+    That's it. 662 links in 695 URLs checked. 0 warnings found. 0 errors found
+    ```
+    
+    Any issues reported should be fixed before submitting a pull request to add your changes to the okd.io site.
+
+=== "Editing on cluster"
+
+    There is a community operator available in the OperatorHub on OKD to install Eclipse Che, the upstream project for Red Hat CodeReady Workspaces.
+
+    You can use Che to modify site content through your browser, with your OKD cluster hosting the workspace and developer environment.
+
+    You need to have access to an OKD cluster and have the Che operator installed and an Che instance deployed and running.
+
+    In your OKD console, you should have an applications link in the top toolbar.  Open the Applications menu (3x3 grid icon) and select Che.  This will open the Che application - Google Chrome is the supported browser and will give the best user experience.
+
+    In the Che console side menu, select to **Create Workspace**, then in the **Import from Git** section add the URL of *your* fork of the okd.io git repository (should be similar to `https://github.com/<user or org name>/okd.io.git`) then press **Create & Open** to start the workspace.
+
+    After a short while the workspace will open (*the cluster has to download and start a number of containers, so the first run may take a few minutes depending on your cluster network access*).  When the workspace is displayed you may have to wait a few seconds for the workspace to initialize and clone your git repo into the workspace.  You may also get asked if you trust the author of the git repository, answer yes to this question.  Your environment should then be ready to start work.
+    
+    The web based developer environment uses the same code base as Microsoft Visual Studio Code, so provides a similar user experience, but within your browser.
+
+    ### Live editing of the content
+
+    To change the content of the web site you can use your preferred editing application.  To see the changes you can run a live local copy of **okd.io** that will automatically update as you save local changes.
+
+    On the right side of the workspace window you should see 3 icons, hovering over them should reveal they are the **Outline**, **Endpoints** and **Workspace**.  Clicking into the workspace, you should see a **User Runtimes** section with the option to open a new terminal, then 2 commands (Live edit and Build) and finally a link to launch MkDocs web site (initially this link will not work)
+
+    To allow you to see your changes in a live site (where any change you save will automatically be updated on the site) click on the **1. Live edit** link.  This will launch a new terminal window where the **mkdocs serve** command will run, which provides a local live site.  However, as you are running the development site on a cluster, the Che runtime automatically makes this site available to you.  The **MkDocs** link now points to the site, but you will be asked if you want to open the site in a new tab or in Preview.
+
+    Preview will add a 4th icon to the side toolbar and open the web site in the side panel. You can drag the side of the window to resize the browser view to allow you to edit on the left and view the results on the right of your browser window.  
+    
+    If you have multiple monitors you may want to select to open the website in a new Tab or use the **MkDocs** link, then drag the browser tab on to a different monitor.
+
+    When you finished editing simply close the terminal window running the Live edit script.  This will stop the web server running the preview site.
+
+    ### Build and validate the site
+
+
+    The build script will create or update the static web site in the **public** directory - this is what will be created and published as the live site if you submit a pull request with your modifications.
+
+    To run the build script simply click the **2. Build** link in the Workspace panel.
+
+    You should verify there are no spelling mistakes, by finding the last line of the CSpell output: 
+    
+    ```text
+    CSpell: Files checked: 31, Issues found: 0 in 0 files
+    ```
+    
+    Further down in the console output wil be the summary of the link checker:
+    
+    ```text
+    That's it. 662 links in 695 URLs checked. 0 warnings found. 0 errors found
+    ```
+    
+    Any issues reported should be fixed before submitting a pull request to add your changes to the okd.io site.
 
 === "Local mkdocs and python tooling installation"
 
@@ -176,7 +247,7 @@ You can create the environment by installing the components on your local system
     - Clone **your fork** of the [okd.io repository](https://github.com/openshift-cs/okd.io/){: target=_blank}
     - cd into the local repo directory (./okd.io)
     - Install the required python packages `pip install -r requirements.txt'
-    - Install the spell checker using command `npm ci`
+    - Install the spell checker using command `npm ci`.  If you want to use the cspell command on the command line, then you need to install it globally `npm -g i cspell`
 
     !!!note
         sudo command may be needed to install globally, depending on your system configuration
@@ -190,9 +261,21 @@ You can create the environment by installing the components on your local system
 
     There is also a convenience script `./build.sh` in the root of the repository that will check spelling, build the site then run the link checker.
 
-The site is created using [MkDocs](http://mkdocs.org){: target="_blank" .external } with the [Materials theme](https://squidfunk.github.io/mkdocs-material/){: target="_blank" .external } theme.
+    You should verify there are no spelling mistakes, by finding the last line of the CSpell output: 
+    
+    ```text
+    CSpell: Files checked: 31, Issues found: 0 in 0 files
+    ```
+    
+    Similarly, the link checker creates a summary after checking the site:
+    
+    ```text
+    That's it. 662 links in 695 URLs checked. 0 warnings found. 0 errors found
+    ```
+    
+    Any issues reported should be fixed before submitting a pull request to add your changes to the okd.io site.
 
-MkDocs takes Markdown documents and turns them into a static website that can be accessed from a filesystem or served from a web server.
+The site is created using [MkDocs](http://mkdocs.org){: target="_blank" .external } with the [Materials theme](https://squidfunk.github.io/mkdocs-material/){: target="_blank" .external } theme.
 
 ## Updating the site
 
