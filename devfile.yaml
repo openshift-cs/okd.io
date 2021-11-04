@@ -26,13 +26,13 @@ components:
 commands:
   - name: 1. Live edit
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/okd-io'
+      - workdir: '${CHE_PROJECTS_ROOT}/okd.io'
         type: exec
         command: 'mkdocs serve -a 0.0.0.0:8000'
         component: okd-io
   - name: 2. Build
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/okd-io'
+      - workdir: '${CHE_PROJECTS_ROOT}/okd.io'
         type: exec
         command: mkdocs build
         component: okd-io
