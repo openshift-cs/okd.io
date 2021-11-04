@@ -34,5 +34,5 @@ commands:
     actions:
       - workdir: '${CHE_PROJECTS_ROOT}/okd.io'
         type: exec
-        command: build.sh
+        command: ./build.sh
         component: okd-io
