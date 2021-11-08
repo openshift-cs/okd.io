@@ -10,7 +10,7 @@
         "build": "./build.sh",
         "docker-build-image": "docker build -t mkdocs-build -f ./dev/Dockerfile .",
         "docker-serve": "docker run -it --rm --name mkdocs-serve -p 8000:8000 -v ${INIT_CWD}:/site mkdocs-build",
-        "docker-build": "docker run -it --rm --name mkdocs-build -p 8000:8000 -v ${INIT_CWD}:/site --entrypoint /site/build.sh mkdocs-build",
+        "docker-build": "docker run -it --rm --name mkdocs-build -v ${INIT_CWD}:/site --entrypoint /site/build.sh mkdocs-build",
         "podman-build-image": "podman build -t mkdocs-build -f ./dev/Dockerfile .",
         "podman-serve": "podman run -it --rm --name mkdocs-serve -p 8000:8000 -v ${INIT_CWD}:/site mkdocs-build",
         "podman-build": "podman run -it --rm --name mkdocs-build -v ${INIT_CWD}:/site --entrypoint /site/build.sh mkdocs-build",

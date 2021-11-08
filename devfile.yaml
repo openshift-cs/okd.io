@@ -1,0 +1,38 @@
+apiVersion: 1.0.0
+metadata:
+  name: okd-io
+components:
+  - id: vscode/typescript-language-features/latest
+    type: chePlugin
+  - id: ms-vscode/node-debug2/latest
+    type: chePlugin
+  - id: redhat/vscode-openshift-connector/latest
+    type: chePlugin
+  - mountSources: true
+    endpoints:
+      - name: MkDocs
+        port: 8000
+    command:
+      - sleep
+      - infinity
+    memoryLimit: 512Mi
+    type: dockerimage
+    alias: okd-io
+    image: 'quay.io/brianinnesuk/mkdocs-builder:1.0.1'
+  - id: redhat/vscode-yaml/latest
+    type: chePlugin
+  - id: redhat/vscode-xml/latest
+    type: chePlugin
+commands:
+  - name: 1. Live edit
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/okd.io'
+        type: exec
+        command: 'mkdocs serve -a 0.0.0.0:8000'
+        component: okd-io
+  - name: 2. Build
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/okd.io'
+        type: exec
+        command: ./build.sh
+        component: okd-io

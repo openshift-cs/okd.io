@@ -90,6 +90,8 @@ nav:
       - Documentation:
           - Overview: wg_docs/overview.md
           - Modifying OKD.io: wg_docs/okd-io.md
+          - Setup environment : wg_docs/doc-env.md
+          - Content guidelines : wg_docs/content.md
       - CRC Build: 
           - Overview: wg_crc/overview.md
       - OKD Virtualization: 
