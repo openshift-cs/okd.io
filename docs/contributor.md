@@ -25,13 +25,5 @@ The OKD project has a [charter](https://github.com/openshift/community/blob/mast
 
 The project is managed by a bi-weekly working group video call:
 
-- Calendar link : [OKD working group calendar](https://calendar.fedoraproject.org/list/okd/){: target=_blank}
-- Agenda link : [OKD working group agenda and meeting nodes](https://hackmd.io/YJBn04R5TDi5Sm9XbOGwZA){: target=_blank}
-
-The main working group is where are the major project decisions are made, but when a specific work item needs to be completed a sub-group may be formed, so a focussed set of volunteers can work on a specific area.
-
-### Sub groups
-
-- [Documentation working group](wg_docs/overview.md){: target=_blank}
-- [Code-Ready Containers on OKD working group](wg_crc/overview.md){: target=_blank}
-- [OKD virtualization working group](wg_virt/overview.md){: target=_blank}
+The [main working group](working-groups.md) is where are the major project decisions are made, but when a specific work item needs to be completed a sub-group may be formed, so a focussed set of volunteers can work on a specific area.
+ 

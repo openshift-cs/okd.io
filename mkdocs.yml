@@ -87,6 +87,7 @@ nav:
       - OKD Community: community.md
       - Contributor: contributor.md
   - OKD Working Groups:
+      - OKD Working Group : working-groups.md
       - Documentation:
           - Overview: wg_docs/overview.md
           - Modifying OKD.io: wg_docs/okd-io.md
