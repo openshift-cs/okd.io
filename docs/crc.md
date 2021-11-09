@@ -1,4 +1,4 @@
-# CodeReady Containers for OkD
+# CodeReady Containers for OKD
 
  CodeReady Containers brings a minimal, single node OKD 4 cluster to your local computer. This cluster provides a minimal environment for development and testing purposes. CodeReady Containers is mainly targeted at running on developers' laptops and desktops.
 
