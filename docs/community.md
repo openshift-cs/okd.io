@@ -11,13 +11,13 @@ We want the OKD community to be a welcoming community, where everyone is treat w
 !!!Todo
     Add code of conduct content or link to content
 
-Red Hat supports the [Inclusive Naming Initiative](){: target=_blank} and the OKD project follows the guidelines and recommendations from that project.  All contributions to OKD must also follow their guidelines
+Red Hat supports the [Inclusive Naming Initiative](https://inclusivenaming.org/){: target=_blank} and the OKD project follows the guidelines and recommendations from that project.  All contributions to OKD must also follow their guidelines
 
 ## End-User community
 
 The community of OKD users is a self-supporting community.  There is no official support for OKD, all help is community provided.
 
-The [Help section](){: target=_blank} provides details on how to get help for any issues you may be experiencing.
+The [Help section](help.md){: target=_blank} provides details on how to get help for any issues you may be experiencing.
 
 We encourage all users to participate in discussions and to help fellow users where they can.
 
