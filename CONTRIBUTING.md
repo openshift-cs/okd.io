@@ -17,7 +17,7 @@ And add the `upstream` remote to follow this repository's changes:
 ```bash
 $ git remote add upstream git@github.com:openshift-cs/okd.io
 $ git fetch upstream
-$ git rebase upstream/master
+$ git rebase upstream/main
 ```
 
 
