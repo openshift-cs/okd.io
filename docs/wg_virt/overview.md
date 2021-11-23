@@ -34,7 +34,7 @@ Slack Channel: <https://kubernetes.slack.com/messages/openshift-dev>
 
 * some social activity like a blog post and more upstream documentation
 
-* just as a general comment (I don't have "real" data), I want to add that on CI side we are more flaky on OKD than on OCP: nothing so serious, but we see more false positives on OKD lanes than on OCP ones
+* improve reliability of testing and CI on OKD
 
 ## SIG Membership
 
