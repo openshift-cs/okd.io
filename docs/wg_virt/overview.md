@@ -6,6 +6,10 @@ including a graphical user interface and deployed using bare metal suited method
 
 [Meet our community](community.md)!
 
+## Documentation
+
+* [Guide to installing OKD Virtualization on Bare Metal UPI](../guides/virt-baremetal-upi/index.md)
+
 ## Projects
 
 The OKD Virtualization Subgroup is monitoring and integrating the following projects in a user consumable virtualization solution:

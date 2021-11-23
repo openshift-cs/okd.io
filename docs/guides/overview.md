@@ -13,3 +13,4 @@ The guides linked below provide some examples of how community members are using
 - [Azure Installer Provisioned Infrastructure Default Deployment](azure-ipi.md)
 - [AWS Installer Provisioned Infrastructure Default Deployment](aws-ipi.md)
 - [GCP Installer Provisioned Infrastructure Default Deployment](gcp-ipi.md)
+- [Guide to installing OKD Virtualization on Bare Metal UPI](virt-baremetal-upi/index.md)]
