@@ -12,7 +12,7 @@ ignore=
   .php$
   ^https://fonts.gstatic.com
   js/rs-plugin/assets/transparent.png$
-
+  ^https://medium.com/@casonadams/edgerouter-x-adguardhome-b9d453f5725b
 [checking]
 robotstxt=0
 localwebroot=./
