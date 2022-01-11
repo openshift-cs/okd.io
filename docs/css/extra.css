@@ -22,7 +22,7 @@
     --md-code-hl-name-color: var(--md-code-fg-color);
     --md-code-hl-operator-color: var(--md-default-fg-color--light);
     --md-code-hl-punctuation-color: var(--md-default-fg-color--light);
-    --md-code-hl-comment-color: var(--md-default-fg-color--light);
+    --md-code-hl-comment-color: #cbd26f;
     --md-code-hl-generic-color: var(--md-default-fg-color--light);
     --md-code-hl-variable-color: var(--md-default-fg-color--light);
     --md-typeset-color: var(--md-default-fg-color);
@@ -34,6 +34,16 @@
     --md-admonition-bg-color: var(--md-default-bg-color--lighter);
     --md-footer-bg-color: hsla(var(--md-hue), 15%, 12%, 1);
     --md-footer-bg-color--dark: hsla(var(--md-hue), 15%, 10%, 1);
+}
+
+[data-md-color-primary=blue-grey] {
+    --md-primary-fg-color--light: hsla(200, 48%, 30%, 1);
+    --md-default-bg-color: hsla(0, 0%, 87%, 1);
+	--md-default-bg-color--light: hsla(0, 0%, 90%, 1);
+	--md-default-bg-color--lighter: hsla(0, 0%, 93%, 1);
+	--md-default-bg-color--lightest: hsla(0, 0%, 96%, 1);
+	--md-default-fg-color: rgba(0, 0, 0, 0.95);
+	--md-default-fg-color--light: rgba(0, 0, 0, 0.8);
 }
 
 [data-md-color-scheme=okd] {
@@ -58,7 +68,7 @@
     --md-code-hl-name-color: var(--md-code-fg-color);
     --md-code-hl-operator-color: var(--md-default-fg-color--light);
     --md-code-hl-punctuation-color: var(--md-default-fg-color--light);
-    --md-code-hl-comment-color: var(--md-default-fg-color--light);
+    --md-code-hl-comment-color: #cbd26f;
     --md-code-hl-generic-color: var(--md-default-fg-color--light);
     --md-code-hl-variable-color: var(--md-default-fg-color--light);
     --md-typeset-color: var(--md-default-fg-color);

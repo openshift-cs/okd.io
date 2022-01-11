@@ -82,7 +82,7 @@
 
 h2:after {
     content: "";
-    opacity: 0.2;
+    opacity: 0.15;
     background: url(images/bg_teal-container-honeycomb.png) right center no-repeat;
     background-size: cover;
     top: 0;
@@ -131,7 +131,7 @@ h3:nth-of-type(even) {
 p:first-child {
     font-size: 1.5rem;
     padding-bottom: 2rem;
-    color: var(--md-primary-fg-color--dark);
+    color: var(--md-primary-fg-color--light);
     text-align: left;
 }
 
@@ -159,11 +159,4 @@ h2+p+p {
     margin-top: 0;
     height: 5px;
     color: var(--md-accent-bg-color);
-}
-
-
-@media (prefers-color-scheme: dark) {
-    p:first-child {
-        color: var(--md-primary-fg-color--light);
-    }
 }
