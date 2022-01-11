@@ -6,6 +6,10 @@ including a graphical user interface and deployed using bare metal suited method
 
 [Meet our community](community.md)!
 
+## Documentation
+
+* [Guide to installing OKD Virtualization on Bare Metal UPI](../guides/virt-baremetal-upi/index.md)
+
 ## Projects
 
 The OKD Virtualization Subgroup is monitoring and integrating the following projects in a user consumable virtualization solution:
@@ -34,7 +38,7 @@ Slack Channel: <https://kubernetes.slack.com/messages/openshift-dev>
 
 * some social activity like a blog post and more upstream documentation
 
-* just as a general comment (I don't have "real" data), I want to add that on CI side we are more flaky on OKD than on OCP: nothing so serious, but we see more false positives on OKD lanes than on OCP ones
+* improve reliability of testing and CI on OKD
 
 ## SIG Membership
 

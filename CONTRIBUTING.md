@@ -4,7 +4,7 @@ If you wish to contribute to this repository please follow the guidelines below.
 
 ## Forking this repository
 
-The first thing you need to do is to [fork this repository](https://github.com/openshift-cs/okd.io#fork-destination-box) into your own github account.
+The first thing you need to do is to [fork this repository](https://github.com/openshift-cs/okd.io#fork-destination-box) into your own GitHub account.
 
 Then, clone it into your local machine:
 
