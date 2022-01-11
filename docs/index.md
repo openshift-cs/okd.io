@@ -27,7 +27,7 @@ OKD embeds Kubernetes and extends it with security and other integrated concepts
 
 OKD adds **developer and operations-centric** tools on top of Kubernetes to enable rapid application development, easy deployment and scaling, and long-term lifecycle maintenance for small and large teams
 
-OKD is also referred to as Origin in github and in the documentation
+OKD is also referred to as Origin in GitHub and in the documentation
 
 OKD is a **sibling** Kubernetes distribution to **Red Hat OpenShift** | If you are looking for enterprise-level support, or information on partner certification, Red Hat also offers [Red Hat OpenShift Container Platform](https://www.openshift.com/){: target=_blank}
 
