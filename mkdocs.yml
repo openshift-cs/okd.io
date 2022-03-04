@@ -17,7 +17,7 @@ theme:
       scheme: okd
       toggle:
         icon: material/toggle-switch-off-outline
-        name: Switch to dark mod
+        name: Switch to dark mode
       primary: blue grey
       accent: red
     - media: "(prefers-color-scheme: dark)"

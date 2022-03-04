@@ -10,6 +10,16 @@
     font-size: 1.4em;
 }
 
+.home-hero-text > div {
+    background: var(--md-default-bg-color--light);
+
+}
+
+.home-hero-text h1, .home-hero-text img {
+    color: #fff;
+    z-index: 2;
+}
+
 .row {
     display: flex;
     flex-direction: row;
@@ -120,12 +130,13 @@ h3:nth-of-type(even) {
     color: var(--md-typeset-a-color);
     font-weight: bold;
     position: relative;
-    margin: 1.5rem 0 0.5rem;
+    margin: 3rem 0 0.5rem;
     box-shadow: 0 1px var(--md-default-bg-color--lighter);
-    font-size: 1.2rem;
-    line-height: 1.2rem;
-    background: var(--md-default-bg-color--light);
-    background-size: cover;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    padding-bottom: 1rem;
+    /*background: var(--md-default-bg-color--light);*/
+    /*background-size: cover;*/
 }
 
 p:first-child {
