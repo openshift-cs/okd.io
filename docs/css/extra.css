@@ -104,7 +104,8 @@
 }
 
 .md-container {
-    background-color: var(--md-default-bg-color--lightest);
+
+    background-image: linear-gradient( var(--md-default-bg-color--lightest), var(--md-default-bg-color--white) );
 }
 
 .md-nav {
