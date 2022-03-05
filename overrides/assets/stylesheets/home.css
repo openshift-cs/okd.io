@@ -6,8 +6,24 @@
 .home-purpose {
     max-width: 100%;
     width: 100%;
-    padding: 0 clamp(0.5rem, 15vw, 8rem);
+    padding: 0 clamp(0.5rem, 15vw, 3rem);
     font-size: 1.4em;
+}
+
+.home-purpose > .row {
+    padding:0;
+    margin:0;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .home-purpose {
+        padding: 0 clamp(0.5rem, 15vw, 1rem);
+    }
+
+
 }
 
 .home-hero-text > div {
@@ -49,8 +65,12 @@
 
 .md-main__inner .md-content__inner,
 .md-sidebar--primary:not([hidden])~.md-content>.md-content__inner {
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.md-content__inner:before {
+    height:0;
 }
 
 .col-md-12 {
