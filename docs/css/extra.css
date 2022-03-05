@@ -55,8 +55,8 @@
     --md-default-bg-color: hsla(0, 0%, 85%, 1);
     --md-default-bg-color--light: hsla(0, 0%, 60%, 1);
     --md-default-bg-color--lighter: hsla(0, 0%, 70%, 1);
-    --md-default-bg-color--lightest: hsl(0, 0%, 95%, 1);
-    --md-default-bg-color--white: hsl(0, 0%, 100%, 1);
+    --md-default-bg-color--lightest: hsla(0, 0%, 91%, 1);
+    --md-default-bg-color--white: hsla(0, 0%, 100%, 1);
     --md-code-fg-color: hsla(var(--md-hue), 18%, 86%, 1);
     --md-code-bg-color: hsla(var(--md-hue), 37%, 15%, 1);
     --md-code-hl-color: hsla(var(--md-default-fg-color--lightest));
@@ -74,6 +74,7 @@
     --md-code-hl-variable-color: var(--md-default-fg-color--light);
     --md-typeset-color: var(--md-default-fg-color);
     --md-typeset-a-color: var(--md-primary-fg-color--light);
+    --md-typeset-a-color--light:  hsla(0, 0%, 100%, 1);
     --md-typeset-mark-color: var(--md-default-fg-color--lightest);
     --md-typeset-kbd-color: hsla(var(--md-hue), 15%, 94%, 1);
     --md-typeset-kbd-accent-color: hsla(var(--md-hue), 15%, 94%, 1);

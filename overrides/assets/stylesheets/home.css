@@ -13,6 +13,7 @@
 .home-hero-text > div {
     background: var(--md-default-bg-color--light);
 
+
 }
 
 .home-hero-text h1, .home-hero-text img {
@@ -92,7 +93,7 @@
 
 h2:after {
     content: "";
-    opacity: 0.15;
+    opacity: 0.3;
     background: url(images/bg_teal-container-honeycomb.png) right center no-repeat;
     background-size: cover;
     top: 0;
@@ -100,29 +101,31 @@ h2:after {
     bottom: 0;
     right: 0;
     position: absolute;
+    z-index: -1;
 }
 
 h2:nth-of-type(odd),
 h2:nth-of-type(even) {
-    color: var(--md-typeset-a-color);
-    margin: 3rem 0;
+    color: var(--md-typeset-a-color--light);
+    margin: 4.5rem 0 3rem 0;
     padding: 3rem 0 3rem;
     text-align: center;
     font-weight: bold;
     position: relative;
     font-size: 1.5rem;
+    z-index: 1;
 }
 
 h2:nth-of-type(odd) {
     background: url(images/okd-panda-flat_nerd_with_plug_with_number.svg) left center no-repeat, var(--md-default-bg-color--light);
     background-size: contain, cover;
-    box-shadow: 0px 2px var(--md-default-bg-color--lighter)
+    box-shadow: 0px 2px var(--md-default-bg-color--light)
 }
 
 h2:nth-of-type(even) {
     background: url(images/okd-panda-flat_rocketeer_with_number.svg) right center no-repeat, var(--md-default-bg-color--light);
     background-size: contain, cover;
-    box-shadow: 0px 2px var(--md-default-bg-color--lighter)
+    box-shadow: 0px 2px var(--md-default-bg-color--light)
 }
 
 h3:nth-of-type(odd),
@@ -134,7 +137,7 @@ h3:nth-of-type(even) {
     box-shadow: 0 1px var(--md-default-bg-color--lighter);
     font-size: 1.3rem;
     line-height: 1.3rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
     /*background: var(--md-default-bg-color--light);*/
     /*background-size: cover;*/
 }
