@@ -85,6 +85,7 @@ nav:
   - Blog: blog.md
   - Community:
       - OKD Community: community.md
+      - Code of Conduct: conduct.md
       - Contributor: contributor.md
   - OKD Working Groups:
       - OKD Working Group: working-groups.md
