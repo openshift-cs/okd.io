@@ -63,7 +63,7 @@ See [https://openshift.tips/](https://openshift.tips/){: target=_blank} for usef
 !!!Warning
     Nightly builds (from `4.x.0-0.okd`) are pruned every 72 hours.
 
-    If your cluster uses these images, consider [mirroring](https://docs.okd.io/latest/installing/installing-mirroring-installation-images.html) these files to a local registry.
+    If your cluster uses these images, consider [mirroring](https://docs.okd.io/latest/installing/disconnected_install/installing-mirroring-installation-images.html) these files to a local registry.
 
     Builds from the **stable-4** stream are not removed.
 
