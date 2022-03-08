@@ -13,6 +13,7 @@ ignore=
   ^https://fonts.gstatic.com
   js/rs-plugin/assets/transparent.png$
   ^https://medium.com/@casonadams/edgerouter-x-adguardhome-b9d453f5725b
+  ^https://mirror.openshift.com/pub/openshift-v4/clients/oc/latest/linux/
 [checking]
 robotstxt=0
 localwebroot=./

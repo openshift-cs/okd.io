@@ -6,10 +6,7 @@ OKD has an active community of end-users, with many different use-cases.  From e
 
 ## Code of Conduct
 
-We want the OKD community to be a welcoming community, where everyone is treat with respect.
-
-!!!Todo
-    Add code of conduct content or link to content
+We want the OKD community to be a welcoming community, where everyone is treat with respect, so the link to the [code of conduct](./conduct.md) should be made visible at all events
 
 Red Hat supports the [Inclusive Naming Initiative](https://inclusivenaming.org/){: target=_blank} and the OKD project follows the guidelines and recommendations from that project.  All contributions to OKD must also follow their guidelines
 
