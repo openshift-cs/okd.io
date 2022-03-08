@@ -79,7 +79,7 @@
     --md-typeset-kbd-color: hsla(var(--md-hue), 15%, 94%, 1);
     --md-typeset-kbd-accent-color: hsla(var(--md-hue), 15%, 94%, 1);
     --md-typeset-kbd-border-color: hsla(var(--md-hue), 15%, 14%, 1);
-    --md-admonition-bg-color: var(--md-default-bg-color--lighter);
+    --md-admonition-bg-color: var(--md-default-bg-color--lightest);
     --md-footer-bg-color: hsla(var(--md-hue), 15%, 12%, 1);
     --md-footer-bg-color--dark: hsla(var(--md-hue), 15%, 10%, 1);
 }
