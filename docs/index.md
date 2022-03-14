@@ -46,7 +46,6 @@ All contributions are welcome! OKD uses the Apache 2 license and does not requir
 - Read [the documentation](https://docs.okd.io/latest/welcome/index.html)
 - Read [our charter](https://github.com/openshift/community/blob/master/CHARTER.md)
 - Help Resolve an [Open Issue](https://github.com/openshift/okd/issues)
-- Review our [Apache 2 license](https://docs.okd.io/latest/welcome/index.html)
 
 ### Connect to the community
 
