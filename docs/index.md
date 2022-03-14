@@ -53,8 +53,8 @@ Join the [OKD Working Group](contributor.md)
 
 ### Talk to Us
 
-- Follow the [public user or development mailing lists](https://lists.openshift.redhat.com/openshiftmm/listinfo){: target=_blank}
-- Chat with us on the [#openshift-dev channel on Slack](https://kubernetes.slack.com/messages/openshift-dev/){: target=_blank}
+- Follow the [public mailing lists](https://groups.google.com/g/okd-wg)
+- Chat with us on the [#openshift-users channel on Slack](https://kubernetes.slack.com/messages/openshift-users/)
 
 
 ## Standardization through Containerization
