@@ -46,7 +46,6 @@ All contributions are welcome! OKD uses the Apache 2 license and does not requir
 - Read [the documentation](https://docs.okd.io/latest/welcome/index.html)
 - Read [our charter](https://github.com/openshift/community/blob/master/CHARTER.md)
 - Help Resolve an [Open Issue](https://github.com/openshift/okd/issues)
-- Review our [Apache 2 license](https://docs.okd.io/latest/welcome/index.html)
 
 ### Connect to the community
 
@@ -54,8 +53,8 @@ Join the [OKD Working Group](contributor.md)
 
 ### Talk to Us
 
-- Follow the [public user or development mailing lists](https://lists.openshift.redhat.com/openshiftmm/listinfo){: target=_blank}
-- Chat with us on the [#openshift-dev channel on Slack](https://kubernetes.slack.com/messages/openshift-dev/){: target=_blank}
+- Follow the [public mailing lists](https://groups.google.com/g/okd-wg)
+- Chat with us on the [#openshift-users channel on Slack](https://kubernetes.slack.com/messages/openshift-users/)
 
 
 ## Standardization through Containerization
