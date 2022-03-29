@@ -1,6 +1,6 @@
 # Deployment Guides
 
-<!--- cSpell:ignore prereqs Vadim homelab -->
+<!--- cSpell:ignore prereqs Vadim homelab virt baremetal -->
 
 The guides linked below provide some examples of how community members are using OKD and provide details of the underlying hardware and platform configurations they are using.
 
@@ -13,4 +13,4 @@ The guides linked below provide some examples of how community members are using
 - [Azure Installer Provisioned Infrastructure Default Deployment](azure-ipi.md)
 - [AWS Installer Provisioned Infrastructure Default Deployment](aws-ipi.md)
 - [GCP Installer Provisioned Infrastructure Default Deployment](gcp-ipi.md)
-- [Guide to installing OKD Virtualization on Bare Metal UPI](virt-baremetal-upi/index.md)]
+- [Guide to installing OKD Virtualization on Bare Metal UPI](virt-baremetal-upi/index.md)

@@ -2,7 +2,7 @@
 
 <!--- cSpell:ignore wg_virt  -->
 
-OKD is governed by working groups.  
+OKD is governed by working groups as set out in the [OKD Working Group Charter](charter.md)
 
 There is a primary working group, where all the main decisions are made regarding the project.  
 
