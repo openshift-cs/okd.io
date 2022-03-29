@@ -81,6 +81,7 @@ nav:
           - Azure IPI Default Deployment: guides/azure-ipi.md
           - AWS IPI Default Deployment: guides/aws-ipi.md
           - GCP IPI Default Deployment: guides/gcp-ipi.md
+          - OKD Virtualization: guides/virt-baremetal-upi/index.md
   - Documentation: docs.md
   - Blog: blog.md
   - Community:
@@ -89,6 +90,7 @@ nav:
       - Contributor: contributor.md
   - OKD Working Groups:
       - OKD Working Group: working-groups.md
+      - OKD Charter: charter.md
       - Documentation:
           - Overview: wg_docs/overview.md
           - Modifying OKD.io: wg_docs/okd-io.md

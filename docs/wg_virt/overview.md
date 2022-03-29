@@ -1,5 +1,7 @@
 # OKD Virtualization Subgroup
 
+<!--- cSpell:ignore Kube Virt Medik Konveyor operatorhub baremetal -->
+
 The Goal of the OKD Virtualization Subgroup is to provide an integrated solution for classical virtualization users
 based on [OKD](https://www.okd.io/), [HCO](https://github.com/kubevirt/hyperconverged-cluster-operator) and [KubeVirt](http://kubevirt.io/),
 including a graphical user interface and deployed using bare metal suited method.
@@ -14,7 +16,6 @@ including a graphical user interface and deployed using bare metal suited method
 
 The OKD Virtualization Subgroup is monitoring and integrating the following projects in a user consumable virtualization solution:
 
-<!--- cSpell:ignore Kube Virt Medik Konveyor operatorhub -->
 * [OKD](https://www.okd.io/) - as the platform
 * [KubeVirt](http://kubevirt.io/) - as the virtualization plugin
 * [HyperConverged Cluster Operator (HCO)](https://github.com/kubevirt/hyperconverged-cluster-operator) - for supporting tools

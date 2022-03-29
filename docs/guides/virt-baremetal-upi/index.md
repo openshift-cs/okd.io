@@ -1,5 +1,7 @@
 # OKD Virtualization on user provided infrastructure
 
+<!--- cSpell:ignore baremetal rpcbind openvswitch kube Virt Hyperconverged hostpath machineconfig kubevirt -->
+
 ## Preparing the hardware
 
 As a first step for providing an infrastructure for OKD Virtualization, you need to prepare the hardware:
