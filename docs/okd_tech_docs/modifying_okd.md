@@ -1,6 +1,6 @@
 # Making changes to OKD
 
-<!--- cSpell:ignore podman Dockerfiles -->
+<!--- cSpell:ignore podman Dockerfiles toolset -->
 
 The source code for OKD is available on [github](https://github.com/openshift){target=_blank}.  OKD is made up of many components bundled into a release.  You can find the exact commit for each component included in a release using the `oc adm release info` command with the `--commit-urls` option, as outlined in the [overview](./index.md#okd-releases) section.
 
