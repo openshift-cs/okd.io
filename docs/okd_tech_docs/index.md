@@ -27,8 +27,8 @@ You can find the latest available release [here](https://github.com/openshift/ok
 
 For the OKD 4.10 release named *4.10.0-0.okd-2022-03-07-131213* the command would be `oc adm release info 4.10.0-0.okd-2022-03-07-131213`
 
-you can also add additional options to get additional information about a release:
+you can add additional command line options to get more specific information about a release:
 
 - `--commit-urls` shows the source code that makes up the release
 - `--commits` allows you to specify 2 releases and see the differences between the releases
-- `--pullspecs` show the exact images that will be used by a release
+- `--pullspecs` show the exact container images that will be used by a release
