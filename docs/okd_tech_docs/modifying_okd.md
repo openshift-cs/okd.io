@@ -22,11 +22,19 @@ Some component repositories contain a Makefile, so building the image can be don
     Unfortunately many of the components have Dockerfiles that use RedHat internal build images from *registry.ci.openshift.org* which requires authorization.  E.g. console-operator uses *registry.ci.openshift.org/ocp/builder:rhel-8-golang-1.17-openshift-4.10* as the builder
 
 !!!Question
-    Are the images in *registry.ci.openshift.org* available publicly?
-    Can [this go-toolset](https://catalog.redhat.com/software/containers/rhel8/go-toolset/5b9c810add19c70b45cbd666){target=_blank} be used instead?
+    - Are the images in *registry.ci.openshift.org* available publicly?
+    - Can this [go-toolset](https://catalog.redhat.com/software/containers/rhel8/go-toolset/5b9c810add19c70b45cbd666){target=_blank} be used instead?
+    - Is it possible to replicate a *release build* of an OKD component outside Red Hat CI infrastructure?
+        - can a community member discover the build containers/configuration?
 
 !!!Todo
     Work out the easiest steps needed to build the console-operator
+
+    Scenario:
+
+    - Modify console-operator to have a link to the community site **okd.io** instead of **docs.okd.io**
+    - add to pre-existing cluster
+    - build a custom release to include the modified console-operator, then install a new cluster will custom release
 
 If it is not clear how to build a component you can look in the **release** repository at `https://github.com/openshift/release/tree/master/ci-operator/config/openshift/<operator repo name>`, this is used by the Red Hat build system to build components so can be used to determine how to build a component.
 
@@ -53,4 +61,3 @@ oc scale --replicas=0 deployment/cluster-version-operator -n openshift-cluster-v
 Some images, such as the **Cluster Cloud Controller Manager Operator** and the **Machine API Operator** need additional steps to be able to make changes, but these typically have a **docs** folder containing additional information about how to make changes to these images.
 
 ### Create custom release
-
