@@ -23,7 +23,7 @@ Some component repositories contain a Makefile, so building the image can be don
 
 !!!Question
     - Are the images in *registry.ci.openshift.org* available publicly?
-    - Can this [go-toolset](https://catalog.redhat.com/software/containers/rhel8/go-toolset/5b9c810add19c70b45cbd666){target=_blank} be used instead?
+        - or are the alternate images, e.g. could this [go-toolset](https://catalog.redhat.com/software/containers/rhel8/go-toolset/5b9c810add19c70b45cbd666){target=_blank} be used to build the console-operator instead?
     - Is it possible to replicate a *release build* of an OKD component outside Red Hat CI infrastructure?
         - can a community member discover the build containers/configuration?
 
