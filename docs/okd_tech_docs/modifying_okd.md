@@ -47,7 +47,7 @@ You should also check the repo **README.md** file or any documentation, typicall
 
 An OKD release contain a specific set of images and there are operators that ensure that only the correct set of images are running a cluster, so you need to do some specific actions to be able to run your modified image on a cluster.  You can do this by:
 
-1. running the image on an existing cluster
+1. configuring an existing cluster to run a modified image
 2. create a new installer containing your image then creating a new cluster with the modified installer
 
 ### Running on an existing cluster
