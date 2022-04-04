@@ -36,6 +36,9 @@ Some component repositories contain a Makefile, so building the image can be don
     - add to pre-existing cluster
     - build a custom release to include the modified console-operator, then install a new cluster will custom release
 
+!!!Warning
+    When working with Go lang projects you need to be on Go lang v1.17 or better, as they use language features not supported before v1.17, even though some of the project README.md files may specify V1.15, these README files are out of date
+
 If it is not clear how to build a component you can look in the **release** repository at `https://github.com/openshift/release/tree/master/ci-operator/config/openshift/<operator repo name>`, this is used by the Red Hat build system to build components so can be used to determine how to build a component.
 
 You should also check the repo **README.md** file or any documentation, typically in a **doc** folder, as there may be some repo specific details
