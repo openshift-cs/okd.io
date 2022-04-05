@@ -57,7 +57,6 @@ Join the [OKD Working Group](contributor.md)
 - Follow the [public user or development mailing lists](https://groups.google.com/g/okd-wg){: target=_blank}
 - Chat with us on the [#openshift-dev channel on Slack](https://kubernetes.slack.com/messages/openshift-dev/){: target=_blank}
 
-
 ## Standardization through Containerization
 
 Standards are powerful forces in the software industry. They can drive technology forward by bringing together the combined efforts of multiple developers, different communities, and even competing vendors.
