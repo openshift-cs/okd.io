@@ -4,17 +4,17 @@
 
 ### Attendees:
 
-* Jaime Magiera (University of Michigan)
-* Brian Innes (IBM)
-* Larry Brigman (CommScope)
-* Michael elmiko McCune (Red Hat)
-* Timothée Ravier (Red Hat)
+* Jaime Magiera  - University of Michigan
+* Brian Innes - IBM
+* Larry Brigman - CommScope
+* Michael elmiko McCune - Red Hat
+* Timothée Ravier - Red Hat
 * Mohammad Reza Ostadi
-* Daniel Axelrod (Datto)
+* Daniel Axelrod - Datto
 * Sri Ramanujam
-* Bruce Link (BCIT)
-* Neal Gompa (Datto)
-* Christian Glombek (Red Hat)
+* Bruce Link - BCIT
+* Neal Gompa - Datto
+* Christian Glombek - Red Hat
 
 ### Agenda
 
