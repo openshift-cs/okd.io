@@ -60,4 +60,3 @@
     * Charro Gruver - gather OKD download stats from dl.fedoraproject.org or delegate
     * Daniel - Write up guides format into README in guides directory and then file tickets against people who have agreed to update them
     * Ceate troubleshooting dicsussion thread (Brian)
-* Events
