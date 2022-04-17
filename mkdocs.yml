@@ -92,7 +92,7 @@ nav:
       - OKD Working Group: 
           - About: working-groups.md
           - Charter: charter.md
-          - Minutes: working-group/minutes/
+          - Minutes: working-group/minutes/minutes.md
       - Documentation:
           - Overview: wg_docs/overview.md
           - Modifying OKD.io: wg_docs/okd-io.md
