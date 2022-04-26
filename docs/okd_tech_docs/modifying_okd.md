@@ -18,17 +18,18 @@ Most component repositories contain a Dockerfile, so building the image is as si
 
 Some component repositories contain a Makefile, so building the image can be done using the Makefile, typically with `make build`
 
-!!!Info
-    Unfortunately many of the components have Dockerfiles that use RedHat internal build images from *registry.ci.openshift.org* which requires authorization.  E.g. console-operator uses *registry.ci.openshift.org/ocp/builder:rhel-8-golang-1.17-openshift-4.10* as the builder
+First thing to do is to replace the `FROM` images in `Dockerfile.rhel7`.  You may want to just copy it to `Dockerfile` and then make the changes. 
 
-!!!Question
-    - Are the images in *registry.ci.openshift.org* available publicly?
-        - or are the alternate images, e.g. could this [go-toolset](https://catalog.redhat.com/software/containers/rhel8/go-toolset/5b9c810add19c70b45cbd666){target=_blank} be used to build the console-operator instead?
-    - Is it possible to replicate a *release build* of an OKD component outside Red Hat CI infrastructure?
-        - can a community member discover the build containers/configuration?
+```
+    FROM registry.ci.openshift.org/openshift/release:golang-1.17 AS builder
+```
+and
+```
+    FROM registry.ci.openshift.org/origin/4.10:base
+```
+Note that these may change as golang and release requirements change.
 
-!!!Todo
-    Work out the easiest steps needed to build the console-operator
+The original images are unavailable to the public. There is an effort to update the Dockerfiles with publically available images.
 
     Scenario:
 
@@ -36,6 +37,32 @@ Some component repositories contain a Makefile, so building the image can be don
     - add to pre-existing cluster
     - build a custom release to include the modified console-operator, then install a new cluster will custom release
 
+1. Fork the console-operator repository
+2. Clone the new fork locally: `git clone https://github.com/<username>/console-operator.git`
+3. create new branch from master (or main):  `git switch -c <branch name>`
+4. Make needed modifications.  Commit/squash as needed.  Maintainers like to see 1 commit rather than several.
+5. Create the image: `podman build -f <Dockerfile file> -t <target repo>/<username>/console-operator:4.11-<some additional identifier>`    
+6. Push image to external repository: `podman push  <target repo>/<username>/console-operator:4.11-<some additional identifier>`    
+7. Create new release to test with.  This requires the `oc` command to be available.  I use the following script.  It can be modified as needed:
+```    
+$ cat make_payload.sh
+server=https://api.ci.openshift.org
+
+from_release=registry.ci.openshift.org/origin/release:4.11.0-0.okd-2022-04-12-000907
+release_name=4.11.0-0.jef-2022-04-12-0
+to_image=quay.io/fortinj66/origin-release:v4.11-console-operator
+
+oc adm release new --from-release ${from_release} \
+                   --name ${release_name} \
+                   --to-image ${to_image} \
+                   console-operator=<target repo>/<username>/console-operator:4.11-<some additional identifier>
+```
+
+`from_release`, `release_name`, `to_image` will need to be updated as needed  
+    
+8. Pull installer for cluster release: `oc adm release extract --tools <to_image from above>`  (Make sure image is publically available)
+
+    
 !!!Warning
     When working with some Go lang projects you may need to be on Go lang v1.17 or better, as some projects use language features not supported before v1.17, even though some of the project README.md files may specify V1.15, these README files are out of date
 
