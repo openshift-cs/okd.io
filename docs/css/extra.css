@@ -71,7 +71,7 @@
     --md-code-hl-punctuation-color: var(--md-default-fg-color--light);
     --md-code-hl-comment-color: #cbd26f;
     --md-code-hl-generic-color: var(--md-default-fg-color--light);
-    --md-code-hl-variable-color: var(--md-default-fg-color--light);
+    --md-code-hl-variable-color: var(--md-code-fg-color);
     --md-typeset-color: var(--md-default-fg-color);
     --md-typeset-a-color: var(--md-primary-fg-color--light);
     --md-typeset-a-color--light:  hsla(0, 0%, 100%, 1);
