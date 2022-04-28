@@ -17,7 +17,7 @@ theme:
       scheme: okd
       toggle:
         icon: material/toggle-switch-off-outline
-        name: Switch to dark mod
+        name: Switch to dark mode
       primary: blue grey
       accent: red
     - media: "(prefers-color-scheme: dark)"
@@ -63,7 +63,7 @@ extra_css:
   - css/extra.css
 extra:
   generator: false
-copyright: Copyright © 2021 OKD Working Group
+copyright: Copyright © 2022 OKD Working Group
 nav:
   - Home: index.md
   - About: about.md
