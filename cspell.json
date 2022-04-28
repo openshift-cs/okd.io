@@ -12,6 +12,7 @@
             "/^\\s*```[\\s\\S]*?^\\s*```/gm"
         ]
     }],
+    "ignorePaths": ["docs/working-group/minutes/**"],
     // words - list of words to be always considered correct
     "words": [
         "Kubernetes",
