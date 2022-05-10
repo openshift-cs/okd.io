@@ -12,7 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: quay.io/centos/centos:stream8
+      image: quay.io/fedora/fedora:35
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
