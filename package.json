@@ -25,6 +25,6 @@
     "author": "Brian Innes",
     "license": "ISC",
     "devDependencies": {
-        "cspell": "^5.15.2"
+        "cspell": "^5.20.0"
     }
 }
