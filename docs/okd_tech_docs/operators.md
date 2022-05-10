@@ -2,6 +2,9 @@
 
 <!--- cSpell:ignore Devworkspace devspaces -->
 
+!!!Warning
+    This section is under construction
+    
 OKD contains many operators which deliver the base platform, however there is also additional capabilities delivered as operators available via the Operator Hub.
 
 The operator hub story for OKD isn't ideal currently (as at OKD 4.10) as OKD shares source with OpenShift, the commercial sibling to OKD.  OpenShift has additional operator hub catalogs provided by Red Hat, which deliver additional capabilities as part of the supported OpenShift product. These additional capabilities are not currently provided to OKD.
