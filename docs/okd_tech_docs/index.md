@@ -26,7 +26,9 @@ OKD shares most of the same source code as Red Hat OpenShift.  One of the primar
 
 An OKD release is a strictly defined set of software.  A release is defined by a **release payload**, which contains an operator (Cluster Version Operator), a list of manifests to apply and a reference file.  You can get information about a release using the **oc** command line utility, `oc adm release info <release name>`.
 
-You can find the latest available release [here](https://github.com/openshift/okd/releases){target=_blank}.  
+You can find the latest available release [here](https://github.com/openshift/okd/releases){target=_blank}.
+
+You can get the current version of your cluster using the `oc get clusterversion` command, or from the Cluster Settings page in the Administration section of the OKD web console.
 
 For the OKD 4.10 release named *4.10.0-0.okd-2022-03-07-131213* the command would be `oc adm release info 4.10.0-0.okd-2022-03-07-131213`
 

@@ -4,7 +4,7 @@
 
 !!!Warning
     This section is under construction
-    
+
 The source code for OKD is available on [github](https://github.com/openshift){target=_blank}.  OKD is made up of many components bundled into a release.  You can find the exact commit for each component included in a release using the `oc adm release info` command with the `--commit-urls` option, as outlined in the [overview](./index.md#okd-releases) section.
 
 To make a change to OKD you need to:
@@ -31,15 +31,15 @@ and
     FROM registry.ci.openshift.org/origin/4.10:base
 ```
 
-!!!Note 
-    To original and replacement image may change as golang version and release requirements change.
+!!!Note
+    The original and replacement image may change as golang version and release requirements change.
 
 !!!Question
     Is there a way to find the correct base image for an OKD release?
 
 The original images are unavailable to the public. There is an effort to update the Dockerfiles with publically available images.
 
-### Example Scenario:
+### Example Scenario
 
 - Modify console-operator to have a link to the community site **okd.io** instead of **docs.okd.io**
 - add to pre-existing cluster
@@ -51,7 +51,7 @@ To complete the scenario the following steps need to be performed:
 2. Clone the new fork locally: `git clone https://github.com/<username>/console-operator.git`
 3. create new branch from master (or main):  `git switch -c <branch name>`
 4. Make needed modifications.  Commit/squash as needed.  Maintainers like to see 1 commit rather than several.
-5. Create the image: `podman build -f <Dockerfile file> -t <target repo>/<username>/console-operator:4.11-<some additional identifier>`    
+5. Create the image: `podman build -f <Dockerfile file> -t <target repo>/<username>/console-operator:4.11-<some additional identifier>`
 6. Push image to external repository: `podman push  <target repo>/<username>/console-operator:4.11-<some additional identifier>`    
 7. Create new release to test with.  This requires the `oc` command to be available.  I use the following script (make_payload.sh).  It can be modified as needed, such as adding the correct container registry and username:
 
