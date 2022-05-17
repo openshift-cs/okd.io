@@ -88,11 +88,10 @@ nav:
       - OKD Community: community.md
       - Code of Conduct: conduct.md
       - Contributor: contributor.md
-  - OKD Working Groups:
-      - OKD Working Group:
-          - About: working-groups.md
-          - Charter: charter.md
-          - Minutes: working-group/minutes/minutes.md
+  - OKD Working Group:
+      - About: working-groups.md
+      - Charter: charter.md
+      - Minutes: working-group/minutes/minutes.md
       - Subgroups:
           - Documentation:
               - Overview: wg_docs/overview.md
