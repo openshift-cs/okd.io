@@ -42,7 +42,7 @@ We know you've got great ideas for improving OKD and its network of open source 
 
 ### Get Started
 
-All contributions are welcome! OKD uses the Apache 2 license and does not require any contributor agreement to submit patches. Please open issues for any bugs or problems you encounter, ask questions in the **#openshift-dev** on Kubernetes Slack Channel, or get involved in the OKD-WG by joining the OKD-WG google group.
+All contributions are welcome! OKD uses the Apache 2 license and does not require any contributor agreement to submit patches. Please open issues for any bugs or problems you encounter, ask questions in the **#openshift-users** on Kubernetes Slack Channel, or get involved in the OKD-WG by joining the OKD-WG google group.
 
 - Get started with the [Contributors Guide](https://github.com/openshift/okd/blob/master/CONTRIBUTING.md)
 - Read [the documentation](https://docs.okd.io/latest/welcome/index.html)
