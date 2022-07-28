@@ -5,24 +5,25 @@
 ## Preparing the hardware
 
 As a first step for providing an infrastructure for OKD Virtualization, you need to prepare the hardware:
-* check that [minimum hardware requirements for running OKD](https://docs.okd.io/latest/installing/installing_bare_metal/installing-bare-metal.html#minimum-resource-requirements_installing-bare-metal) are satisfied;
-* check that [additional hardware requirements for running OKD Virtualization](https://docs.okd.io/latest/virt/install/preparing-cluster-for-virt.html#virt-cluster-resource-requirements_preparing-cluster-for-virt) are also satisfied.
+
+* check that the [minimum hardware requirements for running OKD](https://docs.okd.io/latest/installing/installing_bare_metal/installing-bare-metal.html#minimum-resource-requirements_installing-bare-metal) are satisfied
+* check that the [additional hardware requirements for running OKD Virtualization](https://docs.okd.io/latest/virt/install/preparing-cluster-for-virt.html#virt-cluster-resource-requirements_preparing-cluster-for-virt) are also satisfied.
 
 
 ## Preparing the infrastructure
 
 Once your hardware is ready and connected to the network you need to configure your services, your network and your DNS for allowing the OKD installer to deploy the software.
-You may need to prepare in advance also a few services you'll need during the deployment.
-Read carefully the [Preparing the user-provisioned infrastructure](https://docs.okd.io/latest/installing/installing_bare_metal/installing-bare-metal.html#installation-infrastructure-user-infra_installing-bare-metal) section and ensure all the requirements are met.
+You may also need to prepare in advance a few services you'll need during the deployment.
+Carefully read the [Preparing the user-provisioned infrastructure](https://docs.okd.io/latest/installing/installing_bare_metal/installing-bare-metal.html#installation-infrastructure-user-infra_installing-bare-metal) section and ensure all the requirements are met.
 
 
 ## Provision your hosts
 
 For the bastion / service host you can use CentOS Stream 8.
-You can follow [CentOS 8 installation documentation](https://docs.centos.org/en-US/8-docs/standard-install/)
+You can follow the [CentOS 8 installation documentation](https://docs.centos.org/en-US/8-docs/standard-install/)
 but we recommend using the latest [CentOS Stream 8 ISO](http://isoredirect.centos.org/centos/8-stream/isos/x86_64/).
 
-For the OKD nodes you’ll need Fedora CoreOS. You can get it from [Get Fedora!](https://getfedora.org/en/coreos?stream=stable) website, choose the Bare Metal ISO.
+For the OKD nodes you’ll need Fedora CoreOS. You can get it from the [Get Fedora!](https://getfedora.org/en/coreos?stream=stable) website, choose the Bare Metal ISO.
 
 ## Configure the bastion to host needed services
 
@@ -42,7 +43,7 @@ firewall-cmd --reload
 curl localhost:8080
 ```
 
-Configure haproxy
+Configure haproxy:
 
 ```bash
 dnf install haproxy -y
@@ -54,7 +55,6 @@ firewall-cmd --reload
 setsebool -P haproxy_connect_any 1
 systemctl enable --now haproxy.service
 ```
-
 
 ## Installing OKD
 
