@@ -63,13 +63,12 @@ OKD current stable-4 branch is delivering OKD 4.8. If you're using an older vers
 At this point you should have all OKD nodes ready to be installed with Fedora CoreOS and the bastion with all the needed services.
 Check that all nodes and the bastion have the correct ip addresses and fqdn and that they are resolvable via DNS.
 
-As we are going to use baremetal UPI installation you’ll need to create a `install-config.yaml` following the example for
+As we are going to use the baremetal UPI installation you’ll need to create a `install-config.yaml` following the example for
 [installing bare metal](https://docs.okd.io/latest/installing/installing_bare_metal/installing-bare-metal.html#installation-bare-metal-config-yaml_installing-bare-metal)
 
 Remember to [configure your proxy settings if you have a proxy](https://docs.okd.io/latest/installing/installing_bare_metal/installing-bare-metal.html#installation-configure-proxy_installing-bare-metal)
 
-
-## Apply workarounds
+## Apply the workarounds
 
 * qemu-ga is hitting selinux denials <https://bugzilla.redhat.com/show_bug.cgi?id=1927639>
 
@@ -106,21 +105,18 @@ echo '(allow openvswitch_t init_var_run_t (capability (fsetid)))' >local_openvsw
 semodule -i local_openvswitch.cil
 ```
 
-
 ## Installing HCO and KubeVirt
 
-Once OKD console is up, connect to it.
-Go to Operators -> OperatorHub
-Look for `KubeVirt HyperConverged Cluster Operator` and install it.
+Once the OKD console is up, connect to it.
+Go to **Operators** -> **OperatorHub**, look for `KubeVirt HyperConverged Cluster Operator` and install it.
 
-Click on Create Hyperconverged button, all the defaults should be fine.
-
+Click on the **Create Hyperconverged** button, all the defaults should be fine.
 
 ## Providing storage
 
 Shared storage is not mandatory for OKD Virtualization, but without a doubt it provides many advantages over a configuration based on local storage which is considered a suboptimal configuration.
 
-Between the advantages enabled by shared storage is worth to mention:
+Between the advantages enabled by shared storage it is worth mentioning:
 - Live migration of Virtual Machines
   - Founding pillar for HA
   - Enables seamless cluster upgrades without the need to shut down and restart all the VMs on each upgrade
@@ -131,6 +127,7 @@ Between the advantages enabled by shared storage is worth to mention:
 TBD: rook.io deployment
 
 ### Local storage
+
 You can configure local storage for your virtual machines by using the OKD Virtualization hostpath provisioner feature.
 
 When you install OKD Virtualization, the hostpath provisioner Operator is automatically installed. To use it, you must:
@@ -139,9 +136,11 @@ When you install OKD Virtualization, the hostpath provisioner Operator is automa
 - Create a StorageClass object for the hostpath provisioner.
 
 #### Configuring SELinux for the hostpath provisioner on OKD worker nodes
+
 You can configure SELinux for your OKD Worker nodes using a [MachineConfig](./contrib/machineconfig-selinux-hpp.yaml).
 
 #### Creating a CR for the HostPathProvisioner operator
+
 1. Create the HostPathProvisioner custom resource file. For example:
     ```bash
     $ touch hostpathprovisioner_cr.yaml
