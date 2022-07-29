@@ -139,13 +139,16 @@ When you install OKD Virtualization, the hostpath provisioner Operator is automa
 
 You can configure SELinux for your OKD Worker nodes using a [MachineConfig](./contrib/machineconfig-selinux-hpp.yaml).
 
-#### Creating a CR for the HostPathProvisioner operator
+#### Creating a custom resource (CR) for the HostPathProvisioner operator
 
 1. Create the HostPathProvisioner custom resource file. For example:
+
     ```bash
     $ touch hostpathprovisioner_cr.yaml
     ```
+
 2. Edit that file. For example:
+
     ```yaml
     apiVersion: hostpathprovisioner.kubevirt.io/v1beta1
     kind: HostPathProvisioner
@@ -154,20 +157,25 @@ You can configure SELinux for your OKD Worker nodes using a [MachineConfig](./co
     spec:
       imagePullPolicy: IfNotPresent
       pathConfig:
-        path: "/var/hpvolumes" #The path of the directory on the node
-        useNamingPrefix: false #Use the name of the PVC bound to the created PV as part of the directory name.
+        path: "/var/hpvolumes" # The path of the directory on the node
+        useNamingPrefix: false # Use the name of the PVC bound to the created PV as part of the directory name.
     ```
-3. Creating the CR in the `kubevirt-hyperconverged` namespace:
+
+3. Create the CR in the `kubevirt-hyperconverged` namespace:
+
     ```bash
     $ oc create -n kubevirt-hyperconverged -f hostpathprovisioner_cr.yaml
     ```
 
 #### Creating a StorageClass for the HostPathProvisioner operator
 1. Create the YAML file for the storage class. For example:
+
     ```bash
     $ touch hppstorageclass.yaml
     ```
+
 2. Edit that file. For example:
+
     ```yaml
     apiVersion: storage.k8s.io/v1
     kind: StorageClass
@@ -177,7 +185,9 @@ You can configure SELinux for your OKD Worker nodes using a [MachineConfig](./co
     reclaimPolicy: Delete
     volumeBindingMode: WaitForFirstConsumer
     ```
+
 3. Creating the Storage Class object:
+
     ```bash
     $ oc create -f hppstorageclass.yaml
     ```
