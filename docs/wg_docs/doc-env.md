@@ -73,13 +73,13 @@ You can create the environment by :
     - if you are using the docker command on Linux or Mac OS:
 
         ```shell
-        docker run -it --rm --name mkdocs-serve -p 8000:8000 -v `pwd`:/site mkdocs-build
+        docker run -it --rm --name mkdocs-serve -p 8000:8000 -v `pwd`:/site:Z mkdocs-build
         ```
 
     - if you are using the podman command on Linux:
 
         ```shell
-        podman run -it --rm --name mkdocs-serve -p 8000:8000 -v `pwd`:/site mkdocs-build
+        podman run -it --rm --name mkdocs-serve -p 8000:8000 -v `pwd`:/site:Z mkdocs-build
         ```
 
     - if you are on Windows using the docker command in Powershell:
@@ -125,13 +125,13 @@ You can create the environment by :
     - if you are using the docker command on Linux or Mac OS:
 
         ```shell
-        docker run -it --rm --name mkdocs-build -p -v `pwd`:/site --entrypoint /site/build.sh mkdocs-build
+        docker run -it --rm --name mkdocs-build -p 8000:8000 -v `pwd`:/site:Z --entrypoint /site/build.sh mkdocs-build
         ```
 
     - if you are using the podman command on Linux:
 
         ```shell
-        podman run -it --rm --name mkdocs-build -p -v `pwd`:/site --entrypoint /site/build.sh mkdocs-build
+        podman run -it --rm --name mkdocs-build -p 8000:8000 -v `pwd`:/site:Z --entrypoint /site/build.sh mkdocs-build
         ```
 
     - if you are on Windows using the docker command in Powershell:
